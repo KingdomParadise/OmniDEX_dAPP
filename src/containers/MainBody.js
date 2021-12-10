@@ -5,10 +5,28 @@ import bannerTopBox from "../assets/images/banner-top-box.png";
 import faddedBox from "../assets/images/faddedBox.png";
 import cryptoIcon from "../assets/images/icon.png";
 import daigram from "../assets/images/daigram.png";
+import matic_grant from "../assets/images/polygon.svg";
+import harmony_grant from "../assets/images/harmony.svg";
+import near_grant from "../assets/images/near.svg";
+import uniswap from "../assets/images/uniswap.svg";
+import quickswap from "../assets/images/quickswap.svg";
 import { Link } from "react-router-dom";
+import pangolin from "../assets/images/pangolin.svg";
+import _inch from "../assets/images/1inch.svg";
+import sushiswap from "../assets/images/sushiswap.svg";
+import ox from "../assets/images/0x.svg";
+import pancakeswap from "../assets/images/pancakeswap.svg";
+import joe from "../assets/images/joe.svg";
+import solarbeam from "../assets/images/joe.svg";
+import spiritswap from "../assets/images/xdai.svg";
+import xdai from "../assets/images/xdai.svg";
+import fantom from "../assets/images/fantom.svg";
+import ethereum from "../assets/images/ethereum.svg";
+import avalanche from "../assets/images/avalanche.svg";
+import harmony from "../assets/images/harmony.svg";
+import bsc from "../assets/images/bsc.svg";
 
 const MainBody = () => {
-
 	return (
 		<div className='home__3KnWO'>
 			<section className='container'>
@@ -154,6 +172,272 @@ const MainBody = () => {
 					</Link>
 				</div>
 				<div className='gradient__31T_H' />
+			</section>
+			<section className='grants__32DqA'>
+				<h2 className='grants__title__1PoEy'>
+					Grants <span className='highlight'>for omni</span>
+				</h2>
+				<p className='grants__text__fxIfw'>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do{" "}
+					<br /> eiusmod tempor incididunt ut labore et dolore magna
+					aliqua.
+				</p>
+				<div className='grants__list__121p9'>
+					<div className='_1NVMLAeGTqGbKx__SalZv8'>
+						<img src={matic_grant} alt='Matic Grant' />
+						Matic Grant
+					</div>
+					<div className='_1NVMLAeGTqGbKx__SalZv8'>
+						<img src={harmony_grant} alt='Harmony One Grant' />
+						Harmony One Grant
+					</div>
+					<div className='_1NVMLAeGTqGbKx__SalZv8'>
+						<img src={near_grant} alt='NEAR Grant' />
+						NEAR Grant
+					</div>
+				</div>
+			</section>
+			<section className='audits__366o9'>
+				<h2 className='audits__title__5FrFg'>
+					<span className='highlight'>Omni </span>Audits
+				</h2>
+				<p className='audits__text__1kN0O'>
+					Lorem ipsum dolor sit amet, consectetur adipiscing <br /> elit,
+					sed do eiusmod tempor incididunt ut labore
+				</p>
+				<div className='audits__list__3OBjG'>
+					<div
+						className='_1NVMLAeGTqGbKx__SalZv8'
+						style={{ width: "38vw" }}
+					>
+						<img
+							height={70}
+							src={near_grant}
+							id='certik'
+							alt='Audits CertiK'
+						/>
+						<span>CertiK Audit</span>
+					</div>
+					<Link
+						to='/'
+						className='screen__link__1gw9g'
+						rel='noreferrer'
+						style={{ height: "56px", marginLeft: "52px" }}
+					>
+						Action Button
+						<img
+							className='arrow__3f0-7'
+							src={arrow}
+							height={15}
+							width={35}
+							alt='arrow'
+						/>
+					</Link>
+				</div>
+			</section>
+			<section className='partners__3xIAI'>
+				<div className='partners__title__1CYAp'>
+					<h2>
+						<span className='highlight'>Omni </span>
+						<br className='partners__br__32LPN' />
+						supports
+					</h2>
+					<img
+						className='partners__main-cube__3H4O7'
+						src={bannerTopBox}
+						// width={28} 
+						alt='Decorative cube'
+					/>
+				</div>
+				<div className='partners__blocks__1hYQ4'>
+					<div>
+						<div className='partners__subtitle__31ICZ'>
+							<h3>Dexes</h3>
+							
+						</div>
+						<div className='partners__list__26Fh1'>
+							<div className='partner__3YHW9'>
+								<img
+									width={50}
+									src={uniswap}
+									alt='Uniswap'
+								/>
+								Uniswap
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									width={45}
+									src={quickswap}
+									alt='Quickswap'
+								/>
+								Quickswap
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									width={45}
+									src={pangolin}
+									alt='Pangolin'
+								/>
+								Pangolin
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									width={45}
+									src={_inch}
+									alt='1inch'
+								/>
+								1inch
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									width={45}
+									src={sushiswap}
+									alt='Sushiswap'
+								/>
+								Sushiswap
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									width={45}
+									src={ox}
+									alt='0x protocol'
+								/>
+								0x protocol
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									width={45}
+									src={pancakeswap}
+									alt='Pancakeswap'
+								/>
+								Pancakeswap
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									width={45}
+									src={matic_grant}
+									alt='Polygon'
+								/>
+								Polygon
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									width={45}
+									src={solarbeam}
+									alt='Solarbeam'
+								/>
+								Solarbeam
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									width={45}
+									src={spiritswap}
+									alt='Spiritswap'
+								/>
+								Spiritswap
+							</div>
+						</div>
+					</div>
+					<div>
+						<div className='partners__subtitle__31ICZ'>
+							<h3>Blockchains</h3>
+							<img
+								className='partners__blured-cube__Pv_-u'
+								src={faddedBox}
+								alt='Decorative cube'
+							/>
+						</div>
+						<div className='partners__list__26Fh1'>
+							<div className='partner__3YHW9'>
+								<img
+									src={ethereum}
+									alt='Ethereum'
+								/>
+								Ethereum
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									src={matic_grant}
+									alt='Polygon'
+								/>
+								Polygon
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									src={fantom}
+									alt='Fantom'
+								/>
+								Fantom
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									src={xdai}
+									alt='xDai'
+								/>
+								xDai
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									src={avalanche}
+									alt='Avalanche'
+								/>
+								Avalanche
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									src={matic_grant}
+									alt='Polygon'
+								/>
+								Polygon
+							</div>
+							<div className='partner__3YHW9'>
+								<img
+									src={harmony}
+									alt='Harmony'
+								/>
+								Harmony
+							</div>
+							<div className='partner__3YHW9'>
+								<img src={bsc} alt='BSC' />
+								BSC
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className='gradient__1Dstx' />
+			</section>
+			<section className='subscription__2SoKh'>
+				<div className='subscription__container__25DDT'>
+					<div>
+						<h2 className='subscription__title__2R0N8'>
+							Subscribe to our newsletter
+						</h2>
+						<p className='subscription__text__qXvTm'>
+							Fill in your email to receive Omni’s latest info and
+							updates
+						</p>
+					</div>
+					<form className='signup-form__2Wjqj' id='subscribeToLetters'>
+						<input
+							className='signup-form__input__1SY-X'
+							id='email'
+							name='email'
+							type='email'
+							required
+							placeholder='Email address'
+						/>
+						<Link to='/' className='screen__link__1gw9g signup-form__submit__RSCiX' rel='noreferrer'>
+						Action Button
+						<img
+							className='arrow__3f0-7'
+							src={arrow}
+							height={15}
+							width={35}
+							alt='arrow'
+						/>
+					</Link>
+					</form>
+				</div>
 			</section>
 		</div>
 	);

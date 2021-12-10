@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../assets/styles/popup.css'
+import theme_toggle_dark from '../assets/images/popup/dark-mode.png'
+import language_icon from '../assets/images/popup/english-icon.png'
+import tutorial_icon_dark from '../assets/images/popup/tutorial.png'
+import { FiChevronRight } from "react-icons/fi";
 
 const Popup = () => {
+
+	const [ toggleSwitch, settoggleSwitch ] = useState(true)
+
+	useEffect(() => {
+		let root = document.getElementsByTagName( 'html' )[0];
+		if(toggleSwitch) {
+			root.classList.add('dark');
+		} else {
+			root.classList.remove('dark');
+		}
+	}, [toggleSwitch])
+
 	return (
 		<div id='modals' style={{ zIndex: 1000 }}>
 			<div />
@@ -9,7 +25,7 @@ const Popup = () => {
 			<div />
 			<div
 				className='_8e7JriZ3TGBEEqYJcxhQH'
-				style={{ top: "95.5px", left: "226.328px" }}
+				style={{ top: "75.5px", left: "53vw" }}
 			>
 				<div
 					className='b1wrYDKlpvqv6pS_mCwck _1A7hsyIuo366Cm918KSon5'
@@ -20,11 +36,12 @@ const Popup = () => {
 						<ul className='_3DgFXcyOkq2iAtWH0tuygf'>
 							<li className='qurKyclokEqI27YQFICdG'>
 								<div className='_2v_45L7smCuYTlHG8WCvAn'>
-									<img src='/' alt='theme' />
-									<label className='_3P4pf151tbSKI_Y0vuVyF2'>
-										<input type='checkbox' />
-										<span className='_3Yd2rDgWeXq38Lc1OuJhqL' />
-									</label>
+									<img src={theme_toggle_dark} 
+									height={28} width={28} alt='theme' />
+									<label class="switch">
+  <input type="checkbox" onChange={(e) => settoggleSwitch(e.target.checked)} checked={toggleSwitch} />
+  <span class="slider round"></span>
+</label>
 								</div>
 								<div>
 									<h4 className='jM5sqd_NxOiSJHWFeDzFA'>Dark mode</h4>
@@ -36,15 +53,12 @@ const Popup = () => {
 							<li className='qurKyclokEqI27YQFICdG'>
 								<div className='_2v_45L7smCuYTlHG8WCvAn'>
 									<img
-										height={32}
-										width={32}
-										src='/'
+										height={30}
+										width={30}
+										src={language_icon}
 										alt='Language flag'
 									/>
-									<img
-										src='/'
-										alt='Change language'
-									/>
+									<FiChevronRight size={20} color={'gray'}  />
 								</div>
 								<div>
 									<h4 className='jM5sqd_NxOiSJHWFeDzFA'>English</h4>
@@ -62,13 +76,12 @@ const Popup = () => {
 								>
 									<div className='_2v_45L7smCuYTlHG8WCvAn'>
 										<img
-											src='assets/icons/tutorials.svg'
+											src={tutorial_icon_dark}
+											height={28}
+										width={32}
 											alt='Tutorials'
 										/>
-										<img
-											src='assets/icons/arrow.svg'
-											alt='Go to tutorials'
-										/>
+										<FiChevronRight size={20} color={'gray'} />
 									</div>
 									<div>
 										<h4 className='jM5sqd_NxOiSJHWFeDzFA'>
