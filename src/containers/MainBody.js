@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../assets/styles/mainBody.css";
+import { FiSettings, FiSearch } from "react-icons/fi";
+import { BsFillStarFill } from "react-icons/bs";
 import arrow from "../assets/images/arrow.png";
 import bannerTopBox from "../assets/images/banner-top-box.png";
 import faddedBox from "../assets/images/faddedBox.png";
@@ -47,11 +49,25 @@ const MainBody = () => {
 					</span>
 
 					<div className='screen__instruction__2oDJw'>
+						<div className='screen_instruction_inner'>
 						<div className='landing_instruction'>
 							<span>
-								Complete multi chain <br /> swap in on click
+								Complete multi chain <br /> swap in 1 click!
 							</span>
-						</div>{" "}
+							
+						</div>
+						<div className='landing_instruction_search'>
+							<div className='landing_instruction_search_input'>
+							<div className='input-icons'>
+							<FiSearch className='icon' size={30} color={'#fff'} />
+            <input className="input-field" type="text" placeholder='Search name or paste address' />
+							</div>
+							</div>
+							<button type='button'><BsFillStarFill color='#fff' size={24} /></button>	
+							</div>
+						</div>
+						
+
 						<img
 							className='screen__big-cube__mMoMv'
 							src={bannerTopBox}
@@ -245,7 +261,7 @@ const MainBody = () => {
 					<img
 						className='partners__main-cube__3H4O7'
 						src={bannerTopBox}
-						// width={28} 
+						// width={28}
 						alt='Decorative cube'
 					/>
 				</div>
@@ -253,87 +269,46 @@ const MainBody = () => {
 					<div>
 						<div className='partners__subtitle__31ICZ'>
 							<h3>Dexes</h3>
-							
 						</div>
 						<div className='partners__list__26Fh1'>
 							<div className='partner__3YHW9'>
-								<img
-									width={50}
-									src={uniswap}
-									alt='Uniswap'
-								/>
+								<img width={50} src={uniswap} alt='Uniswap' />
 								Uniswap
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									width={45}
-									src={quickswap}
-									alt='Quickswap'
-								/>
+								<img width={45} src={quickswap} alt='Quickswap' />
 								Quickswap
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									width={45}
-									src={pangolin}
-									alt='Pangolin'
-								/>
+								<img width={45} src={pangolin} alt='Pangolin' />
 								Pangolin
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									width={45}
-									src={_inch}
-									alt='1inch'
-								/>
+								<img width={45} src={_inch} alt='1inch' />
 								1inch
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									width={45}
-									src={sushiswap}
-									alt='Sushiswap'
-								/>
+								<img width={45} src={sushiswap} alt='Sushiswap' />
 								Sushiswap
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									width={45}
-									src={ox}
-									alt='0x protocol'
-								/>
+								<img width={45} src={ox} alt='0x protocol' />
 								0x protocol
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									width={45}
-									src={pancakeswap}
-									alt='Pancakeswap'
-								/>
+								<img width={45} src={pancakeswap} alt='Pancakeswap' />
 								Pancakeswap
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									width={45}
-									src={matic_grant}
-									alt='Polygon'
-								/>
+								<img width={45} src={matic_grant} alt='Polygon' />
 								Polygon
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									width={45}
-									src={solarbeam}
-									alt='Solarbeam'
-								/>
+								<img width={45} src={solarbeam} alt='Solarbeam' />
 								Solarbeam
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									width={45}
-									src={spiritswap}
-									alt='Spiritswap'
-								/>
+								<img width={45} src={spiritswap} alt='Spiritswap' />
 								Spiritswap
 							</div>
 						</div>
@@ -349,52 +324,31 @@ const MainBody = () => {
 						</div>
 						<div className='partners__list__26Fh1'>
 							<div className='partner__3YHW9'>
-								<img
-									src={ethereum}
-									alt='Ethereum'
-								/>
+								<img src={ethereum} alt='Ethereum' />
 								Ethereum
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									src={matic_grant}
-									alt='Polygon'
-								/>
+								<img src={matic_grant} alt='Polygon' />
 								Polygon
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									src={fantom}
-									alt='Fantom'
-								/>
+								<img src={fantom} alt='Fantom' />
 								Fantom
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									src={xdai}
-									alt='xDai'
-								/>
+								<img src={xdai} alt='xDai' />
 								xDai
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									src={avalanche}
-									alt='Avalanche'
-								/>
+								<img src={avalanche} alt='Avalanche' />
 								Avalanche
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									src={matic_grant}
-									alt='Polygon'
-								/>
+								<img src={matic_grant} alt='Polygon' />
 								Polygon
 							</div>
 							<div className='partner__3YHW9'>
-								<img
-									src={harmony}
-									alt='Harmony'
-								/>
+								<img src={harmony} alt='Harmony' />
 								Harmony
 							</div>
 							<div className='partner__3YHW9'>
@@ -406,6 +360,148 @@ const MainBody = () => {
 				</div>
 				<div className='gradient__1Dstx' />
 			</section>
+			<section className='trade__3nosP'>
+				<h2 className='trade__title__6tKjg'>
+					Trade <br className='trade__br__Xh7vw' />
+					<span className='highlight'>your token</span>
+					<br />
+					directly on
+					<br />
+					<span className='highlight'>your platform!</span>
+				</h2>
+				<p className='trade__text__SfbzQ'>
+					The Omni Relay Widget enables users to buy and sell tokens on any
+					website. This means that your users can buy token, without having
+					to leave your website! It’s free and Already joined 40+ projects.
+				</p>
+
+				<Link to='/' className='screen__link__1gw9g' rel='noreferrer'>
+					Action Button
+					<img
+						className='arrow__3f0-7'
+						src={arrow}
+						height={15}
+						width={35}
+						alt='arrow'
+					/>
+				</Link>
+			</section>
+
+			{/* omnidex calculations */}
+
+			<section className='calculations_container'>
+				<div className='calculations_inner'>
+					<div className='calc_title'>
+						<span>Omni-DEX</span>
+						<FiSettings color='#fff' size={26} />
+					</div>
+					<div className='calc_swap_container'>
+						<div className='calc_swap_block'>
+							<div className='token_indicator'>
+								<div className='token_indicator_container'>
+									<img
+										src={ethereum}
+										height={24}
+										width={24}
+										alt='token'
+									/>
+								</div>
+							</div>
+							<div className='token_input_buttons'>
+							<div className='token-amount-input-container'>
+								<input type='text' />
+								<button type='button'>ETH</button>
+							</div>
+							<div>
+							<button type='button' className='token_info_buttons'>$4,259</button>
+							</div>
+							</div>
+						</div>
+						<div className='calc_swap_arrow'>
+							<button type='button'>
+								<img
+									className='arrow__3f0-7'
+									src={arrow}
+									height={15}
+									width={35}
+									alt='arrow'
+								/>
+							</button>
+						</div>
+						<div className='calc_swap_block'>
+							<div className='token_indicator'>
+								<div className='token_indicator_container'>
+									<img
+										src={ethereum}
+										height={24}
+										width={24}
+										alt='token'
+									/>
+								</div>
+							</div>
+							<div className='token_input_buttons'>
+							<div className='token-amount-input-container'>
+								<input type='text' />
+								<button type='button'>OMNI</button>
+							</div>
+							<div>
+							<button type='button' className='token_info_buttons'>$4,259</button>
+							<button type='button' className='token_info_buttons'>Est. Fee $70</button>
+							</div>
+							</div>
+							<Link
+								to='/'
+								style={{
+									minWidth: "180px",
+									height: "56px",
+									marginLeft: "22px",
+								}}
+								className='screen__link__1gw9g'
+								rel='noreferrer'
+							>
+								Action Button
+								<img
+									className='arrow__3f0-7'
+									src={arrow}
+									height={15}
+									width={35}
+									alt='arrow'
+								/>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* omnidex calculations */}
+
+			<section className='doc-container__3Ot-h'>
+				<div className='doc__3KXY3'>
+					<div className='doc__info__1QgQf'>
+						<h2 className='doc__title__2v02J'>Documentation</h2>
+						<p className='doc__text__1LslB'>
+							Find out more about our Multi-Chain solution and platform.
+						</p>
+					</div>
+					<Link to='/' className='screen__link__1gw9g' rel='noreferrer'>
+						Know More
+						<img
+							className='arrow__3f0-7'
+							src={arrow}
+							height={15}
+							width={35}
+							alt='arrow'
+						/>
+					</Link>
+				</div>
+				<img
+					className='doc__cube__6tzQM'
+					src={bannerTopBox}
+					height={120}
+					width={120}
+					alt='Decorative cube'
+				/>
+			</section>
+
 			<section className='subscription__2SoKh'>
 				<div className='subscription__container__25DDT'>
 					<div>
@@ -426,19 +522,176 @@ const MainBody = () => {
 							required
 							placeholder='Email address'
 						/>
-						<Link to='/' className='screen__link__1gw9g signup-form__submit__RSCiX' rel='noreferrer'>
-						Action Button
-						<img
-							className='arrow__3f0-7'
-							src={arrow}
-							height={15}
-							width={35}
-							alt='arrow'
-						/>
-					</Link>
+						<Link
+							to='/'
+							style={{ minWidth: "180px" }}
+							className='screen__link__1gw9g signup-form__submit__RSCiX'
+							rel='noreferrer'
+						>
+							Action Button
+						</Link>
 					</form>
 				</div>
 			</section>
+			<footer className='_2CnzWZ7-9CkSBh7Czhrq7O'>
+				<div className='xKGRxEZ58RoSqMJGbrrq6'>
+					<div>
+						<h3 className='_1taTtc7XhIMqvwCgfnppti'>Community</h3>
+						<nav className='_3jt2oztRe9u2DB6DlqqmE_'>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='https://www.coingecko.com/en/coins/Omni'
+							>
+								<img
+									src='assets/icons/socials/coingecko.svg'
+									alt='coingecko'
+								/>
+							</a>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='https://www.facebook.com/OmniDEX/'
+							>
+								<img src='assets/icons/socials/fb.svg' alt='fb' />
+							</a>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='https://twitter.com/CryptoOmni'
+							>
+								<img
+									src='assets/icons/socials/twitter.svg'
+									alt='twitter'
+								/>
+							</a>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='https://discord.gg/hayrHU2Tvh'
+							>
+								<img
+									src='assets/icons/socials/discord.svg'
+									alt='discord'
+								/>
+							</a>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='https://t.me/cryptoOmni_chat'
+							>
+								<img
+									src='assets/icons/socials/telegram.svg'
+									alt='telegram'
+								/>
+							</a>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='https://coinmarketcap.com/currencies/Omni'
+							>
+								<img
+									src='assets/icons/socials/marketcap.svg'
+									alt='marketcap'
+								/>
+							</a>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='https://cryptoOmni.medium.com/'
+							>
+								<img
+									src='assets/icons/socials/medium.svg'
+									alt='medium'
+								/>
+							</a>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='mailto:support@Omni.finance'
+							>
+								<img src='assets/icons/socials/mail.svg' alt='mail' />
+							</a>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='https://github.com/CryptoOmni'
+							>
+								<img
+									src='assets/icons/socials/github.svg'
+									alt='github'
+								/>
+							</a>
+							<a
+								className='_2AYjj8ChaxuGx00GqNpb3u'
+								href='https://docs.Omni.finance/'
+							>
+								<img
+									src='assets/icons/socials/gitbook.svg'
+									alt='gitbook'
+								/>
+							</a>
+						</nav>
+					</div>
+					<div>
+						<h3 className='_1taTtc7XhIMqvwCgfnppti'>Documents</h3>
+						<nav className='RmujUMsYkKkkuRY8eS296'>
+							<Link to='/'>
+								Pitch Deck
+								<img
+									className='arrow__3f0-7'
+									src={arrow}
+									height={15}
+									width={35}
+									alt='arrow'
+								/>
+							</Link>
+							<Link to='/'>
+								One Pager
+								<img
+									className='arrow__3f0-7'
+									src={arrow}
+									height={15}
+									width={35}
+									alt='arrow'
+								/>
+							</Link>
+							<Link to='/'>
+								Roadmap
+								<img
+									className='arrow__3f0-7'
+									src={arrow}
+									height={15}
+									width={35}
+									alt='arrow'
+								/>
+							</Link>
+						</nav>
+					</div>
+					<div>
+						<h3 className='_1taTtc7XhIMqvwCgfnppti'>Company</h3>
+						<nav className='RmujUMsYkKkkuRY8eS296'>
+							<Link to='/'>
+								Merch Shop
+								<img
+									className='arrow__3f0-7'
+									src={arrow}
+									height={15}
+									width={35}
+									alt='arrow'
+								/>
+							</Link>
+							<Link to='/'>
+								Contact Our Team
+								<img
+									className='arrow__3f0-7'
+									src={arrow}
+									height={15}
+									width={35}
+									alt='arrow'
+								/>
+							</Link>
+						</nav>
+					</div>
+				</div>
+				<p className='nEVyhRp2L427W-NvwfPEX'>
+					©Copyright Omni 2021,{" "}
+					<Link to='/' className='_3d4_tKssgilyA1Tcp3MBFt'>
+						Privacy policy
+					</Link>
+				</p>
+			</footer>
 		</div>
 	);
 };

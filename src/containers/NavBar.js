@@ -7,6 +7,8 @@ import Popup from "../components/Popup";
 const NavBar = () => {
 
 	const [ togglePopup, settogglePopup ] = useState(false)
+	const [toggleSwitch, settoggleSwitch] = useState(false);
+
 
 	return (
 		<Fragment>
@@ -30,7 +32,7 @@ const NavBar = () => {
 					</div>
 				</div>
 			</header>
-			{togglePopup && <Popup />}
+			{togglePopup ? <Popup toggleSwitch={toggleSwitch} settoggleSwitch={settoggleSwitch} /> : null}
 		</Fragment>
 	);
 };
