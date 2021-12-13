@@ -7,14 +7,14 @@ import { FiChevronRight } from "react-icons/fi";
 
 const Popup = ({toggleSwitch, settoggleSwitch}) => {
 	
-	useEffect(() => {
-		let root = document.getElementsByTagName("html")[0];
-		if (toggleSwitch) {
-			root.classList.add("dark");
-		} else {
-			root.classList.remove("dark");
-		}
-	}, [toggleSwitch]);
+	// useEffect(() => {
+	// 	let root = document.getElementsByTagName("html")[0];
+	// 	if (toggleSwitch) {
+	// 		root.classList.add("dark");
+	// 	} else {
+	// 		root.classList.remove("dark");
+	// 	}
+	// }, [toggleSwitch]);
 
 	return (
 		<div id='modals' style={{ zIndex: 1000 }}>
@@ -43,8 +43,8 @@ const Popup = ({toggleSwitch, settoggleSwitch}) => {
 									<label className='switch'>
 										<input
 											type='checkbox'
-											onChange={(e) =>
-												settoggleSwitch(e.target.checked)
+											onChange={
+												settoggleSwitch
 											}
 											checked={toggleSwitch}
 										/>

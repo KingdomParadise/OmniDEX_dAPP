@@ -5,14 +5,14 @@
 	--main-green: #2fabe6;
 	--main-error: #fb5b16;
 	--omni-base-01: #fff;
-	--omni-base-02: #000;
+	--omni-base-02: #172542;
 	--omni-base-03: #606162;
 	--omni-base-04: #f4f4f4;
 	--omni-base-05: hsla(0, 0%, 9%, 0.5);
 	--omni-base-06: #f3f3f5;
 	--omni-base-07: hsla(0, 0%, 100%, 0.6);
 	--omni-base-08: #f6f6ff;
-	--main-background: #f6f6ff;
+	--main-background: #f6f4f5;
 	--bg-header: hsla(0, 0%, 100%, 0.6);
 	--filter-invert: invert(1);
 }
@@ -106,9 +106,6 @@ button {
 	position: relative;
 	z-index: 1;
 }
-.highlight {
-	color: #4aa956;
-}
 .nowrap {
 	white-space: nowrap;
 }
@@ -117,7 +114,6 @@ a {
 	text-decoration: none;
 }
 .button {
-	background: #4aa956;
 	border-radius: 6px;
 	color: #fff;
 	display: inline-block;

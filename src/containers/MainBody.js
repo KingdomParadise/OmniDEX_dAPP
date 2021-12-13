@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../assets/styles/mainBody.css";
 import { FiSettings, FiSearch } from "react-icons/fi";
 import { BsFillStarFill } from "react-icons/bs";
@@ -7,6 +7,7 @@ import bannerTopBox from "../assets/images/banner-top-box.png";
 import faddedBox from "../assets/images/faddedBox.png";
 import cryptoIcon from "../assets/images/icon.png";
 import daigram from "../assets/images/daigram.png";
+import daigram_light from "../assets/images/daigram-light.png";
 import matic_grant from "../assets/images/polygon.svg";
 import harmony_grant from "../assets/images/harmony.svg";
 import near_grant from "../assets/images/near.svg";
@@ -18,17 +19,29 @@ import _inch from "../assets/images/1inch.svg";
 import sushiswap from "../assets/images/sushiswap.svg";
 import ox from "../assets/images/0x.svg";
 import pancakeswap from "../assets/images/pancakeswap.svg";
-import joe from "../assets/images/joe.svg";
-import solarbeam from "../assets/images/joe.svg";
-import spiritswap from "../assets/images/xdai.svg";
+import solarbeam from "../assets/images/solarbeam.png";
+import certik_light from "../assets/images/certik-light.png";
+import certik_dark from "../assets/images/certik-dark.png";
+import spiritswap from "../assets/images/spiritswap.png";
 import xdai from "../assets/images/xdai.svg";
 import fantom from "../assets/images/fantom.svg";
 import ethereum from "../assets/images/ethereum.svg";
 import avalanche from "../assets/images/avalanche.svg";
 import harmony from "../assets/images/harmony.svg";
 import bsc from "../assets/images/bsc.svg";
+import facebook from "../assets/images/communityIcons/fb.svg";
+import discord from "../assets/images/communityIcons/discord.svg";
+import github from "../assets/images/communityIcons/github.svg";
+import email from "../assets/images/communityIcons/mail.svg";
+import twitter from "../assets/images/communityIcons/twitter.svg";
+import telegram from "../assets/images/communityIcons/telegram.svg";
+import coingecko from "../assets/images/communityIcons/coingecko.svg";
+import { ThemeContext } from "../theme/ThemeContext";
 
 const MainBody = () => {
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
+
 	return (
 		<div className='home__3KnWO'>
 			<section className='container'>
@@ -50,24 +63,31 @@ const MainBody = () => {
 
 					<div className='screen__instruction__2oDJw'>
 						<div className='screen_instruction_inner'>
-						<div className='landing_instruction'>
-							<span>
-								Complete multi chain <br /> swap in 1 click!
-							</span>
-							
+							<div className='landing_instruction'>
+								<span style={{ color: '#fff' }}>
+									Complete multi chain <br /> swap in 1 click!
+								</span>
+							</div>
+							<div className='landing_instruction_search'>
+								<div className='landing_instruction_search_input'>
+									<div className='input-icons'>
+										<FiSearch
+											className='icon'
+											size={26}
+											color={"#fff"}
+										/>
+										<input
+											className='input-field'
+											type='text'
+											placeholder='Search name or paste address'
+										/>
+									</div>
+								</div>
+								<button type='button'>
+									<BsFillStarFill color='#fff' size={24} />
+								</button>
+							</div>
 						</div>
-						<div className='landing_instruction_search'>
-							<div className='landing_instruction_search_input'>
-							<div className='input-icons'>
-							<FiSearch className='icon' size={30} color={'#fff'} />
-            <input className="input-field" type="text" placeholder='Search name or paste address' />
-							</div>
-							</div>
-							<button type='button'><BsFillStarFill color='#fff' size={24} /></button>	
-							</div>
-						</div>
-						
-
 						<img
 							className='screen__big-cube__mMoMv'
 							src={bannerTopBox}
@@ -82,7 +102,7 @@ const MainBody = () => {
 					</div>
 					<div className='screen__info__2QpSI'>
 						<p className='screen__text__1p3Jl'>
-							<span style={{ color: "white" }}>
+							<span>
 								The Omni-DEX is a cross-chain exchange allowing the swap
 								of thousands of tokens across 8 different blockchains
 								seamlessly
@@ -153,7 +173,7 @@ const MainBody = () => {
 				</h2>
 				<img
 					className='about__image__Ry7YU'
-					src={daigram}
+					src={darkMode  ?  daigram : daigram_light}
 					alt='What is omni'
 				/>
 				<div className='about__info__3eAVO'>
@@ -228,7 +248,7 @@ const MainBody = () => {
 					>
 						<img
 							height={70}
-							src={near_grant}
+							src={darkMode ? certik_dark :  certik_light}
 							id='certik'
 							alt='Audits CertiK'
 						/>
@@ -390,7 +410,7 @@ const MainBody = () => {
 			{/* omnidex calculations */}
 
 			<section className='calculations_container'>
-				<div className='calculations_inner'>
+				<div className='calculations_inner' style={{ backgroundColor: darkMode ? '#0c1d42b2' : 'hsl(0deg 0% 79% / 61%)' }}>
 					<div className='calc_title'>
 						<span>Omni-DEX</span>
 						<FiSettings color='#fff' size={26} />
@@ -408,13 +428,15 @@ const MainBody = () => {
 								</div>
 							</div>
 							<div className='token_input_buttons'>
-							<div className='token-amount-input-container'>
-								<input type='text' />
-								<button type='button'>ETH</button>
-							</div>
-							<div>
-							<button type='button' className='token_info_buttons'>$4,259</button>
-							</div>
+								<div className='token-amount-input-container'>
+									<input type='text' />
+									<button type='button'>ETH</button>
+								</div>
+								<div>
+									<button type='button' className='token_info_buttons'>
+										$4,259
+									</button>
+								</div>
 							</div>
 						</div>
 						<div className='calc_swap_arrow'>
@@ -440,14 +462,18 @@ const MainBody = () => {
 								</div>
 							</div>
 							<div className='token_input_buttons'>
-							<div className='token-amount-input-container'>
-								<input type='text' />
-								<button type='button'>OMNI</button>
-							</div>
-							<div>
-							<button type='button' className='token_info_buttons'>$4,259</button>
-							<button type='button' className='token_info_buttons'>Est. Fee $70</button>
-							</div>
+								<div className='token-amount-input-container'>
+									<input type='text' />
+									<button type='button'>OMNI</button>
+								</div>
+								<div>
+									<button type='button' className='token_info_buttons'>
+										$4,259
+									</button>
+									<button type='button' className='token_info_buttons'>
+										Est. Fee $70
+									</button>
+								</div>
 							</div>
 							<Link
 								to='/'
@@ -475,7 +501,7 @@ const MainBody = () => {
 			{/* omnidex calculations */}
 
 			<section className='doc-container__3Ot-h'>
-				<div className='doc__3KXY3'>
+				<div className='doc__3KXY3' style={{ backgroundColor: darkMode ? '#0c1d42b2' : 'hsl(0deg 0% 79% / 61%)' }}>
 					<div className='doc__info__1QgQf'>
 						<h2 className='doc__title__2v02J'>Documentation</h2>
 						<p className='doc__text__1LslB'>
@@ -533,95 +559,57 @@ const MainBody = () => {
 					</form>
 				</div>
 			</section>
-			<footer className='_2CnzWZ7-9CkSBh7Czhrq7O'>
+			<footer className='footer_container'>
+				<div className='_2CnzWZ7-9CkSBh7Czhrq7O'>
 				<div className='xKGRxEZ58RoSqMJGbrrq6'>
 					<div>
 						<h3 className='_1taTtc7XhIMqvwCgfnppti'>Community</h3>
 						<nav className='_3jt2oztRe9u2DB6DlqqmE_'>
-							<a
+							<Link to='/'
 								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='https://www.coingecko.com/en/coins/Omni'
 							>
 								<img
-									src='assets/icons/socials/coingecko.svg'
-									alt='coingecko'
+									src={facebook}
+									alt='facebook'
 								/>
-							</a>
-							<a
+							</Link>
+							<Link
 								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='https://www.facebook.com/OmniDEX/'
+								to='/'
 							>
-								<img src='assets/icons/socials/fb.svg' alt='fb' />
-							</a>
-							<a
+								<img src={discord} alt='dicord' />
+							</Link>
+							<Link
 								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='https://twitter.com/CryptoOmni'
+								to='/'
 							>
-								<img
-									src='assets/icons/socials/twitter.svg'
-									alt='twitter'
-								/>
-							</a>
-							<a
+								<img src={twitter} alt='twitter' />
+							</Link>
+							<Link
 								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='https://discord.gg/hayrHU2Tvh'
+								to='/'
 							>
-								<img
-									src='assets/icons/socials/discord.svg'
-									alt='discord'
-								/>
-							</a>
-							<a
+								<img src={telegram} alt='telegram' />
+							</Link>
+							<Link
 								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='https://t.me/cryptoOmni_chat'
+								to='/'
 							>
-								<img
-									src='assets/icons/socials/telegram.svg'
-									alt='telegram'
-								/>
-							</a>
-							<a
+								<img src={email} alt='email' />
+							</Link>
+							<Link
 								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='https://coinmarketcap.com/currencies/Omni'
+								to='/'
 							>
-								<img
-									src='assets/icons/socials/marketcap.svg'
-									alt='marketcap'
-								/>
-							</a>
-							<a
+								<img src={github} alt='github' />
+							</Link>
+							<Link
 								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='https://cryptoOmni.medium.com/'
+								to='/'
 							>
-								<img
-									src='assets/icons/socials/medium.svg'
-									alt='medium'
-								/>
-							</a>
-							<a
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='mailto:support@Omni.finance'
-							>
-								<img src='assets/icons/socials/mail.svg' alt='mail' />
-							</a>
-							<a
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='https://github.com/CryptoOmni'
-							>
-								<img
-									src='assets/icons/socials/github.svg'
-									alt='github'
-								/>
-							</a>
-							<a
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-								href='https://docs.Omni.finance/'
-							>
-								<img
-									src='assets/icons/socials/gitbook.svg'
-									alt='gitbook'
-								/>
-							</a>
+								<img src={coingecko} alt='coingecko' />
+							</Link>
+
 						</nav>
 					</div>
 					<div>
@@ -691,6 +679,7 @@ const MainBody = () => {
 						Privacy policy
 					</Link>
 				</p>
+				</div>
 			</footer>
 		</div>
 	);

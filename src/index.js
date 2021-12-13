@@ -2,15 +2,15 @@ import { CssBaseline } from "@mui/material";
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import CustomThemeProvider from "./theme/CustomThemeProvider";
+import { ThemeProvider } from "./theme/ThemeContext";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
 	<BrowserRouter>
-		<CustomThemeProvider>
+		<ThemeProvider>
 			<CssBaseline />
 			<App />
-		</CustomThemeProvider>
+		</ThemeProvider>
 	</BrowserRouter>,
 	document.querySelector("#root")
 );
