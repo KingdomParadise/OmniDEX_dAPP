@@ -44,9 +44,11 @@ const MainBody = () => {
 
 	return (
 		<div className='home__3KnWO'>
-			<section className='container'>
+			<section  className="container_main_">
+				<div id='grad1'>
+				<div className='container'> 
 				<div className='screen__3DOGq'>
-					<span>
+					<span style={{ width : '50%' }}>
 						<h5 style={{ fontSize: "24px", margin: 0 }}>NEW RELEASE</h5>
 						<h2 className='screen__title__vymBx'>
 							<span className='highlight'>
@@ -59,6 +61,25 @@ const MainBody = () => {
 							</span>{" "}
 							protocol
 						</h2>
+						<div className='screen__info__2QpSI'>
+						<p className='screen__text__1p3Jl'>
+							<span>
+								The Omni-DEX is a cross-chain exchange allowing the swap
+								of thousands of tokens across 8 different blockchains
+								seamlessly
+							</span>
+						</p>
+						<Link to='/' className='screen__link__1gw9g' rel='noreferrer'>
+							Start Trading
+							<img
+								className='arrow__3f0-7'
+								src={arrow}
+								height={15}
+								width={35}
+								alt='arrow'
+							/>
+						</Link>
+					</div>
 					</span>
 
 					<div className='screen__instruction__2oDJw'>
@@ -100,27 +121,13 @@ const MainBody = () => {
 							alt='Decorative cube'
 						/>{" "}
 					</div>
-					<div className='screen__info__2QpSI'>
-						<p className='screen__text__1p3Jl'>
-							<span>
-								The Omni-DEX is a cross-chain exchange allowing the swap
-								of thousands of tokens across 8 different blockchains
-								seamlessly
-							</span>
-						</p>
-						<Link to='/' className='screen__link__1gw9g' rel='noreferrer'>
-							Start Trading
-							<img
-								className='arrow__3f0-7'
-								src={arrow}
-								height={15}
-								width={35}
-								alt='arrow'
-							/>
-						</Link>
-					</div>
 				</div>
-				<div className='advantages__SkBVq'>
+				<div className='gradient' />
+				</div>
+				</div>
+			</section>
+			<section className="omniDex_advantages">
+			<div className='advantages__SkBVq'>
 					<div className='advantage__1vF4S'>
 						<img
 							className='advantage__img__2uWaX'
@@ -164,7 +171,6 @@ const MainBody = () => {
 						</p>
 					</div>
 				</div>
-				<div className='gradient' />
 			</section>
 			<section className='about__1wd5a'>
 				<h2 className='about__title__3oBok'>
@@ -186,7 +192,7 @@ const MainBody = () => {
 							exchanges.
 						</span>
 					</p>
-					<Link to='/' className='button button_glassy'>
+					<Link to='/' className='button button_glassy' style={{ backgroundColor : darkMode ? '#07315d' : '#649dbe' }}>
 						Action Button
 						<img
 							className='button__arrow'
@@ -413,12 +419,15 @@ const MainBody = () => {
 				<div className='calculations_inner' style={{ backgroundColor: darkMode ? '#0c1d42b2' : 'hsl(0deg 0% 79% / 61%)' }}>
 					<div className='calc_title'>
 						<span>Omni-DEX</span>
-						<FiSettings color='#fff' size={26} />
+						<span style={darkMode ?  {  } : {backgroundColor : '#a8adb3', borderRadius: '.5rem', padding: '.5rem .6rem .4rem'}}>
+
+						<FiSettings color='#fff' size={26}  />
+						</span>
 					</div>
 					<div className='calc_swap_container'>
 						<div className='calc_swap_block'>
 							<div className='token_indicator'>
-								<div className='token_indicator_container'>
+								<div className='token_indicator_container' style={{ backgroundColor : darkMode ? '#031730' : '#a8adb3' }}>
 									<img
 										src={ethereum}
 										height={24}
@@ -428,12 +437,12 @@ const MainBody = () => {
 								</div>
 							</div>
 							<div className='token_input_buttons'>
-								<div className='token-amount-input-container'>
-									<input type='text' />
-									<button type='button'>ETH</button>
+								<div className='token-amount-input-container' style={{ backgroundColor : darkMode ? '#081e3f' : '#becad5' }} >
+									<input type='text' style={{ color :  darkMode ? '#fff' : '#666a6c' }} />
+									<button type='button' style={{ backgroundColor : darkMode ? '#050d21' : '#919ba6' }}>ETH</button>
 								</div>
 								<div>
-									<button type='button' className='token_info_buttons'>
+									<button type='button' className='token_info_buttons' style={ darkMode ? { backgroundColor :  '#081e3f', color : '#fff' } : {backgroundColor : '#becad5', color : '#666a6c' }}>
 										$4,259
 									</button>
 								</div>
@@ -450,9 +459,10 @@ const MainBody = () => {
 								/>
 							</button>
 						</div>
-						<div className='calc_swap_block'>
+						<div className='calc_swap_block calc_swap_block_block'>
+							<span style={{ display : 'flex'}}>
 							<div className='token_indicator'>
-								<div className='token_indicator_container'>
+								<div className='token_indicator_container' style={{ backgroundColor : darkMode ? '#031730' : '#a8adb3' }}>
 									<img
 										src={ethereum}
 										height={24}
@@ -462,19 +472,20 @@ const MainBody = () => {
 								</div>
 							</div>
 							<div className='token_input_buttons'>
-								<div className='token-amount-input-container'>
-									<input type='text' />
-									<button type='button'>OMNI</button>
+								<div className='token-amount-input-container' style={{ backgroundColor : darkMode ? '#081e3f' : '#becad5' }}>
+									<input type='text' style={{ color :  darkMode ? '#fff' : '#666a6c' }} />
+									<button type='button' style={{ backgroundColor : darkMode ? '#050d21' : '#919ba6' }} >OMNI</button>
 								</div>
 								<div>
-									<button type='button' className='token_info_buttons'>
+									<button type='button' className='token_info_buttons' style={ darkMode ? { backgroundColor :  '#081e3f', color : '#fff' } : {backgroundColor : '#becad5', color : '#666a6c' }}>
 										$4,259
 									</button>
-									<button type='button' className='token_info_buttons'>
+									<button type='button' className='token_info_buttons' style={ darkMode ? { backgroundColor :  '#081e3f', color : '#fff' } : {backgroundColor : '#becad5', color : '#666a6c' }}>
 										Est. Fee $70
 									</button>
 								</div>
 							</div>
+							</span>
 							<Link
 								to='/'
 								style={{
@@ -482,7 +493,7 @@ const MainBody = () => {
 									height: "56px",
 									marginLeft: "22px",
 								}}
-								className='screen__link__1gw9g'
+								className='screen__link__1gw9g action_calc_button'
 								rel='noreferrer'
 							>
 								Action Button
@@ -550,7 +561,7 @@ const MainBody = () => {
 						/>
 						<Link
 							to='/'
-							style={{ minWidth: "180px" }}
+							// style={{ width: "auto" }}
 							className='screen__link__1gw9g signup-form__submit__RSCiX'
 							rel='noreferrer'
 						>

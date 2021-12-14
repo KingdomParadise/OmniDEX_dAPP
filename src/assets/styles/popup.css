@@ -150,6 +150,11 @@ html.dark {
 		display: none;
 	}
 }
+@media (max-width: 480px) {
+	.b1wrYDKlpvqv6pS_mCwck {
+		width: auto !important;
+	}
+}
 ._1A7hsyIuo366Cm918KSon5 {
 	transition: opacity 0.3s ease-in;
 }
