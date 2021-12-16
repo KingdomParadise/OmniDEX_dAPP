@@ -5,6 +5,7 @@ import dotLogo from '../assets/images/page1/dot-logo.png'
 import LockIcon from '@mui/icons-material/Lock';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import farmingBg from '../assets/images/page1/farming-bg.png'
+import dcbBsc from '../assets/images/page1/dcb-bsc.png'
 const Page1Body = () => {
     return (
         <div className='page1BodyContainer'>
@@ -62,6 +63,87 @@ const Page1Body = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="col-md-12 mt-4">
+                    <div className="rect3 d-flex flex-column justify-content-start py-5">
+                        <div>
+                            <h2 className="bolder"><span className="color2">HOT</span> FARMS</h2>
+                            <h6 className="">Omni is the ultimate exchange protocol</h6>
+                        </div>
+                        <div className="d-flex justify-content-start">
+                            <div className="d-flex bgDCB mr-2 pr-5">
+                                <div className="mr-3">
+                                    <img src={dcbBsc} width={120} alt="dcb-bsc" />
+                                </div>
+                                <div>
+                                    <p className="mb-1 bold">DCB-BSC</p>
+                                    <p className="mb-1">Apr: 82.10%</p>
+                                </div>
+                            </div>
+                            <div className="d-flex bgDCB pr-5">
+                                <div className="mr-3">
+                                    <img src={dcbBsc} width={120} alt="dcb-bsc" />
+                                </div>
+                                <div>
+                                    <p className="mb-1 bold">DCB-BSC</p>
+                                    <p className="mb-1">Apr: 82.10%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-12 mt-4">
+                    <div className="rect4 d-flex flex-column justify-content-start py-5">
+                        <div>
+                            <h2 className="bolder"><span className="color2">COOL</span> POOLS</h2>
+                            <h6 className="">Omni is the ultimate exchange protocol</h6>
+                        </div>
+                        <div className="d-flex justify-content-start">
+                            <div className="d-flex bgDCB mr-2 pr-5">
+                                <div className="mr-3">
+                                    <img src={dcbBsc} width={120} alt="dcb-bsc" />
+                                </div>
+                                <div>
+                                    <p className="mb-1 bold">DCB-BSC</p>
+                                    <p className="mb-1">Apr: 82.10%</p>
+                                </div>
+                            </div>
+                            <div className="d-flex bgDCB pr-5">
+                                <div className="mr-3">
+                                    <img src={dcbBsc} width={120} alt="dcb-bsc" />
+                                </div>
+                                <div>
+                                    <p className="mb-1 bold">DCB-BSC</p>
+                                    <p className="mb-1">Apr: 82.10%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-12">
+                    <div className="rect5 d-flex flex-column justify-content-center align-items-center mt-4 py-4">
+                        <div>
+                            <h2 className="bolder mb-3"><span className="color2">OMNIDEX</span> STATS</h2>
+                        </div>
+                        <div className="d-flex flex-column">
+                            <div className="rect5-item1">
+                                <span className="text-uppercase">Total Value Locked</span>
+                                <span>$ 454,543,34</span>
+                            </div>
+                            <div className="rect5-item2">
+                                <span className="text-uppercase">USD Market Cap</span>
+                                <span>$ 454,543,34</span>
+                            </div>
+                            <div className="rect5-item1">
+                                <span className="text-uppercase">Banana in circulation</span>
+                                <span>$ 454,543,34</span>
+                            </div>
+                            <div className="rect5-item2">
+                                <span className="text-uppercase">Total Banana Burned</span>
+                                <span>$ 454,543,34</span>
+                            </div>
+                        </div> 
                     </div>
                 </div>
             </div>
