@@ -1,5 +1,48 @@
+
+.bg-app{
+    background-color: #182845;
+}
+.btn-trans{
+    background-color: transparent;
+    color:white;
+}
+.toolBar{
+    height: 10vh;
+    background: #182845;
+}
 .page1BodyContainer{
     width: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #182845;
+    height: 90vh;
+    padding:2rem 3rem;
+    overflow-y: scroll;
+}
+
+.color2{
+    color:#27ecfe;
+}
+.rect1{
+    background-image: url(../images/page1/landing-bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    background-color: rgba(13, 27, 55, 0.4);
+    padding: 1rem 2rem;
+}
+.launchBtn{
+    background-color: #0a3662;
+    color:white;
+}
+.btn-gradient{
+    background-color: skyblue;
+    background: linear-gradient(to right, #2fabe5, #07518f);
+    color:white;
+}
+.rect2{
+    background-image: url(../images/page1/farming-bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
 }

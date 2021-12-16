@@ -44,90 +44,125 @@ const MainBody = () => {
 
 	return (
 		<div className='home__3KnWO'>
-			<section  className="container_main_">
+			<section className='container_main_'>
 				<div id='grad1'>
-				<div className='container'> 
-				<div className='screen__3DOGq'>
-					<span style={{ width : '50%' }}>
-						<h5 style={{ fontSize: "24px", margin: 0 }}>NEW RELEASE</h5>
-						<h2 className='screen__title__vymBx'>
-							<span className='highlight'>
-								<span className='nowrap'>
-									Omni-chain
-									<br />
-								</span>
-								exchange
-								<br className='screen__br__3HphO' />
-							</span>{" "}
-							protocol
-						</h2>
-						<div className='screen__info__2QpSI'>
-						<p className='screen__text__1p3Jl'>
-							<span>
-								The Omni-DEX is a cross-chain exchange allowing the swap
-								of thousands of tokens across 8 different blockchains
-								seamlessly
+					<div className='container'>
+						<div className='screen__3DOGq'>
+							<span style={{ width: "50%" }}>
+								<h5
+									style={{
+										fontSize: "24px",
+										margin: 0,
+										textAlign: "left",
+									}}
+								>
+									NEW RELEASE
+								</h5>
+								<h2 className='screen__title__vymBx'>
+									<span className='highlight'>
+										<span className='nowrap'>
+											Omni-chain
+											<br />
+										</span>
+										exchange
+										<br className='screen__br__3HphO' />
+									</span>{" "}
+									protocol
+								</h2>
+								<div className='screen__info__2QpSI'>
+									<p className='screen__text__1p3Jl'>
+										<span>
+											The Omni-DEX is a cross-chain exchange allowing
+											the swap of thousands of tokens across 8
+											different blockchains seamlessly
+										</span>
+									</p>
+									<Link
+										to='/'
+										className='screen__link__1gw9g'
+										rel='noreferrer'
+									>
+										Start Trading
+										<img
+											className='arrow__3f0-7'
+											src={arrow}
+											height={15}
+											width={35}
+											alt='arrow'
+										/>
+									</Link>
+								</div>
 							</span>
-						</p>
-						<Link to='/' className='screen__link__1gw9g' rel='noreferrer'>
-							Start Trading
-							<img
-								className='arrow__3f0-7'
-								src={arrow}
-								height={15}
-								width={35}
-								alt='arrow'
-							/>
-						</Link>
-					</div>
-					</span>
 
-					<div className='screen__instruction__2oDJw'>
-						<div className='screen_instruction_inner'>
-							<div className='landing_instruction'>
-								<span style={{ color: '#fff' }}>
-									Complete multi chain <br /> swap in 1 click!
-								</span>
-							</div>
-							<div className='landing_instruction_search'>
-								<div className='landing_instruction_search_input'>
-									<div className='input-icons'>
-										<FiSearch
-											className='icon'
-											size={26}
-											color={"#fff"}
-										/>
-										<input
-											className='input-field'
-											type='text'
-											placeholder='Search name or paste address'
-										/>
+							<div className='screen__instruction__2oDJw'>
+								<div className='screen_instruction_inner'>
+									<div className='landing_instruction'>
+										<span style={{ color: "#fff" }}>
+											Complete multi chain <br /> swap in 1 click!
+										</span>
+									</div>
+									<div className='landing_instruction_search'>
+										<div className='landing_instruction_search_input'>
+											<div className='input-icons'>
+												<FiSearch
+													className='icon'
+													size={26}
+													color={"#fff"}
+												/>
+												<input
+													className='input-field'
+													type='text'
+													placeholder='Search name or paste address'
+												/>
+											</div>
+										</div>
+										<button type='button'>
+											<BsFillStarFill color='#fff' size={24} />
+										</button>
 									</div>
 								</div>
-								<button type='button'>
-									<BsFillStarFill color='#fff' size={24} />
-								</button>
+								<img
+									className='screen__big-cube__mMoMv'
+									src={bannerTopBox}
+									height={150}
+									alt='Decorative cube1'
+								/>
+								<img
+									className='screen__blured-cube__5rokD'
+									src={faddedBox}
+									alt='Decorative cube'
+								/>{" "}
 							</div>
 						</div>
-						<img
-							className='screen__big-cube__mMoMv'
-							src={bannerTopBox}
-							height={150}
-							alt='Decorative cube1'
-						/>
-						<img
-							className='screen__blured-cube__5rokD'
-							src={faddedBox}
-							alt='Decorative cube'
-						/>{" "}
+						<div className='screen__info__2QpSI_secondary'>
+									<p className='screen__text__1p3Jl'>
+										<span>
+											The Omni-DEX is a cross-chain exchange allowing
+											the swap of thousands of tokens across 8
+											different blockchains seamlessly
+										</span>
+									</p>
+									<Link
+										to='/'
+										className='screen__link__1gw9g'
+										rel='noreferrer'
+									>
+										Start Trading
+										<img
+											className='arrow__3f0-7'
+											src={arrow}
+											height={15}
+											width={35}
+											alt='arrow'
+										/>
+									</Link>
+								</div>
+						<div className='gradient' />
 					</div>
 				</div>
-				<div className='gradient' />
-				</div>
-				</div>
 			</section>
-			<section className="omniDex_advantages">
-			<div className='advantages__SkBVq'>
+			<section className='omniDex_advantages'>
+				<div className='advantages__SkBVq'>
 					<div className='advantage__1vF4S'>
 						<img
 							className='advantage__img__2uWaX'
@@ -179,7 +214,7 @@ const MainBody = () => {
 				</h2>
 				<img
 					className='about__image__Ry7YU'
-					src={darkMode  ?  daigram : daigram_light}
+					src={darkMode ? daigram : daigram_light}
 					alt='What is omni'
 				/>
 				<div className='about__info__3eAVO'>
@@ -192,7 +227,11 @@ const MainBody = () => {
 							exchanges.
 						</span>
 					</p>
-					<Link to='/' className='button button_glassy' style={{ backgroundColor : darkMode ? '#07315d' : '#649dbe' }}>
+					<Link
+						to='/'
+						className='button button_glassy action_button_def'
+						style={{ backgroundColor: darkMode ? "#07315d" : "#649dbe" }}
+					>
 						Action Button
 						<img
 							className='button__arrow'
@@ -254,7 +293,7 @@ const MainBody = () => {
 					>
 						<img
 							height={70}
-							src={darkMode ? certik_dark :  certik_light}
+							src={darkMode ? certik_dark : certik_light}
 							id='certik'
 							alt='Audits CertiK'
 						/>
@@ -416,18 +455,39 @@ const MainBody = () => {
 			{/* omnidex calculations */}
 
 			<section className='calculations_container'>
-				<div className='calculations_inner' style={{ backgroundColor: darkMode ? '#0c1d42b2' : 'hsl(0deg 0% 79% / 61%)' }}>
+				<div
+					className='calculations_inner'
+					style={{
+						backgroundColor: darkMode
+							? "#0c1d42b2"
+							: "hsl(0deg 0% 79% / 61%)",
+					}}
+				>
 					<div className='calc_title'>
 						<span>Omni-DEX</span>
-						<span style={darkMode ?  {  } : {backgroundColor : '#a8adb3', borderRadius: '.5rem', padding: '.5rem .6rem .4rem'}}>
-
-						<FiSettings color='#fff' size={26}  />
+						<span
+							style={
+								darkMode
+									? {}
+									: {
+											backgroundColor: "#a8adb3",
+											borderRadius: ".5rem",
+											padding: ".5rem .6rem .4rem",
+									  }
+							}
+						>
+							<FiSettings color='#fff' size={26} />
 						</span>
 					</div>
 					<div className='calc_swap_container'>
 						<div className='calc_swap_block'>
 							<div className='token_indicator'>
-								<div className='token_indicator_container' style={{ backgroundColor : darkMode ? '#031730' : '#a8adb3' }}>
+								<div
+									className='token_indicator_container'
+									style={{
+										backgroundColor: darkMode ? "#031730" : "#a8adb3",
+									}}
+								>
 									<img
 										src={ethereum}
 										height={24}
@@ -437,12 +497,43 @@ const MainBody = () => {
 								</div>
 							</div>
 							<div className='token_input_buttons'>
-								<div className='token-amount-input-container' style={{ backgroundColor : darkMode ? '#081e3f' : '#becad5' }} >
-									<input type='text' style={{ color :  darkMode ? '#fff' : '#666a6c' }} />
-									<button type='button' style={{ backgroundColor : darkMode ? '#050d21' : '#919ba6' }}>ETH</button>
+								<div
+									className='token-amount-input-container'
+									style={{
+										backgroundColor: darkMode ? "#081e3f" : "#becad5",
+									}}
+								>
+									<input
+										type='text'
+										style={{ color: darkMode ? "#fff" : "#666a6c" }}
+									/>
+									<button
+										type='button'
+										style={{
+											backgroundColor: darkMode
+												? "#050d21"
+												: "#919ba6",
+										}}
+									>
+										ETH
+									</button>
 								</div>
 								<div>
-									<button type='button' className='token_info_buttons' style={ darkMode ? { backgroundColor :  '#081e3f', color : '#fff' } : {backgroundColor : '#becad5', color : '#666a6c' }}>
+									<button
+										type='button'
+										className='token_info_buttons'
+										style={
+											darkMode
+												? {
+														backgroundColor: "#081e3f",
+														color: "#fff",
+												  }
+												: {
+														backgroundColor: "#becad5",
+														color: "#666a6c",
+												  }
+										}
+									>
 										$4,259
 									</button>
 								</div>
@@ -460,31 +551,87 @@ const MainBody = () => {
 							</button>
 						</div>
 						<div className='calc_swap_block calc_swap_block_block'>
-							<span style={{ display : 'flex'}}>
-							<div className='token_indicator'>
-								<div className='token_indicator_container' style={{ backgroundColor : darkMode ? '#031730' : '#a8adb3' }}>
-									<img
-										src={ethereum}
-										height={24}
-										width={24}
-										alt='token'
-									/>
+							<span style={{ display: "flex" }}>
+								<div className='token_indicator'>
+									<div
+										className='token_indicator_container'
+										style={{
+											backgroundColor: darkMode
+												? "#031730"
+												: "#a8adb3",
+										}}
+									>
+										<img
+											src={ethereum}
+											height={24}
+											width={24}
+											alt='token'
+										/>
+									</div>
 								</div>
-							</div>
-							<div className='token_input_buttons'>
-								<div className='token-amount-input-container' style={{ backgroundColor : darkMode ? '#081e3f' : '#becad5' }}>
-									<input type='text' style={{ color :  darkMode ? '#fff' : '#666a6c' }} />
-									<button type='button' style={{ backgroundColor : darkMode ? '#050d21' : '#919ba6' }} >OMNI</button>
+								<div className='token_input_buttons'>
+									<div
+										className='token-amount-input-container'
+										style={{
+											backgroundColor: darkMode
+												? "#081e3f"
+												: "#becad5",
+										}}
+									>
+										<input
+											type='text'
+											style={{
+												color: darkMode ? "#fff" : "#666a6c",
+											}}
+										/>
+										<button
+											type='button'
+											style={{
+												backgroundColor: darkMode
+													? "#050d21"
+													: "#919ba6",
+											}}
+										>
+											OMNI
+										</button>
+									</div>
+									<div>
+										<button
+											type='button'
+											className='token_info_buttons'
+											style={
+												darkMode
+													? {
+															backgroundColor: "#081e3f",
+															color: "#fff",
+													  }
+													: {
+															backgroundColor: "#becad5",
+															color: "#666a6c",
+													  }
+											}
+										>
+											$4,259
+										</button>
+										<button
+											type='button'
+											className='token_info_buttons'
+											style={
+												darkMode
+													? {
+															backgroundColor: "#081e3f",
+															color: "#fff",
+													  }
+													: {
+															backgroundColor: "#becad5",
+															color: "#666a6c",
+													  }
+											}
+										>
+											Est. Fee $70
+										</button>
+									</div>
 								</div>
-								<div>
-									<button type='button' className='token_info_buttons' style={ darkMode ? { backgroundColor :  '#081e3f', color : '#fff' } : {backgroundColor : '#becad5', color : '#666a6c' }}>
-										$4,259
-									</button>
-									<button type='button' className='token_info_buttons' style={ darkMode ? { backgroundColor :  '#081e3f', color : '#fff' } : {backgroundColor : '#becad5', color : '#666a6c' }}>
-										Est. Fee $70
-									</button>
-								</div>
-							</div>
 							</span>
 							<Link
 								to='/'
@@ -512,7 +659,14 @@ const MainBody = () => {
 			{/* omnidex calculations */}
 
 			<section className='doc-container__3Ot-h'>
-				<div className='doc__3KXY3' style={{ backgroundColor: darkMode ? '#0c1d42b2' : 'hsl(0deg 0% 79% / 61%)' }}>
+				<div
+					className='doc__3KXY3'
+					style={{
+						backgroundColor: darkMode
+							? "#0c1d42b2"
+							: "hsl(0deg 0% 79% / 61%)",
+					}}
+				>
 					<div className='doc__info__1QgQf'>
 						<h2 className='doc__title__2v02J'>Documentation</h2>
 						<p className='doc__text__1LslB'>
@@ -572,124 +726,100 @@ const MainBody = () => {
 			</section>
 			<footer className='footer_container'>
 				<div className='_2CnzWZ7-9CkSBh7Czhrq7O'>
-				<div className='xKGRxEZ58RoSqMJGbrrq6'>
-					<div>
-						<h3 className='_1taTtc7XhIMqvwCgfnppti'>Community</h3>
-						<nav className='_3jt2oztRe9u2DB6DlqqmE_'>
-							<Link to='/'
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-							>
-								<img
-									src={facebook}
-									alt='facebook'
-								/>
-							</Link>
-							<Link
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-								to='/'
-							>
-								<img src={discord} alt='dicord' />
-							</Link>
-							<Link
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-								to='/'
-							>
-								<img src={twitter} alt='twitter' />
-							</Link>
-							<Link
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-								to='/'
-							>
-								<img src={telegram} alt='telegram' />
-							</Link>
-							<Link
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-								to='/'
-							>
-								<img src={email} alt='email' />
-							</Link>
-							<Link
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-								to='/'
-							>
-								<img src={github} alt='github' />
-							</Link>
-							<Link
-								className='_2AYjj8ChaxuGx00GqNpb3u'
-								to='/'
-							>
-								<img src={coingecko} alt='coingecko' />
-							</Link>
-
-						</nav>
+					<div className='xKGRxEZ58RoSqMJGbrrq6'>
+						<div>
+							<h3 className='_1taTtc7XhIMqvwCgfnppti'>Community</h3>
+							<nav className='_3jt2oztRe9u2DB6DlqqmE_'>
+								<Link to='/' className='_2AYjj8ChaxuGx00GqNpb3u'>
+									<img src={facebook} alt='facebook' />
+								</Link>
+								<Link className='_2AYjj8ChaxuGx00GqNpb3u' to='/'>
+									<img src={discord} alt='dicord' />
+								</Link>
+								<Link className='_2AYjj8ChaxuGx00GqNpb3u' to='/'>
+									<img src={twitter} alt='twitter' />
+								</Link>
+								<Link className='_2AYjj8ChaxuGx00GqNpb3u' to='/'>
+									<img src={telegram} alt='telegram' />
+								</Link>
+								<Link className='_2AYjj8ChaxuGx00GqNpb3u' to='/'>
+									<img src={email} alt='email' />
+								</Link>
+								<Link className='_2AYjj8ChaxuGx00GqNpb3u' to='/'>
+									<img src={github} alt='github' />
+								</Link>
+								<Link className='_2AYjj8ChaxuGx00GqNpb3u' to='/'>
+									<img src={coingecko} alt='coingecko' />
+								</Link>
+							</nav>
+						</div>
+						<div>
+							<h3 className='_1taTtc7XhIMqvwCgfnppti'>Documents</h3>
+							<nav className='RmujUMsYkKkkuRY8eS296'>
+								<Link to='/'>
+									Pitch Deck
+									<img
+										className='arrow__3f0-7'
+										src={arrow}
+										height={15}
+										width={35}
+										alt='arrow'
+									/>
+								</Link>
+								<Link to='/'>
+									One Pager
+									<img
+										className='arrow__3f0-7'
+										src={arrow}
+										height={15}
+										width={35}
+										alt='arrow'
+									/>
+								</Link>
+								<Link to='/'>
+									Roadmap
+									<img
+										className='arrow__3f0-7'
+										src={arrow}
+										height={15}
+										width={35}
+										alt='arrow'
+									/>
+								</Link>
+							</nav>
+						</div>
+						<div>
+							<h3 className='_1taTtc7XhIMqvwCgfnppti'>Company</h3>
+							<nav className='RmujUMsYkKkkuRY8eS296'>
+								<Link to='/'>
+									Merch Shop
+									<img
+										className='arrow__3f0-7'
+										src={arrow}
+										height={15}
+										width={35}
+										alt='arrow'
+									/>
+								</Link>
+								<Link to='/'>
+									Contact Our Team
+									<img
+										className='arrow__3f0-7'
+										src={arrow}
+										height={15}
+										width={35}
+										alt='arrow'
+									/>
+								</Link>
+							</nav>
+						</div>
 					</div>
-					<div>
-						<h3 className='_1taTtc7XhIMqvwCgfnppti'>Documents</h3>
-						<nav className='RmujUMsYkKkkuRY8eS296'>
-							<Link to='/'>
-								Pitch Deck
-								<img
-									className='arrow__3f0-7'
-									src={arrow}
-									height={15}
-									width={35}
-									alt='arrow'
-								/>
-							</Link>
-							<Link to='/'>
-								One Pager
-								<img
-									className='arrow__3f0-7'
-									src={arrow}
-									height={15}
-									width={35}
-									alt='arrow'
-								/>
-							</Link>
-							<Link to='/'>
-								Roadmap
-								<img
-									className='arrow__3f0-7'
-									src={arrow}
-									height={15}
-									width={35}
-									alt='arrow'
-								/>
-							</Link>
-						</nav>
-					</div>
-					<div>
-						<h3 className='_1taTtc7XhIMqvwCgfnppti'>Company</h3>
-						<nav className='RmujUMsYkKkkuRY8eS296'>
-							<Link to='/'>
-								Merch Shop
-								<img
-									className='arrow__3f0-7'
-									src={arrow}
-									height={15}
-									width={35}
-									alt='arrow'
-								/>
-							</Link>
-							<Link to='/'>
-								Contact Our Team
-								<img
-									className='arrow__3f0-7'
-									src={arrow}
-									height={15}
-									width={35}
-									alt='arrow'
-								/>
-							</Link>
-						</nav>
-					</div>
-				</div>
-				<p className='nEVyhRp2L427W-NvwfPEX'>
-					©Copyright Omni 2021,{" "}
-					<Link to='/' className='_3d4_tKssgilyA1Tcp3MBFt'>
-						Privacy policy
-					</Link>
-				</p>
+					<p className='nEVyhRp2L427W-NvwfPEX'>
+						©Copyright Omni 2021,{" "}
+						<Link to='/' className='_3d4_tKssgilyA1Tcp3MBFt'>
+							Privacy policy
+						</Link>
+					</p>
 				</div>
 			</footer>
 		</div>

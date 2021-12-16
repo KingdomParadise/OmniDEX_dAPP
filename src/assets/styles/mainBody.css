@@ -177,6 +177,10 @@ url('../images/right-gradient-banner.png')
 	z-index: 1;
 }
 
+.screen__info__2QpSI_secondary {
+	display: none;
+}
+
 .screen__big-cube__mMoMv {
 	position: absolute;
 	right: -31px;
@@ -991,6 +995,13 @@ url('../images/right-gradient-banner.png')
 }
 
 @media (max-width: 480px) {
+	.screen__info__2QpSI {
+		display: none;
+	}
+	.screen__info__2QpSI_secondary {
+		display: block ;
+		margin-top: 415px;
+	}
 	.grants__32DqA {
 		padding-top: 80px;
 		text-align: left;
@@ -1036,10 +1047,12 @@ url('../images/right-gradient-banner.png')
 		display: inline;
 	}
 	.partners__main-cube__3H4O7 {
-		top: 20px;
+		top: 65px;
+		right: -140px;
 	}
 	.partners__blured-cube__Pv_-u {
-		top: -70px;
+		top: -9px;
+    left: -76px;
 	}
 	.partners__blocks__1hYQ4 {
 		grid-template-columns: 1fr;
@@ -1081,6 +1094,11 @@ url('../images/right-gradient-banner.png')
 	.trade__3nosP a {
 		width: 100%;
 	}
+	.action_button_def {
+		margin-bottom: 15px;
+		margin-right: 0 !important;
+	}
+	
 }
 
 .gradient__31T_H {
@@ -1101,16 +1119,17 @@ url('../images/right-gradient-banner.png')
 		margin-top: 15px;
 	}
 	.omniDex_advantages {
-		margin-top: 380px;
+		margin-top: 54px;
 	}
 	.landing_instruction_search  {
 		margin: .5rem .8rem;
 	}
 	.screen_instruction_inner {
 		width: auto;
+		height: 360px;
 	}
 	.screen_instruction_inner .input-field {
-		width: auto;
+		width: 96%;
 	}
 	.audits__list__3OBjG {
 		flex-direction: column;
@@ -1187,6 +1206,14 @@ url('../images/right-gradient-banner.png')
 }
 
 @media (max-width: 480px) {
+	.screen__big-cube__mMoMv {
+		margin-right: 16px;
+	}
+
+	.screen__blured-cube__5rokD {
+	bottom: -346px;	
+	}
+
 	.screen__3DOGq {
 		margin-bottom: 65px;
 		padding-top: 30px;
@@ -1231,7 +1258,7 @@ url('../images/right-gradient-banner.png')
 
 @media (max-width: 900px) {
 	.advantage__1vF4S {
-		width: 300px;
+		width: auto;
 	}
 	.advantage__1vF4S:last-child {
 		margin-bottom: 0;
@@ -1282,6 +1309,10 @@ url('../images/right-gradient-banner.png')
 	}
 }
 @media (max-width: 480px) {
+	.gradient {
+		display: none;
+		width: 0;
+	}
 	.subscription__2SoKh {
 		margin-top: 80px;
 		padding-top: 30px;

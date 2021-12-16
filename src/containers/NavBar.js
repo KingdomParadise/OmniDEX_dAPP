@@ -45,8 +45,8 @@ const NavBar = () => {
 								<div className='toggle_bar' />
 							</button>
 						</div>
-						<Link to='/' className='action_button' style={{ backgroundColor : darkMode ? '#2ca8e3' : '#649dbe' }}>
-							Action Button
+						<Link to='/dex' className='action_button' style={{ backgroundColor : darkMode ? '#2ca8e3' : '#649dbe' }}>
+							Launch App
 						</Link>
 					</div>
 				</div>

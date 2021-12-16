@@ -113,6 +113,12 @@ a {
 	color: var(--omni-base-02);
 	text-decoration: none;
 }
+
+a:hover {
+	color: #fff !important;
+	text-decoration: none !important;
+}
+
 .button {
 	border-radius: 6px;
 	color: #fff;
