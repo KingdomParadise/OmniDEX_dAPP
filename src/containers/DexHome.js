@@ -34,7 +34,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
-import Page1Body from './Page1Body'
+import DexHomeBody from './DexHomeBody'
 import "../assets/styles/page1.css";
 import logo from "../assets/images/logo.svg";
 import swap from "../assets/sidebar/swap.png";
@@ -211,7 +211,7 @@ export default function PersistentDrawerLeft() {
       </Drawer>
       <Main open={open} className="p-0">
         <DrawerHeader />
-        <Page1Body />
+        <DexHomeBody />
       </Main>
     </Box>
   );

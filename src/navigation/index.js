@@ -1,16 +1,15 @@
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
-import Swap from '../containers/DEX/Swap'
-import Swap1 from '../containers/DEX/Swap1'
+import Swap from '../containers/DEX/Swap1'
 import Home from '../containers/Home'
-import Page1 from '../containers/Page1'
+import DexHome from '../containers/DexHome'
 
 const Navigation = () => {
     return (
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dex" element={<Page1 />} />
-        <Route path="/dex/swap" element={<Swap1 />} />
+        <Route path="/dex" element={<DexHome />} />
+        <Route path="/dex/swap" element={<Swap />} />
       </Routes>
     )
 }

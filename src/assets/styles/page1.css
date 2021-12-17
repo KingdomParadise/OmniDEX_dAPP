@@ -1,4 +1,5 @@
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
 .bg-app{
     background-color: #182845;
 }
@@ -16,8 +17,9 @@
     flex-direction: column;
     background-color: #182845;
     height: 90vh;
-    padding:2rem 3rem;
+    padding:2rem 3rem 0 3rem;
     overflow-y: scroll;
+    position: relative;
 }
 
 .color2{
@@ -30,6 +32,8 @@
     border-radius: 24px;
     background-color: rgba(13, 27, 55, 0.4);
     padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
 }
 .launchBtn{
     background-color: #0a3662;
@@ -51,13 +55,15 @@
     padding:.5rem;
 }
 .rect3{
-    background-color: #233557;
+    background-color: #23355780;
     background-image: url(../images/page1/hot-farm-bg.png);
     background-position: center;
     background-size: auto;
     border-radius: 24px;
     
     padding: 2rem 2rem;
+    position: relative;
+    z-index: 10;
 }
 .rect4{
     background-color: rgba(19, 34, 62, 0.4);
@@ -67,15 +73,19 @@
     border-radius: 24px;
     
     padding: 2rem 2rem;
+    position: relative;
+    z-index: 10;
 }
 .rect5{
     background-color: #13223e;
-    /* background-image: url(../images/page1/cool-pools-bg.png);
+    background-image: url(../images/page1/dots-bg.png);
     background-position: center;
-    background-size: cover; */
+    background-size: cover;
     border-radius: 24px;
     
     padding: 2rem 2rem;
+    position: relative;
+    z-index: 10;
 }
 .rect5-item1{
     width: 520px;
@@ -90,4 +100,159 @@
     width: 520px;
     justify-content: space-between;
     display: flex;
+}
+.newsLetter{
+    background: linear-gradient(to right, #2fabe6, #07528f);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding:2rem;
+    margin-top: 3rem;
+}
+.fs-lg{
+    font-size: 24px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* footer css ----- */
+
+.footer_container {
+	background-color:var(--bg-footer) ;
+}
+
+._2CnzWZ7-9CkSBh7Czhrq7O {
+	margin: 0 auto;
+	max-width: 1220px;
+	padding: 76px 20px 0;
+	position: relative;
+	z-index: 1;
+	padding-bottom: 96px;
+}
+
+._2CnzWZ7-9CkSBh7Czhrq7O {
+	padding-bottom: 96px;
+	padding-top: 76px;
+}
+._1taTtc7XhIMqvwCgfnppti {
+	color: #bec2cb;
+	font-size: 25px;
+	line-height: 1.6;
+	margin: 0 0 39px;
+}
+.xKGRxEZ58RoSqMJGbrrq6 {
+	grid-gap: 60px 40px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(-webkit-min-content, 265px));
+	grid-template-columns: repeat(auto-fit, minmax(min-content, 265px));
+	justify-content: space-between;
+}
+
+._3jt2oztRe9u2DB6DlqqmE_ {
+	grid-gap: 24px;
+	display: grid;
+	grid-template-columns: repeat(5, 56px);
+}
+
+._2AYjj8ChaxuGx00GqNpb3u {
+	align-items: center;
+	background: #0d1d36;
+	border-radius: 50%;
+	color: #fff;
+	display: grid;
+	height: 56px;
+	justify-content: center;
+	transition: 0.1s ease-in-out;
+	width: 56px;
+}
+._2AYjj8ChaxuGx00GqNpb3u:hover {
+	opacity: 0.66;
+}
+/* ._2AYjj8ChaxuGx00GqNpb3u img {
+	filter: var(--filter-invert);
+} */
+
+.RmujUMsYkKkkuRY8eS296 {
+	grid-gap: 19px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.RmujUMsYkKkkuRY8eS296 a {
+	align-items: center;
+	display: flex;
+	font-size: 18px;
+	font-weight: 600;
+	justify-content: space-between;
+	line-height: 1.45;
+	color: #fff;
+	width: 100%;
+}
+.RmujUMsYkKkkuRY8eS296 a img {
+	transition: 0.1s ease-in;
+}
+.RmujUMsYkKkkuRY8eS296 a:hover {
+	text-decoration: none;
+}
+.RmujUMsYkKkkuRY8eS296 a:hover img {
+	transform: translateX(3px);
+}
+
+.nEVyhRp2L427W-NvwfPEX {
+	color: #878787;
+	margin: 53px 0 0;
+}
+
+._3d4_tKssgilyA1Tcp3MBFt {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.trade__3nosP {
+	margin: 0 auto;
+	max-width: 1220px;
+	padding: 150px 20px 0;
+	position: relative;
+	z-index: 1;
+}
+.footer_container{
+    margin-left: -2rem;
+    margin-right: -2rem;
+}
+.cubeImage{
+    position: absolute;
+    bottom:40px;
+    left:-20px;
+    z-index: 3;
+    width: 60px;
+}
+.cubeImage1{
+    position: absolute;
+    bottom:0px;
+    right:1px;
+    z-index: 3;
+    width: 60px;
+}
+.cubeImage2{
+    position: absolute;
+    top:-10px;
+    left:0px;
+    z-index: 3;
+    width: 40px;
+}
+.rect1bgImage{
+    position: absolute;
+    width: 100%;
+    left:-20px;
+    z-index: 3;
 }
