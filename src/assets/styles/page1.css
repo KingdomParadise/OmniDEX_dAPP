@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap");
 .bg-app{
     background-color: #182845;
 }
@@ -16,10 +16,22 @@
     display: flex;
     flex-direction: column;
     background-color: #182845;
-    height: 90vh;
-    padding:2rem 3rem 0 3rem;
-    overflow-y: scroll;
+    /* height: 90vh; */
+    padding:2rem .5rem 0 .5rem;
+    
     position: relative;
+    font-family: "Inter", sans-serif;
+}
+.rocketImg{
+    margin-left:-80px;
+    width: 160px;
+}
+.dotLogo{
+    width: 70px;
+}
+.cFont{
+    font-family: "Inter", sans-serif !important;
+    font-weight: 800 !important;
 }
 
 .color2{
@@ -83,12 +95,12 @@
     background-size: cover;
     border-radius: 24px;
     
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
     position: relative;
     z-index: 10;
 }
 .rect5-item1{
-    width: 520px;
+    width: 100%;
     background-color: #172847;
     padding:1rem 2rem;
     display: flex;
@@ -97,18 +109,19 @@
 .rect5-item2{
     background-color:#0f1d38;
     padding:1rem 2rem;
-    width: 520px;
+    width: 100%;
     justify-content: space-between;
     display: flex;
 }
 .newsLetter{
     background: linear-gradient(to right, #2fabe6, #07528f);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-left: -2rem;
     margin-right: -2rem;
-    padding:2rem;
+    padding:3rem;
     margin-top: 3rem;
 }
 .fs-lg{
@@ -129,6 +142,7 @@
 
 .footer_container {
 	background-color:var(--bg-footer) ;
+    padding-left: 2rem;
 }
 
 ._2CnzWZ7-9CkSBh7Czhrq7O {
@@ -255,4 +269,61 @@
     width: 100%;
     left:-20px;
     z-index: 3;
+}
+.slide{
+    width: 100%;
+    background-color: #13223e;
+    margin:40px;
+    padding:20px;
+    text-align: left !important;
+}
+.carousel .slider-wrapper{
+    width: 100%;
+    overflow: hidden;       
+}
+@media (min-width: 768px) {
+    .page1BodyContainer{
+        padding:2rem 4rem 0 4rem;
+    }
+    .rocketImg{
+        width: 240px;
+        position: relative;
+        top: 1.5rem;
+        margin-left:0
+        
+    }
+    .dotLogo{
+        width: 120px;
+    }
+    .rect5-item1{
+        width: 520px;
+    }
+    .rect5-item2{
+        width: 520px;
+    }
+    .rect5{
+        
+        padding: 2rem 2rem;
+    }
+    .newsLetter{
+        background: linear-gradient(to right, #2fabe6, #07528f);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: -2rem;
+        margin-right: -2rem;
+        padding:3rem;
+        margin-top: 3rem;
+        flex-direction: row;
+    }
+    .footer_container {
+        padding-left: 2rem;
+    }
+    .slide{
+        width: 200px;
+        background-color: #13223e;
+        margin:40px;
+        padding:20px;
+    }
+   
 }

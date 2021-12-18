@@ -1,98 +1,115 @@
-// import React from 'react'
-// import Sidebar from '../components/Sidebar'
-// import Page1Body from './Page1Body'
-
-//  const Page1 = () =>  {
-//     return (
-//         <div className='d-flex'>
-//             <Sidebar />
-//             <Page1Body />
-//         </div>
-      
-//     )
-// }
-
-// export default Page1
-
-import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
-import MuiAppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import React, { useEffect } from "react";
+import clsx from "clsx";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import {
+  Hidden,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  List,
+  Typography,
+  Divider,
+  IconButton,
+  AppBar,
+  Toolbar,
+  CssBaseline,
+  Drawer,
+  useMediaQuery,
+} from "@material-ui/core";
+import { Menu, ChevronLeft, Inbox, Mail, Home } from "@material-ui/icons";
 
 import DexHomeBody from './DexHomeBody'
 import "../assets/styles/page1.css";
-import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/page1/vision-logo.png";
 import swap from "../assets/sidebar/swap.png";
 import bridge from "../assets/sidebar/bridge.png";
 import staking from "../assets/sidebar/staking.png";
+import multiChain from '../assets/sidebar/multichain.png'
+import farming from '../assets/sidebar/farming.png'
+import nft from '../assets/sidebar/nft.png'
 import more from "../assets/sidebar/more.png";
 import burgerMenu from "../assets/images/slider-icon.png";
-import bsc from  '../assets/images/bsc.png'
-const drawerWidth = 240;
+import bsc from '../assets/images/bsc.png'
+import { Routes, Route, Link } from "react-router-dom";
+import Swap from '../containers/DEX/Swap'
+const drawerWidth = 280;
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: `-${drawerWidth}px`,
-    ...(open && {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+  },
+  appBar: {
+    [theme.breakpoints.up("sm")]: {
+      transition: theme.transitions.create(["margin", "width"], {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.leavingScreen,
       }),
-      marginLeft: 0,
-    }),
-  }),
-);
-
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
+      flexShrink: 0,
+    },
+  },
+  appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(['margin', 'width'], {
+    marginLeft: drawerWidth,
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
-  }),
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  hide: {
+    display: "none",
+  },
+  drawer: {
+    [theme.breakpoints.up("sm")]: {
+      width: drawerWidth,
+      flexShrink: 0,
+    },
+  },
+  drawerPaper: {
+    background: '#0b172d',
+    width: drawerWidth,
+  },
+  drawerHeader: {
+    display: "flex",
+    alignItems: "center",
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: "flex-end",
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(0),
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    [theme.breakpoints.up("sm")]: {
+      marginLeft: -drawerWidth,
+    },
+  },
+  contentShift: {
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
+  },
 }));
 
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
-}));
-
-export default function PersistentDrawerLeft() {
+export default function ResponsiveDrawer() {
+  const classes = useStyles();
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true );
+  const [open, setOpen] = React.useState(false);
+  const [isMobileOpen, setIsMobileOpen] = React.useState(false);
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const handleSmallScreenDrawerToggle = () => {
+    setIsMobileOpen(!isMobileOpen);
+  };
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -102,117 +119,159 @@ export default function PersistentDrawerLeft() {
     setOpen(false);
   };
 
+  const drawerItem = (
+    <div>
+      <List>
+        <Link to="/dex" className="text-white">
+          <ListItem button>
+          <ListItemIcon>
+             <Home style={{color:'white'}}/> 
+          </ListItemIcon>
+          <ListItemText primary='Home' />
+          </ListItem>
+        </Link>
+        <Link to="/dex/swap" className="text-white">
+          <ListItem button>
+            <ListItemIcon>
+              <img className="mr-2" src={swap} width={25} alt='swap' />
+            </ListItemIcon>
+            <ListItemText primary='Swap' />
+          </ListItem>
+        </Link>
+        
+        <Link to="/dex/swap" className="text-white">
+          <ListItem button>
+            <ListItemIcon>
+              <img className="mr-2" src={bridge} width={25} alt='bridge' />
+            </ListItemIcon>
+            <ListItemText primary='Bridge' />
+          </ListItem>
+        </Link>
+        <Link to="/dex/swap" className="text-white">
+
+
+          <ListItem button>
+            <ListItemIcon>
+              <img className="mr-2" src={multiChain} width={25} alt='multichain' />
+            </ListItemIcon>
+            <ListItemText primary='Multi-Chain' />
+          </ListItem>
+        </Link>
+        <Link to="/dex/swap" className="text-white">
+
+
+          <ListItem button>
+            <ListItemIcon>
+              <img className="mr-2" src={staking} width={25} alt='staking' />
+            </ListItemIcon>
+            <ListItemText primary='Staking' />
+          </ListItem>
+        </Link>
+        <Link to="/dex/swap" className="text-white">
+
+
+          <ListItem button>
+            <ListItemIcon>
+              <img className="mr-2" src={farming} width={25} alt='farming' />
+            </ListItemIcon>
+            <ListItemText primary='Farming' />
+          </ListItem>
+        </Link>
+        <Link to="/dex/swap" className="text-white">
+          <ListItem button>
+            <ListItemIcon>
+              <img className="mr-2" src={nft} width={25} alt='nft' />
+            </ListItemIcon>
+            <ListItemText primary='NFT' />
+          </ListItem>
+        </Link>
+
+        <Link to="/dex/swap" className="text-white">
+          <ListItem button>
+            <ListItemIcon>
+              <img className="mr-2" src={more} width={25} alt='more' />
+            </ListItemIcon>
+            <ListItemText primary='More' />
+          </ListItem>
+        </Link>
+
+      </List>
+    </div>
+  );
+
+  useEffect(() => {
+    setOpen(!isSmallScreen);
+  }, [isSmallScreen]);
+
   return (
-    <Box sx={{ display: 'flex' }}>
+    <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
-        <Toolbar className="toolBar d-flex justify-content-between bg-app">
-            <div className="d-flex">
+      <AppBar
+        position="fixed"
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: open,
+        })}
+      >
+        <Toolbar className="toolBar bg-app">
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            onClick={handleDrawerOpen}
+            onClick={isSmallScreen ? handleSmallScreenDrawerToggle : handleDrawerOpen}
             edge="start"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            className={clsx(classes.menuButton, open && classes.hide)}
           >
-            <MenuIcon />
+            <Menu />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            <div className="d-md-none">
-                <img src={logo} height={50} width={160} alt='OmniDEX logo' />
-            </div> 
-            
+          <Typography variant="h6" noWrap>
+            <img src={logo} width={170} alt='OmniDEX logo' />
           </Typography>
-          </div>
-          <div>
-          <button className="btn btn-trans mr-3">
-                <img src={bsc} width={30} alt="bsc" className="mr-2"/>
-                BSC
-            </button>
-          <button className="btn btn-primary px-md-5">Action Button</button>
-          </div>
-          
         </Toolbar>
       </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-            background: '#0f1d36',
-            color: 'white'
-          },
-        }}
-        variant="persistent"
-        anchor="left"
-        open={open}
-      >
-        <DrawerHeader >
-          <IconButton onClick={handleDrawerClose}>
-            {/* {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />} */}
-            <img className="mr-3" src={burgerMenu} width={30} alt='menu' />
-          </IconButton>
-          <div className="d-none d-md-block">
-                <img src={logo} height={50} width={160} alt='OmniDEX logo' />
+      <nav className={classes.drawer}>
+        <Hidden smUp implementation="css">
+          <Drawer
+            variant="temporary"
+            anchor={theme.direction === "rtl" ? "right" : "left"}
+            open={isMobileOpen}
+            onClose={handleSmallScreenDrawerToggle}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            {drawerItem}
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown implementation="css">
+          <Drawer
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            variant="persistent"
+            open={open}
+          >
+            <div className={classes.drawerHeader}>
+              <IconButton onClick={handleDrawerClose}>
+                <ChevronLeft className="text-white"/>
+              </IconButton>
             </div>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          {/* {['Swap', 'Bridge', 'Multi-Chain', 'Staking'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          ))} */}
-           <ListItem button>
-              <ListItemIcon>
-                <img className="mr-2" src={swap} width={25} alt='swap' />
-              </ListItemIcon>
-              <ListItemText primary='Swap' />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <img className="mr-2" src={bridge} width={25} alt='bridge' />
-              </ListItemIcon>
-              <ListItemText primary='Bridge' />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-              </ListItemIcon>
-              <ListItemText primary='Multi-Chain' />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-                <img className="mr-2" src={staking} width={25} alt='staking' />
-              </ListItemIcon>
-              <ListItemText primary='Staking' />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-              </ListItemIcon>
-              <ListItemText primary='Farming' />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-              </ListItemIcon>
-              <ListItemText primary='NFT' />
-            </ListItem>
-            <ListItem button>
-              <ListItemIcon>
-              <img className="mr-2" src={more} width={25} alt='more' />
-              </ListItemIcon>
-              <ListItemText primary='More' />
-            </ListItem>
-        </List>
-      </Drawer>
-      <Main open={open} className="p-0">
-        <DrawerHeader />
-        <DexHomeBody />
-      </Main>
-    </Box>
+            <Divider />
+            {drawerItem}
+          </Drawer>
+        </Hidden>
+      </nav>
+      <main
+        className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}
+      >
+        <div className={classes.drawerHeader} />
+        <Routes>
+          <Route path="/" element={<DexHomeBody />}>
+          </Route>
+          <Route path="/swap" element={<Swap />}>
+          </Route>
+        </Routes>
+      </main>
+    </div>
   );
 }

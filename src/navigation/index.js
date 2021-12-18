@@ -8,8 +8,7 @@ const Navigation = () => {
     return (
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dex" element={<DexHome />} />
-        <Route path="/dex/swap" element={<Swap />} />
+        <Route path="/dex/*" element={<DexHome />} />
       </Routes>
     )
 }
