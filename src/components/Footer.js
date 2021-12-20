@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
 	return (
-		<footer className='footerContainer mt-5'>
+		<footer className='footerContainer'>
 			<div className='footer_container_inner'>
 				<h3 className='footerContainerHeading'>Community</h3>
 				<nav className='footerLinks d-flex justify-content-center'>

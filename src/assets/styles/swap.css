@@ -1,6 +1,17 @@
 button:focus {
 	outline: none !important;
 }
+
+.swapConatainer {
+	background-color: #182845;
+}
+
+.containerBackgroundImage {
+	background: url("../images/page1/rect1-bg.png") left bottom no-repeat,
+		url("../images/right-gradient-banner.png") right top no-repeat;
+	background-size: cover, 180px;
+}
+
 .middleBox {
 	max-width: 640px;
 	width: 100%;
@@ -251,7 +262,7 @@ button:focus {
 }
 
 .transDeadline input {
-    height: 36px;
+	height: 36px;
 	border-radius: 6px;
 	background-color: #0d162d;
 	color: #fff;
@@ -259,82 +270,82 @@ button:focus {
 	padding: 0 0.4rem;
 	border: none;
 	outline: none;
-    width: 70px;
-    margin-right: .3rem;
-    margin-bottom: 6px;
+	width: 70px;
+	margin-right: 0.3rem;
+	margin-bottom: 6px;
 }
 
 .tokenDetailsActions {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .tokenDetailsActions .switch {
-    position: relative;
-    display: inline-block;
-    width: 42px;
-  height: 20px;
-  }
-  
-  .tokenDetailsActions  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .tokenDetailsActions  .slider {
-    position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0px;
-  right: 2px;
-  padding-right:2px;
-  width: 44px;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-  }
-  
-  .tokenDetailsActions  .slider:before {
-    position: absolute;
-  content: "";
-  height: 12px;
-  width: 12px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-  }
-  
-  .tokenDetailsActions input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  .tokenDetailsActions input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  .tokenDetailsActions input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .tokenDetailsActions .slider.round {
-    border-radius: 34px;
-  }
-  
-  .tokenDetailsActions .slider.round:before {
-    border-radius: 50%;
-  }
+	position: relative;
+	display: inline-block;
+	width: 42px;
+	height: 20px;
+}
+
+.tokenDetailsActions .switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.tokenDetailsActions .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0px;
+	right: 2px;
+	padding-right: 2px;
+	width: 44px;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.tokenDetailsActions .slider:before {
+	position: absolute;
+	content: "";
+	height: 12px;
+	width: 12px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.tokenDetailsActions input:checked + .slider {
+	background-color: #2196f3;
+}
+
+.tokenDetailsActions input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+.tokenDetailsActions input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.tokenDetailsActions .slider.round {
+	border-radius: 34px;
+}
+
+.tokenDetailsActions .slider.round:before {
+	border-radius: 50%;
+}
 
 /* footer css -------- */
 
 .footerContainer {
-	background-color: #182644;
+	background-color: #0b1227;
 }
 
 .footer_container_inner {
@@ -358,4 +369,70 @@ button:focus {
 .footerLinks a {
 	margin-right: 1.2rem;
 	flex-wrap: wrap;
+}
+
+.walletList {
+	min-width: 20rem;
+	/* min-height: 20rem; */
+}
+
+.newToVision {
+	font-size: 17px;
+}
+
+.newToVision span {
+	color: #6198a5;
+	font-size: 18px;
+}
+
+.tokenGrid {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	-webkit-box-align: center;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+	background-color: transparent;
+	padding: 0.8rem 1.4rem;
+	min-width: 10rem;
+	outline: none;
+	border: 2px solid #6198a5;
+	border-radius: 12px;
+	font-size: 20px;
+	margin-bottom: 0.9rem;
+	color: #6198a5;
+	cursor: pointer;
+}
+
+.tokenGrid:hover {
+	border: 2px solid rgb(204, 204, 204);
+}
+
+.singleItem {
+	/* padding: 1rem; */
+	border-radius: 5px;
+	border: 1px solid transparent;
+	background-color: #0e213e;
+}
+
+.tokenCollection {
+	background-color: #1f2838;
+	border-radius: 6px;
+	max-height: 60vh;
+	overflow: auto;
+}
+
+.selectToken .row {
+	height: 60vh;
+}
+
+.tokenImage img {
+	max-width: 38px;
+	max-height: 38px;
+	border-radius: 25%;
+}
+
+.tokenCard {
+	max-width: 150px;
+	margin-right: auto;
 }

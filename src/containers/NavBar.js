@@ -2,11 +2,11 @@ import React, { Fragment, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/header.css";
 import logo from "../assets/images/logo.svg";
-import Popup from "../components/Popup";
+import NavPopup from "../components/NavPopup";
 import { ThemeContext } from "../theme/ThemeContext";
 
 const NavBar = () => {
-	const [togglePopup, settogglePopup] = useState(false);
+	const [toggleNavPopup, settoggleNavPopup] = useState(false);
 	const [toggleSwitch, settoggleSwitch] = useState(true);
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
@@ -37,7 +37,7 @@ const NavBar = () => {
 					<div className='nav_actions'>
 						<div
 							className='nav_toggle_container'
-							onClick={() => settogglePopup(!togglePopup)}
+							onClick={() => settoggleNavPopup(!toggleNavPopup)}
 						>
 							<button className='toggle_button'>
 								<div className='toggle_bar' />
@@ -45,14 +45,14 @@ const NavBar = () => {
 								<div className='toggle_bar' />
 							</button>
 						</div>
-						<Link to='/dex' className='action_button' style={{ backgroundColor : darkMode ? '#2ca8e3' : '#649dbe' }}>
+						<Link to='/dex' className='action_button' style={{ backgroundColor: darkMode ? '#2ca8e3' : '#649dbe' }}>
 							Launch App
 						</Link>
 					</div>
 				</div>
 			</header>
-			{togglePopup ? (
-				<Popup
+			{toggleNavPopup ? (
+				<NavPopup
 					toggleSwitch={toggleSwitch}
 					settoggleSwitch={handleThemeSwitch}
 				/>

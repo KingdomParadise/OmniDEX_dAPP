@@ -9,13 +9,24 @@
 }
 .toolBar{
     height: 10vh;
-    background: #182845;
+    /* background: #182845; */
 }
 .page1BodyContainer{
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #182845;
+    /* height: 90vh; */
+    padding:2rem .5rem 0 .5rem;
+    
+    position: relative;
+    font-family: "Inter", sans-serif;
+}
+.page1BodyContainerLight{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
     /* height: 90vh; */
     padding:2rem .5rem 0 .5rem;
     
@@ -37,6 +48,9 @@
 .color2{
     color:#27ecfe;
 }
+.color2Light{
+    color:#7ea2c1;
+}
 .rect1{
     background-image: url(../images/page1/landing-bg.png);
     background-position: center;
@@ -47,10 +61,25 @@
     position: relative;
     z-index: 10;
 }
+.rect1Light{
+    background-image: url(../images/page1/landing-bg-light.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    background-color: rgba(238, 238, 238, 0.4);
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
+}
 .launchBtn{
     background-color: #0a3662;
     color:white;
 }
+.launchBtnLight{
+    background-color: #759ab9;
+    color:white;
+}
+
 .btn-gradient{
     background-color: skyblue;
     background: linear-gradient(to right, #2fabe5, #07518f);
@@ -60,6 +89,13 @@
     background-image: url(../images/page1/farming-bg.png);
     background-position: center;
     background-size: cover;
+    border-radius: 24px;
+}
+.rect2Light{
+    background-image: url(../images/page1/farming-bg-light.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(222,223,225,.9);
     border-radius: 24px;
 }
 .bgDCB{
@@ -77,9 +113,31 @@
     position: relative;
     z-index: 10;
 }
+.rect3Light{
+    background-color: #23355780;
+    background-image: url(../images/page1/hot-farm-bg-light.png);
+    background-position: center;
+    background-size: auto;
+    border-radius: 24px;
+    background-color: rgb(222,223,225,.9);
+    padding: 2rem 2rem;
+    position: relative;
+    z-index: 10;
+}
 .rect4{
     background-color: rgba(19, 34, 62, 0.4);
     background-image: url(../images/page1/cool-pools-bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    
+    padding: 2rem 2rem;
+    position: relative;
+    z-index: 10;
+}
+.rect4Light{
+    background-color: rgba(19, 34, 62, 0.4);
+    background-image: url(../images/page1/cool-pools-bg-light.png);
     background-position: center;
     background-size: cover;
     border-radius: 24px;
@@ -99,6 +157,17 @@
     position: relative;
     z-index: 10;
 }
+.rect5Light{
+    background-color: #e9eaea;
+    background-image: url(../images/page1/dots-bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 10;
+}
 .rect5-item1{
     width: 100%;
     background-color: #172847;
@@ -106,8 +175,15 @@
     display: flex;
     justify-content: space-between;
 }
-.rect5-item2{
-    background-color:#0f1d38;
+.rect5-item1Light{
+    width: 100%;
+    background-color: #d0e6f5;
+    padding:1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.rect5-item2Light{
+    background-color:#afc9e0;
     padding:1rem 2rem;
     width: 100%;
     justify-content: space-between;
@@ -240,8 +316,8 @@
 	z-index: 1;
 }
 .footer_container{
-    margin-left: -2rem;
-    margin-right: -2rem;
+    margin-left: -3rem;
+    margin-right: -3rem;
 }
 .cubeImage{
     position: absolute;
@@ -277,12 +353,22 @@
     padding:20px;
     text-align: left !important;
 }
+.slideLight{
+    width: 100%;
+    background-color: #e9eaea;
+    margin:40px;
+    padding:20px;
+    text-align: left !important;
+}
 .carousel .slider-wrapper{
     width: 100%;
     overflow: hidden;       
 }
 @media (min-width: 768px) {
     .page1BodyContainer{
+        padding:2rem 4rem 0 4rem;
+    }
+    .page1BodyContainerLight{
         padding:2rem 4rem 0 4rem;
     }
     .rocketImg{
@@ -310,8 +396,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: -2rem;
-        margin-right: -2rem;
+        margin-left: -3rem;
+        margin-right: -3rem;
         padding:3rem;
         margin-top: 3rem;
         flex-direction: row;
@@ -324,6 +410,13 @@
         background-color: #13223e;
         margin:40px;
         padding:20px;
+    }
+    .slideLight{
+        width: 200px;
+        background-color: #e9eaea;
+        margin:40px;
+        padding:20px;
+        text-align: left !important;
     }
    
 }

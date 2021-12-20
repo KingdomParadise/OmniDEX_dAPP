@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "../assets/styles/popup.css";
+import "../assets/styles/navPopup.css";
 import theme_toggle_dark from "../assets/images/popup/dark-mode.png";
 import language_icon from "../assets/images/popup/english-icon.png";
 import tutorial_icon_dark from "../assets/images/popup/tutorial.png";
 import { FiChevronRight } from "react-icons/fi";
 
-const Popup = ({toggleSwitch, settoggleSwitch}) => {
+const NavPopup = ({toggleSwitch, settoggleSwitch}) => {
 	
 	// useEffect(() => {
 	// 	let root = document.getElementsByTagName("html")[0];
@@ -109,4 +109,4 @@ const Popup = ({toggleSwitch, settoggleSwitch}) => {
 	);
 };
 
-export default Popup;
+export default NavPopup;

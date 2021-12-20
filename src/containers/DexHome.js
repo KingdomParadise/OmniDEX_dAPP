@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import {
@@ -32,7 +32,9 @@ import burgerMenu from "../assets/images/slider-icon.png";
 import bsc from '../assets/images/bsc.png'
 import { Routes, Route, Link } from "react-router-dom";
 import Swap from '../containers/DEX/Swap'
+import { ThemeContext } from "../theme/ThemeContext";
 const drawerWidth = 280;
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -72,13 +74,18 @@ const useStyles = makeStyles((theme) => ({
     background: '#0b172d',
     width: drawerWidth,
   },
+  drawerPaperLight: {
+    background: '#7697b0',
+    width: drawerWidth,
+  },
   drawerHeader: {
     display: "flex",
     alignItems: "center",
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: "flex-end",
+    justifyContent: "flex-start",
+    paddingLeft: '2rem'
   },
   content: {
     flexGrow: 1,
@@ -101,6 +108,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ResponsiveDrawer() {
+  const theme1 = useContext(ThemeContext);
+  const darkMode = theme1.state.darkMode;
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -212,7 +221,7 @@ export default function ResponsiveDrawer() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar className="toolBar bg-app">
+        <Toolbar className="toolBar" style={{background: (darkMode? '#182845' : 'white')}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -223,7 +232,7 @@ export default function ResponsiveDrawer() {
             <Menu />
           </IconButton>
           <Typography variant="h6" noWrap>
-            <img src={logo} width={170} alt='OmniDEX logo' />
+            {/* <img src={logo} width={170} alt='OmniDEX logo' /> */}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -235,8 +244,9 @@ export default function ResponsiveDrawer() {
             open={isMobileOpen}
             onClose={handleSmallScreenDrawerToggle}
             classes={{
-              paper: classes.drawerPaper,
+              paper: darkMode ? classes.drawerPaper : classes.drawerPaperLight,
             }}
+            
           >
             {drawerItem}
           </Drawer>
@@ -244,15 +254,16 @@ export default function ResponsiveDrawer() {
         <Hidden xsDown implementation="css">
           <Drawer
             classes={{
-              paper: classes.drawerPaper,
+              paper: darkMode ? classes.drawerPaper : classes.drawerPaperLight,
             }}
             variant="persistent"
             open={open}
           >
             <div className={classes.drawerHeader}>
-              <IconButton onClick={handleDrawerClose}>
+              {/* <IconButton onClick={handleDrawerClose}>
                 <ChevronLeft className="text-white"/>
-              </IconButton>
+              </IconButton> */}
+              <img src={logo} width={170} alt='OmniDEX logo' />
             </div>
             <Divider />
             {drawerItem}

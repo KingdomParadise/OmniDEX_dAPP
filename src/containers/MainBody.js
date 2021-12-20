@@ -40,7 +40,7 @@ import { ThemeContext } from "../theme/ThemeContext";
 
 const MainBody = () => {
 	const theme = useContext(ThemeContext);
-	const darkMode = theme.state.darkMode;
+	const darkMode = theme.state.lightMode;
 
 	return (
 		<div className='home__3KnWO'>

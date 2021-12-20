@@ -1,7 +1,8 @@
-import React from 'react'
+import React ,{useContext} from 'react'
 import '../assets/styles/page1.css'
 import rocket from '../assets/images/page1/rocket.png'
 import dotLogo from '../assets/images/page1/dot-logo.png'
+import dotLogoLight from '../assets/images/page1/dot-logo-light.png'
 import LockIcon from '@mui/icons-material/Lock';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 //import farmingBg from '../assets/images/page1/farming-bg.png'
@@ -20,24 +21,27 @@ import fadedCube from "../assets/images/faddedBox.png"
 import rect1Bg from "../assets/images/page1/rect1-bg.png"
 import slide1Img from "../assets/images/page1/slide1-img.png"
 import { Carousel } from 'react-responsive-carousel';
+import { ThemeContext } from "../theme/ThemeContext";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const DexHomeBody = () => {
+    const theme1 = useContext(ThemeContext);
+  const darkMode = theme1.state.darkMode;
     return (
-        <div className='page1BodyContainer'>
+        <div className={darkMode?' page1BodyContainer' :'page1BodyContainerLight'}>
             <div>
                 <img src={rect1Bg} className="rect1bgImage" />
             </div>
             <div className="row">
                 <div className="col-md-12">
-                    <div className="rect1 d-flex justify-content-left align-items-center py-4">
+                    <div  className={(darkMode?'rect1 d-flex justify-content-left align-items-center py-4':'rect1Light d-flex justify-content-left align-items-center py-4')}>
                         <div>
                             <img src={rocket} className="rocketImg d-none d-md-block" alt="rocket" />
                         </div>
                         <div>
-                            <h2 className="color2 text-uppercase cFont">Vision Exchange</h2>
+                            <h2 className={darkMode?'color2 text-uppercase cFont':'color2Light text-uppercase cFont'}>Vision Exchange</h2>
                             <h2 className="text-uppercase cFont">Lending Service</h2>
-                            <button className="btn launchBtn btn-md-lg px-4">Beta Mode Launching Soon</button>
+                            <button className={darkMode?'btn launchBtn btn-md-lg px-4':'btn launchBtnLight btn-md-lg px-4'}>Beta Mode Launching Soon</button>
                         </div>
                     </div>
                     <img src={cube} className="cubeImage" />
@@ -45,11 +49,11 @@ const DexHomeBody = () => {
                 <div className="col-md-12 mt-5">
                     <div className="d-flex align-items-center justify-content-center justify-content-md-start">
                         <div className="mr-3 my-auto d-md-block">
-                            <img src={dotLogo} className='dotLogo d-none d-md-block' alt="dotlogo" />
+                            <img src={darkMode?dotLogo:dotLogoLight} className='dotLogo d-none d-md-block' alt="dotlogo" />
                         </div>
                         <div className="my-auto">
                             <h1 className="text-uppercase cFont text-center text-md-left">Welcome all</h1>
-                            <h1 className="text-uppercase cFont text-center text-md-left"><span className="color2">Vision</span> Users</h1>
+                            <h1 className="text-uppercase cFont text-center text-md-left"><span className={darkMode?'color2':'color2Light'}>Vision</span> Users</h1>
                         </div>
                     </div>
                 </div>
@@ -64,13 +68,13 @@ const DexHomeBody = () => {
                     </div>
                 </div>
                 <div className="col-md-12 mt-5">
-                    <div className="rect2 d-flex justify-content-center align-items-center py-5">
+                    <div className={darkMode ? 'rect2 d-flex justify-content-center align-items-center py-5':'rect2Light d-flex justify-content-center align-items-center py-5'}>
                         <div>
-                            <h2 className="text-uppercase cFont"> <span className="color2">VISION </span> Farmings</h2>
+                            <h2 className="text-uppercase cFont"> <span className={darkMode?'color2':'color2Light'}>VISION </span> Farmings</h2>
                             <p className="">Vision is the ultimate exchange protocol</p>
                             <div className="d-flex">
                                 <div>
-                                    <button className="btn launchBtn btn-md-lg d-flex mr-3">
+                                    <button className={darkMode?'btn launchBtn btn-md-lg d-flex mr-3':'btn launchBtnLight btn-md-lg d-flex mr-3'}>
                                         Locked
                                         <LockIcon fontSize="medium" />
                                     </button>
@@ -87,9 +91,9 @@ const DexHomeBody = () => {
                 </div>
                 <div className="col-md-12 mt-5">
                     <img src={fadedCube} className="cubeImage2" />
-                    <div className="rect3 d-flex flex-column justify-content-center justify-content-md-start py-5">
+                    <div className={darkMode? 'rect3 d-flex flex-column justify-content-center justify-content-md-start py-5': 'rect3Light d-flex flex-column justify-content-center justify-content-md-start py-5'}>
                         <div className="text-center text-md-left">
-                            <h2 className="cFont"><span className="color2">HOT</span> FARMS</h2>
+                            <h2 className="cFont"><span className={darkMode?'color2':'color2Light'}>HOT</span> FARMS</h2>
                             <h6 className="">Vision is the ultimate exchange protocol</h6>
                         </div>
                         <div className="d-flex flex-column flex-md-row justify-content-start">
@@ -116,9 +120,9 @@ const DexHomeBody = () => {
                 </div>
                 <div className="col-md-12 mt-5 position-relative">
                     <img src={cube} className="cubeImage1" />
-                    <div className="rect4 d-flex flex-column justify-content-center justify-content-md-start py-5">
+                    <div className={darkMode? 'rect4 d-flex flex-column justify-content-center justify-content-md-start py-5':'rect4Light d-flex flex-column justify-content-center justify-content-md-start py-5'}>
                         <div className="text-center text-md-left">
-                            <h2 className="cFont"><span className="color2">COOL</span> FARMS</h2>
+                            <h2 className="cFont"><span className={darkMode?'color2':'color2Light'}>COOL</span> FARMS</h2>
                             <h6 className="">Vision is the ultimate exchange protocol</h6>
                         </div>
                         <div className="d-flex flex-column flex-md-row justify-content-start">
@@ -146,21 +150,21 @@ const DexHomeBody = () => {
                 <div className="col-md-12 d-none d-md-block mt-5">
                     <div className="d-flex flex-column flex-md-row align-items-start mt-3">
                         <div className="mr-md-5">
-                            <h1 className="text-uppercase cFont mt-4"> Whats the<span className="color2"> news? </span></h1>
+                            <h1 className="text-uppercase cFont mt-4"> Whats the<span className={darkMode?'color2':'color2Light'}> news? </span></h1>
                             <h3 className='text-center text-md-left'></h3>
                         </div>
                         <div className="my-auto">
                             <Carousel >
-                                <div className="slide">
+                                <div className={darkMode?'slide':'slideLight'}>
                                     <img src={slide1Img} width={140}/>
                                     <h3>OmniTv Ep28 - Beefy Finance</h3>
                                     <p>Lorem ipsum dolor sit amet,  ectetur adipiscing elit, sed  </p>
                                 </div>
-                                <div className="slide">
+                                <div className={darkMode?'slide':'slideLight'}>
                                 <img src={slide1Img} width={140}/>
                                     <h3>second news</h3>
                                 </div>
-                                <div className="slide">
+                                <div className={darkMode?'slide':'slideLight'}>
                                 <img src={slide1Img} width={140}/>
                                     <h3>Third news</h3>
                                 </div>
@@ -169,24 +173,24 @@ const DexHomeBody = () => {
                     </div>
                 </div>
                 <div className="col-md-12 mt-4">
-                    <div className="rect5 d-flex flex-column justify-content-center align-items-center mt-4 py-4">
+                    <div className={`d-flex flex-column justify-content-center align-items-center mt-4 py-4 ${darkMode?'rect5':'rect5Light'}`}>
                         <div>
-                            <h2 className="cFont mb-3 text-center text-md-left"><span className="color2">VISION EXCHANGE</span> STATS</h2>
+                            <h2 className="cFont mb-3 text-center text-md-left"><span className={darkMode?'color2':'color2Light'}>VISION EXCHANGE</span> STATS</h2>
                         </div>
                         <div className="d-flex flex-column">
-                            <div className="rect5-item1">
+                            <div className={darkMode?'rect5-item1':'rect5-item1Light'}>
                                 <span className="text-uppercase">Total Value Locked</span>
                                 <span>$ 454,543,34</span>
                             </div>
-                            <div className="rect5-item2">
+                            <div className={darkMode?'rect5-item2':'rect5-item2Light'}>
                                 <span className="text-uppercase">USD Market Cap</span>
                                 <span>$ 454,543,34</span>
                             </div>
-                            <div className="rect5-item1">
+                            <div className={darkMode?'rect5-item1':'rect5-item1Light'}>
                                 <span className="text-uppercase">Banana in circulation</span>
                                 <span>$ 454,543,34</span>
                             </div>
-                            <div className="rect5-item2">
+                            <div className={darkMode?'rect5-item2':'rect5-item2Light'}>
                                 <span className="text-uppercase">Total Banana Burned</span>
                                 <span>$ 454,543,34</span>
                             </div>
