@@ -435,6 +435,7 @@ button:focus {
 	border-radius: 5px;
 	border: 1px solid transparent;
 	background-color: #0e213e;
+	padding:6px
 }
 
 .tokenCollection {
@@ -443,7 +444,14 @@ button:focus {
 	max-height: 60vh;
 	overflow: auto;
 }
-
+.singleTokenListItem{
+	padding:1px 6px;
+}
+.singleTokenListItem:hover{
+	background-color: rgba(40, 56, 83, 0.664);
+	border-radius: 8px;
+	padding:1px 6px;
+}
 .selectToken .row {
 	height: 60vh;
 }
@@ -457,4 +465,36 @@ button:focus {
 .tokenCard {
 	max-width: 150px;
 	margin-right: auto;
+}
+
+.tokenList{
+	height: 350px;
+	overflow-y: scroll;
+}
+
+.cusScroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #0d192d;
+}
+
+.cusScroll::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #0d192d;
+}
+
+.cusScroll::-webkit-scrollbar-thumb
+{
+	background-color: #394454 ;
+	
+}
+.starBtn{
+	border:1px solid white;
+	margin-bottom:10px;
+	display:flex;
+	align-items:center;
+	padding:2px 12px;
+	margin-left:12px;
+	border-radius: 6px;
 }

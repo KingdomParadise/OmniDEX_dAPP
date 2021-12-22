@@ -10,10 +10,15 @@ import filter from "../../assets/images/swap/filter.png";
 import "../../assets/styles/swap.css";
 import bsc from "../../assets/images/bsc.png";
 import uniswap from "../../assets/images/uniswap.svg";
+
+import avalanche from "../../assets/images/network/avalanche.svg";
+import polygon from "../../assets/images/network/polygon.svg";
+
 import Footer from "../../components/Footer";
 import Popover from "@mui/material/Popover";
 import { FiInfo } from "react-icons/fi";
 import { makeStyles } from "@mui/styles";
+import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import CustomDialog from "../../components/CustomDialog";
 import { ThemeContext } from "../../theme/ThemeContext";
 
@@ -37,12 +42,12 @@ const ConnectWallet = ({ open, handleClose }) => {
 		{
 			id: 1,
 			title: "Trust Wallet",
-			icon: uniswap,
+			icon: polygon,
 		},
 		{
 			id: 2,
 			title: "WalletConnect",
-			icon: uniswap,
+			icon: polygon,
 		},
 	];
 
@@ -85,15 +90,83 @@ const ConnectWallet = ({ open, handleClose }) => {
 };
 
 const SelectToken = ({ open, handleClose }) => {
+	const network = [
+		{
+			id: 0,
+			title: "Ethereum",
+			icon: ethereum,
+		},
+		{
+			id: 1,
+			title: "Polygon",
+			icon: polygon,
+		},
+		{
+			id: 2,
+			title: "Avalanche",
+			icon: avalanche,
+		},
+	];
+
+	const tokenList = [
+		{
+			id: 0,
+			title: "MetaMask",
+			icon: uniswap,
+			tag: 'eth'
+		},
+		{
+			id: 1,
+			title: "Trust Wallet",
+			icon: polygon,
+			tag: 'eth'
+		},
+		{
+			id: 2,
+			title: "WalletConnect",
+			icon: polygon,
+			tag: 'rubic'
+		},
+		{
+			id: 3,
+			title: "MetaMask",
+			icon: uniswap,
+			tag: 'eth'
+		},
+		{
+			id: 4,
+			title: "Trust Wallet",
+			icon: polygon,
+			tag: 'eth'
+		},
+		{
+			id: 5,
+			title: "WalletConnect",
+			icon: polygon,
+			tag: 'eth'
+		},
+		{
+			id: 6,
+			title: "Trust Wallet",
+			icon: uniswap,
+			tag: 'eth'
+		},
+		{
+			id: 7,
+			title: "WalletConnect",
+			icon: polygon,
+			tag: 'eth'
+		},
+	];
 	return (
 		<CustomDialog
 			open={open}
 			handleClose={handleClose}
-			title={"Select Token"}
+			title={"Tokens List"}
 		>
-			<div className='px-4'>
+			<div className='px-3'>
 				<div className='selectToken'>
-					<div className='landing_instruction_search_input'>
+					<div className='landing_instruction_search_input d-flex'>
 						<div className='input-icons'>
 							<FiSearch className='icon' size={26} color={"#fff"} />
 							<input
@@ -102,45 +175,55 @@ const SelectToken = ({ open, handleClose }) => {
 								placeholder='Search name or paste address'
 							/>
 						</div>
+						<div className='starBtn'>
+							<StarBorderOutlinedIcon />
+						</div>
 					</div>
 					{/* <button type='button'>
 											<BsFillStarFill color='#fff' size={24} />
 										</button> */}
-					<div className='row'>
-						<div className='col-2 tokenCollection mt-3 pt-3'>
+					<div className='row m-0'>
+						<div className='col-2 tokenCollection pt-3'>
 							<div className='d-flex flex-column'>
-								{[1, 2, 3, 4, 5, 6, 7].map((item) => (
-									<div className='singleItem mb-3'>
+								{network.map((item) => (
+									<div className='singleItem text-center mb-3'>
 										<img
-											src={uniswap}
+											src={item.icon}
 											alt={"token"}
-											height='36'
-											width='36'
+											height='32'
+											width='32'
 										/>
 									</div>
 								))}
 							</div>
 						</div>
-						<div className='col-10 tokenList'>
-							{/* <div className='d-flex flex-column'>
-								{[1, 2, 3, 4, 5, 6, 7].map((item) => (
-									<div className='singleTokenListItem d-flex align-items-center mb-3'>
-										<div className='tokenImage'>
-											<img
-												src={uniswap}
-												alt={"token"}
-												height='36'
-												width='36'
-											/>
+						<div className='col-10 tokenList cusScroll'>
+							<div className='d-flex flex-column'>
+								{tokenList.map((item) => (
+									<div className='singleTokenListItem d-flex justify-content-between align-items-center mb-3'>
+										<div className="d-flex">
+											<div className="mr-2 my-auto">
+												<img
+													src={item.icon}
+													alt={"token"}
+													height='36'
+													width='36'
+												/>
+											</div>
+											<div className="my-auto">
+												<span>
+													{item.title}
+												</span><br/>
+												<span style={{fontSize:'12px',textTransform:'uppercase'}}>{item.tag}</span>
+											</div>
 										</div>
-										<div className="tokenCard">
-											<span>
+										<div>
+											<StarBorderOutlinedIcon />
+										</div>
 
-											</span>
-										</div>
 									</div>
 								))}
-							</div> */}
+							</div>
 						</div>
 					</div>
 				</div>
