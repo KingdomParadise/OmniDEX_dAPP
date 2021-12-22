@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import ethereum from "../../assets/images/ethereum.svg";
 import swithcer from "../../assets/images/swap/swithcer.svg";
 // import swap from "../../assets/images/swap/swap.png";
@@ -15,6 +15,7 @@ import Popover from "@mui/material/Popover";
 import { FiInfo } from "react-icons/fi";
 import { makeStyles } from "@mui/styles";
 import CustomDialog from "../../components/CustomDialog";
+import { ThemeContext } from "../../theme/ThemeContext";
 
 const useStyles = makeStyles((theme) => ({
 	paper: {
@@ -151,6 +152,8 @@ const SelectToken = ({ open, handleClose }) => {
 const Swap = () => {
 	const [tokenValue, setTokenValue] = useState({});
 	const classes = useStyles();
+	const theme = useContext(ThemeContext);
+	const darkMode = theme.state.darkMode;
 	const [anchorEl, setAnchorEl] = useState(null);
 	const [toggleSwitch, settoggleSwitch] = useState({});
 	const [popup, setPopup] = useState({
@@ -233,6 +236,7 @@ const Swap = () => {
 								<div className='firstSelectionGrid'>
 									<button
 										className='selectCurrencyButton'
+										style={{ color: darkMode ? '#9ca6be' : "#fff" }}
 										onClick={() =>
 											setPopup({
 												...popup,
@@ -274,6 +278,7 @@ const Swap = () => {
 								>
 									<button
 										className='selectCurrencyButton'
+										style={{ color: darkMode ? '#9ca6be' : "#fff" }}
 										onClick={() =>
 											setPopup({
 												...popup,

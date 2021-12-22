@@ -40,8 +40,8 @@ import { ThemeContext } from "../theme/ThemeContext";
 
 const MainBody = () => {
 	const theme = useContext(ThemeContext);
-	const darkMode = theme.state.lightMode;
-
+	const darkMode = theme.state.darkMode;
+	
 	return (
 		<div className='home__3KnWO'>
 			<section className='container_main_'>
@@ -61,7 +61,7 @@ const MainBody = () => {
 								<h2 className='screen__title__vymBx'>
 									<span className='highlight'>
 										<span className='nowrap'>
-											Omni-chain
+											Vision-chain
 											<br />
 										</span>
 										exchange
@@ -72,7 +72,7 @@ const MainBody = () => {
 								<div className='screen__info__2QpSI'>
 									<p className='screen__text__1p3Jl'>
 										<span>
-											The Omni-DEX is a cross-chain exchange allowing
+											The Vision-DEX is a cross-chain exchange allowing
 											the swap of thousands of tokens across 8
 											different blockchains seamlessly
 										</span>
@@ -137,7 +137,7 @@ const MainBody = () => {
 						<div className='screen__info__2QpSI_secondary'>
 									<p className='screen__text__1p3Jl'>
 										<span>
-											The Omni-DEX is a cross-chain exchange allowing
+											The Vision-DEX is a cross-chain exchange allowing
 											the swap of thousands of tokens across 8
 											different blockchains seamlessly
 										</span>
@@ -210,17 +210,17 @@ const MainBody = () => {
 			<section className='about__1wd5a'>
 				<h2 className='about__title__3oBok'>
 					What is {"  "}
-					<span className='highlight'>Omni?</span>
+					<span className='highlight'>Vision?</span>
 				</h2>
 				<img
 					className='about__image__Ry7YU'
 					src={darkMode ? daigram : daigram_light}
-					alt='What is omni'
+					alt='What is Vision'
 				/>
 				<div className='about__info__3eAVO'>
 					<p className='about__text__3jNbk'>
 						<span>
-							Omni is the ultimate exchange protocol that allows users to
+							Vision is the ultimate exchange protocol that allows users to
 							exchange a token from one chain to another with ease.
 							Featuring Ethereum, Smart Chain, Avalanche, Polygon,
 							Fantom, and more by utilizing over 50 decentralized
@@ -256,7 +256,7 @@ const MainBody = () => {
 			</section>
 			<section className='grants__32DqA'>
 				<h2 className='grants__title__1PoEy'>
-					Grants <span className='highlight'>for omni</span>
+					Grants <span className='highlight'>for Vision</span>
 				</h2>
 				<p className='grants__text__fxIfw'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do{" "}
@@ -280,7 +280,7 @@ const MainBody = () => {
 			</section>
 			<section className='audits__366o9'>
 				<h2 className='audits__title__5FrFg'>
-					<span className='highlight'>Omni </span>Audits
+					<span className='highlight'>Vision </span>Audits
 				</h2>
 				<p className='audits__text__1kN0O'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing <br /> elit,
@@ -319,7 +319,7 @@ const MainBody = () => {
 			<section className='partners__3xIAI'>
 				<div className='partners__title__1CYAp'>
 					<h2>
-						<span className='highlight'>Omni </span>
+						<span className='highlight'>Vision </span>
 						<br className='partners__br__32LPN' />
 						supports
 					</h2>
@@ -435,7 +435,7 @@ const MainBody = () => {
 					<span className='highlight'>your platform!</span>
 				</h2>
 				<p className='trade__text__SfbzQ'>
-					The Omni Relay Widget enables users to buy and sell tokens on any
+					The Vision Relay Widget enables users to buy and sell tokens on any
 					website. This means that your users can buy token, without having
 					to leave your website! It’s free and Already joined 40+ projects.
 				</p>
@@ -464,7 +464,7 @@ const MainBody = () => {
 					}}
 				>
 					<div className='calc_title'>
-						<span>Omni-DEX</span>
+						<span>Vision-DEX</span>
 						<span
 							style={
 								darkMode
@@ -592,7 +592,7 @@ const MainBody = () => {
 													: "#919ba6",
 											}}
 										>
-											OMNI
+											VISION
 										</button>
 									</div>
 									<div>
@@ -815,7 +815,7 @@ const MainBody = () => {
 						</div>
 					</div>
 					<p className='nEVyhRp2L427W-NvwfPEX'>
-						©Copyright Omni 2021,{" "}
+						©Copyright Vision 2021,{" "}
 						<Link to='/' className='_3d4_tKssgilyA1Tcp3MBFt'>
 							Privacy policy
 						</Link>

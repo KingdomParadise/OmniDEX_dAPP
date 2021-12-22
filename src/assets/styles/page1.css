@@ -11,13 +11,17 @@
     height: 10vh;
     /* background: #182845; */
 }
+.toolbarRight{
+    width: 70%;
+    text-align: right;
+}
 .page1BodyContainer{
     width: 100%;
     display: flex;
     flex-direction: column;
     background-color: #182845;
     /* height: 90vh; */
-    padding:2rem .5rem 0 .5rem;
+    padding:2rem .75rem 0 .75rem;
     
     position: relative;
     font-family: "Inter", sans-serif;
@@ -171,16 +175,23 @@
 .rect5-item1{
     width: 100%;
     background-color: #172847;
-    padding:1rem 2rem;
+    padding:1rem 1rem;
     display: flex;
     justify-content: space-between;
 }
 .rect5-item1Light{
     width: 100%;
     background-color: #d0e6f5;
-    padding:1rem 2rem;
+    padding:1rem 1rem;
     display: flex;
     justify-content: space-between;
+}
+.rect5-item2{
+    background-color:#0f1d38;
+    padding:1rem 1rem;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
 }
 .rect5-item2Light{
     background-color:#afc9e0;
@@ -195,9 +206,9 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-left: -2rem;
-    margin-right: -2rem;
-    padding:3rem;
+    /* margin-left: -2rem;
+    margin-right: -2rem; */
+    padding:3rem 2rem;
     margin-top: 3rem;
 }
 .fs-lg{
@@ -315,10 +326,10 @@
 	position: relative;
 	z-index: 1;
 }
-.footer_container{
+/* .footer_container{
     margin-left: -3rem;
     margin-right: -3rem;
-}
+} */
 .cubeImage{
     position: absolute;
     bottom:40px;
@@ -348,7 +359,7 @@
 }
 .slide{
     width: 100%;
-    background-color: #13223e;
+    /* background-color: #13223e; */
     margin:40px;
     padding:20px;
     text-align: left !important;
@@ -362,7 +373,18 @@
 }
 .carousel .slider-wrapper{
     width: 100%;
-    overflow: hidden;       
+    overflow: hidden;    
+}
+.slider{
+    background-color: transparent;
+}
+
+.carousel .slide{ background-color: transparent; }
+.swipe1{
+    background-color: #23355780;
+}
+.swipe1Light{
+    background-color: #b8b8b880;
 }
 @media (min-width: 768px) {
     .page1BodyContainer{
@@ -402,12 +424,14 @@
         margin-top: 3rem;
         flex-direction: row;
     }
-    .footer_container {
+    .footer_container{
         padding-left: 2rem;
+        margin-left: -3rem;
+        margin-right: -3rem;
     }
     .slide{
         width: 200px;
-        background-color: #13223e;
+        /* background-color: #13223e; */
         margin:40px;
         padding:20px;
     }
@@ -419,4 +443,8 @@
         text-align: left !important;
     }
    
+    .toolbarRight{
+        width: 95%;
+        text-align: right;
+    }
 }

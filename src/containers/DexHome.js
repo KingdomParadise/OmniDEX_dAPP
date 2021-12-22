@@ -85,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "flex-start",
-    paddingLeft: '2rem'
+    paddingLeft: '1rem'
   },
   content: {
     flexGrow: 1,
@@ -221,7 +221,7 @@ export default function ResponsiveDrawer() {
           [classes.appBarShift]: open,
         })}
       >
-        <Toolbar className="toolBar" style={{background: (darkMode? '#182845' : 'white')}}>
+        <Toolbar className="toolBar" style={{display:'flex',justifyContent:'space-between',background: (darkMode? '#182845' : 'white')}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -231,9 +231,14 @@ export default function ResponsiveDrawer() {
           >
             <Menu />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            {/* <img src={logo} width={170} alt='OmniDEX logo' /> */}
-          </Typography>
+          <div className ="toolbarRight">
+            
+            <div>
+              <img src={bsc} width={20} alt='BSC' />
+              <button className="btn btn-link text-white">BSC</button>
+              <button className="btn btn-primary btn-sm px-4 ml-3">Action</button>
+            </div>
+          </div>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer}>
@@ -260,9 +265,10 @@ export default function ResponsiveDrawer() {
             open={open}
           >
             <div className={classes.drawerHeader}>
-              {/* <IconButton onClick={handleDrawerClose}>
-                <ChevronLeft className="text-white"/>
-              </IconButton> */}
+              <IconButton onClick={handleDrawerClose}>
+                <img src={burgerMenu} width={30} alt='menu' />
+                {/* <ChevronLeft className="text-white"/> */}
+              </IconButton>
               <img src={logo} width={170} alt='OmniDEX logo' />
             </div>
             <Divider />

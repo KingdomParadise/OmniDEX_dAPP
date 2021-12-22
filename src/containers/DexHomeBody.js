@@ -154,26 +154,28 @@ const DexHomeBody = () => {
                             <h3 className='text-center text-md-left'></h3>
                         </div>
                         <div className="my-auto">
-                            <Carousel >
-                                <div className={darkMode?'slide':'slideLight'}>
+                            <div className={darkMode?'swipe1':'swipe1Light'}>
+                            <Carousel>
+                                <div>
                                     <img src={slide1Img} width={140}/>
                                     <h3>OmniTv Ep28 - Beefy Finance</h3>
                                     <p>Lorem ipsum dolor sit amet,  ectetur adipiscing elit, sed  </p>
                                 </div>
-                                <div className={darkMode?'slide':'slideLight'}>
+                                <div>
                                 <img src={slide1Img} width={140}/>
                                     <h3>second news</h3>
                                 </div>
-                                <div className={darkMode?'slide':'slideLight'}>
+                                <div>
                                 <img src={slide1Img} width={140}/>
                                     <h3>Third news</h3>
                                 </div>
                             </Carousel>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-12 mt-4">
-                    <div className={`d-flex flex-column justify-content-center align-items-center mt-4 py-4 ${darkMode?'rect5':'rect5Light'}`}>
+                    <div className={`d-flex flex-column justify-content-center align-items-center mt-4 py-md-4 ${darkMode?'rect5':'rect5Light'}`}>
                         <div>
                             <h2 className="cFont mb-3 text-center text-md-left"><span className={darkMode?'color2':'color2Light'}>VISION EXCHANGE</span> STATS</h2>
                         </div>

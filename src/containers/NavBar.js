@@ -1,7 +1,8 @@
 import React, { Fragment, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/header.css";
-import logo from "../assets/images/logo.svg";
+// import logo from "../assets/images/logo.svg";
+import logo from "../assets/images/page1/vision-logo.png";
 import NavPopup from "../components/NavPopup";
 import { ThemeContext } from "../theme/ThemeContext";
 
@@ -10,7 +11,6 @@ const NavBar = () => {
 	const [toggleSwitch, settoggleSwitch] = useState(true);
 	const theme = useContext(ThemeContext);
 	const darkMode = theme.state.darkMode;
-	console.log("darkMode", darkMode);
 
 	const handleThemeSwitch = () => {
 		if (darkMode) {
