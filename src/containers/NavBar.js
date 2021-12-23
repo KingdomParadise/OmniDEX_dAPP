@@ -2,7 +2,7 @@ import React, { Fragment, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/styles/header.css";
 // import logo from "../assets/images/logo.svg";
-import logo from "../assets/images/page1/vision-logo.png";
+import logo from "../assets/images-new/common/logo.png";
 import NavPopup from "../components/NavPopup";
 import { ThemeContext } from "../theme/ThemeContext";
 
@@ -27,7 +27,8 @@ const NavBar = () => {
 			<header id='main-header' className='header_container'>
 				<div className='header_inner'>
 					<Link to='/' className='header_brand'>
-						<img src={logo} height={50} width={180} alt='OmniDEX logo' />
+						<img src={logo} width={60} alt='OmniDEX logo' />
+						<span className="text-uppercase">Vision Exchange</span>
 					</Link>
 					<nav className='nav_items'>
 						<Link to='/'>Home</Link>

@@ -446,6 +446,7 @@ button:focus {
 }
 .singleTokenListItem{
 	padding:1px 6px;
+	cursor: pointer;
 }
 .singleTokenListItem:hover{
 	background-color: rgba(40, 56, 83, 0.664);
@@ -497,4 +498,10 @@ button:focus {
 	padding:2px 12px;
 	margin-left:12px;
 	border-radius: 6px;
+}
+.activeNet{
+	border:1px solid #7e7ea8;
+}
+.inactiveNet{
+	border:1px solid transparent;
 }

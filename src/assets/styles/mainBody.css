@@ -114,7 +114,7 @@ url('../images/right-gradient-banner.png')
 .screen_instruction_inner {
 	border-radius: 25px;
 	height: 460px;
-	background-color: #091633ce;
+	background-color: #35373ace;
 	left: 0;
 	position: absolute;
 	margin-top: 20px;
@@ -126,7 +126,7 @@ url('../images/right-gradient-banner.png')
 .landing_instruction {
 	display: flex;
 	justify-content: center;
-	font-family: "Inter", sans-serif;
+	font-family: 'Special Elite', cursive;
 	font-size: 28px;
 	text-align: center;
 	padding: 2.4rem 1.6rem;

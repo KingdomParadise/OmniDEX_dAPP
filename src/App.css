@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 :root {
 	--main-font: "SF-Pro", Roboto, Arial, sans-serif;
@@ -26,7 +26,7 @@ html.dark {
 	--omni-base-06: #262626;
 	--omni-base-07: hsla(0, 0%, 5%, 0.3);
 	--omni-base-08: #161616;
-	--main-background:#061024;
+	--main-background:#151515;
 	--bg-header: hsla(0, 0%, 5%, 0.6);
 	--filter-invert: invert(0);
 }
@@ -48,7 +48,7 @@ html body {
 }
 html body {
 	color: var(--omni-base-02);
-	font-family: SF-Pro, sans-serif;
+	font-family: 'Special Elite', cursive;
 	height: auto;
 	margin: 0;
 	min-width: 375px;

@@ -55,12 +55,19 @@ html.dark {
 
 .header_brand {
 	margin-right: auto;
+	display: flex;
+	align-items: center;
 }
 .header_brand img {
 	display: block;
 	height: 100%;
 }
-
+.header_brand span {
+	font-size: 24px;
+	text-decoration: none;
+	color:white;
+	margin-left:12px;
+}
 .nav_items {
 	font-size: 100%;
 	margin-right: 32px;
@@ -134,7 +141,7 @@ html.dark {
 }
 
 .action_button {
-	background: #2fabe6;
+	background: linear-gradient(to right, #797979, #555555);
 	border-radius: 6px;
 	color: #fff;
 	display: inline-block;

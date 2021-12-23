@@ -59,7 +59,7 @@ const MainBody = () => {
 									NEW RELEASE
 								</h5>
 								<h2 className='screen__title__vymBx'>
-									<span className='highlight'>
+									<span className=''>
 										<span className='nowrap'>
 											Vision-chain
 											<br />

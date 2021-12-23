@@ -9,6 +9,7 @@ import { FiSettings, FiSearch } from "react-icons/fi";
 import filter from "../../assets/images/swap/filter.png";
 import "../../assets/styles/swap.css";
 import bsc from "../../assets/images/bsc.png";
+import solana from "../../assets/images/network/solana.png"
 import uniswap from "../../assets/images/uniswap.svg";
 
 import avalanche from "../../assets/images/network/avalanche.svg";
@@ -89,75 +90,106 @@ const ConnectWallet = ({ open, handleClose }) => {
 	);
 };
 
-const SelectToken = ({ open, handleClose }) => {
+const SelectToken = ({ open, handleClose, handleTokenSelection }) => {
 	const network = [
 		{
 			id: 0,
 			title: "Ethereum",
 			icon: ethereum,
+			isActive: false
 		},
 		{
 			id: 1,
 			title: "Polygon",
 			icon: polygon,
+			isActive: false
 		},
 		{
 			id: 2,
+			title: "Binance",
+			icon: bsc,
+			isActive: false
+		},
+		{
+			id: 3,
 			title: "Avalanche",
 			icon: avalanche,
+			isActive: false
+		},
+		{
+			id: 4,
+			title: "Solana",
+			icon: solana,
+			isActive: false
 		},
 	];
+	const [activeNetwork, setActiveNetwork] = useState(0);
+	const handleNetworkClick = (id) =>{
+		// console.log(item);
+		// item.isActive = true;
+		// console.log(network);
+		console.log(id);
+		setActiveNetwork(id);
+	}
+	
 
 	const tokenList = [
 		{
 			id: 0,
-			title: "MetaMask",
+			title: "UNI",
 			icon: uniswap,
-			tag: 'eth'
+			tag: 'uniswap'
 		},
 		{
 			id: 1,
-			title: "Trust Wallet",
-			icon: polygon,
-			tag: 'eth'
-		},
-		{
-			id: 2,
-			title: "WalletConnect",
+			title: "RBC",
 			icon: polygon,
 			tag: 'rubic'
 		},
 		{
+			id: 2,
+			title: "USDT",
+			icon: polygon,
+			tag: 'Tether USD'
+		},
+		{
 			id: 3,
-			title: "MetaMask",
+			title: "BNB",
 			icon: uniswap,
-			tag: 'eth'
+			tag: 'Binance Coin'
 		},
 		{
 			id: 4,
-			title: "Trust Wallet",
+			title: "BTCB",
 			icon: polygon,
-			tag: 'eth'
+			tag: 'BTCB Token'
 		},
 		{
 			id: 5,
-			title: "WalletConnect",
+			title: "XVS",
 			icon: polygon,
-			tag: 'eth'
+			tag: 'venus'
 		},
 		{
 			id: 6,
-			title: "Trust Wallet",
+			title: "ULTRA",
 			icon: uniswap,
-			tag: 'eth'
+			tag: 'Ultra Safe'
 		},
 		{
 			id: 7,
-			title: "WalletConnect",
+			title: "RAY",
 			icon: polygon,
-			tag: 'eth'
+			tag: 'radium'
 		},
 	];
+	const handleSearch = () =>{
+
+	}
+	// const handleTokenSelection = (token) =>{
+	// 	alert("selec")
+	// 	console.log(token);
+	// }
 	return (
 		<CustomDialog
 			open={open}
@@ -173,6 +205,7 @@ const SelectToken = ({ open, handleClose }) => {
 								className='input-field'
 								type='text'
 								placeholder='Search name or paste address'
+								onChange={()=> handleSearch()}
 							/>
 						</div>
 						<div className='starBtn'>
@@ -185,8 +218,12 @@ const SelectToken = ({ open, handleClose }) => {
 					<div className='row m-0'>
 						<div className='col-2 tokenCollection pt-3'>
 							<div className='d-flex flex-column'>
-								{network.map((item) => (
-									<div className='singleItem text-center mb-3'>
+								{network.map((item,index) => (
+									<div key = {item.id} value={item} 
+										
+									 	onClick={() =>handleNetworkClick(index)}
+										 className= {activeNetwork === index ? "singleItem text-center mb-3 activeNet" : "singleItem text-center mb-3 inactiveNet"}
+									>
 										<img
 											src={item.icon}
 											alt={"token"}
@@ -200,8 +237,8 @@ const SelectToken = ({ open, handleClose }) => {
 						<div className='col-10 tokenList cusScroll'>
 							<div className='d-flex flex-column'>
 								{tokenList.map((item) => (
-									<div className='singleTokenListItem d-flex justify-content-between align-items-center mb-3'>
-										<div className="d-flex">
+									<div key = {item.id} className='singleTokenListItem d-flex justify-content-between align-items-center mb-3'>
+										<div className="d-flex" onClick={() =>handleTokenSelection(item)}>
 											<div className="mr-2 my-auto">
 												<img
 													src={item.icon}
@@ -214,7 +251,7 @@ const SelectToken = ({ open, handleClose }) => {
 												<span>
 													{item.title}
 												</span><br/>
-												<span style={{fontSize:'12px',textTransform:'uppercase'}}>{item.tag}</span>
+												<span style={{fontSize:'12px'}}>{item.tag}</span>
 											</div>
 										</div>
 										<div>
@@ -243,6 +280,21 @@ const Swap = () => {
 		connectWallet: false,
 		tokenList: false,
 	});
+	
+	const [leftToken, setLeftToken] = useState({
+		id: 0,
+		title: "MetaMask",
+		icon: uniswap,
+		tag: 'eth'
+	});
+	const [rightToken, setRightToken] = useState({
+		
+			id: 7,
+			title: "WalletConnect",
+			icon: polygon,
+			tag: 'eth'
+		
+	});
 
 	const handleSwitch = (e) => {
 		let event = e.target;
@@ -254,9 +306,16 @@ const Swap = () => {
 	};
 
 	const handleClose = () => {
+		
 		setAnchorEl(null);
 	};
-
+	const handleTokenSelection = (token)=>{
+		console.log(token);
+		setPopup({
+			tokenList: false
+		})
+		//setAnchorEl(null);
+	}
 	const open = Boolean(anchorEl);
 	const id = open ? "simple-popover" : undefined;
 
@@ -289,7 +348,7 @@ const Swap = () => {
 									<div className='swap_header_bar_token'>
 										<img
 											style={{ marginRight: "10px" }}
-											src={bsc}
+											src={leftToken.icon}
 											alt='bsc'
 											height='20'
 											width='20'
@@ -298,7 +357,7 @@ const Swap = () => {
 									</div>
 									<div className='swapImageContainer'>
 										<img
-											src={swapDark}
+											src={rightToken.icon}
 											alt='swap'
 											height='22'
 											className='swap_header_bar_swap'
@@ -498,6 +557,7 @@ const Swap = () => {
 			{popup.tokenList && (
 				<SelectToken
 					open={popup.tokenList}
+					handleTokenSelection={handleTokenSelection}
 					handleClose={() =>
 						setPopup({ ...popup, tokenList: !popup.tokenList })
 					}
