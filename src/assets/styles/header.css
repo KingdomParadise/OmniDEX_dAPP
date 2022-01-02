@@ -15,6 +15,11 @@
   --filter-invert: invert(1);
   --header-bg: transparent;
   --omni-font: #000;
+  --action-btn-bg: linear-gradient(
+    274deg,
+    rgba(149, 149, 149, 1) 0%,
+    rgba(149, 149, 149, 1) 52%
+  );
 }
 
 html.dark {
@@ -30,21 +35,33 @@ html.dark {
   /* --main-background: #161616; */
   --bg-header: hsla(0, 0%, 5%, 0.6);
   --filter-invert: invert(0);
-  --header-bg: #282828;
+  --header-bg: linear-gradient(
+    170deg,
+    rgba(19, 19, 19, 0.8) 0%,
+    rgba(19, 19, 19, 0.2) 50%,
+    transparent
+  );
   --header-img: url(../images/header-bg.png);
+  --action-btn-bg: linear-gradient(
+    81deg,
+    rgba(120, 120, 120, 1) 0%,
+    rgba(86, 86, 86, 1) 52%
+  );
 }
 
 .header_container {
   min-height: 72px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   transition: 0.1s ease-in-out;
   width: 100%;
   z-index: 99;
   padding: 20px 0;
   /* background: rgb(24, 40, 69); */
-  background-image: var(--header-img);
+  /* background-image: var(--header-img); */
   background-size: cover;
-  background-color: var(--header-bg);
+  background: var(--header-bg);
 }
 
 .header_inner {
@@ -150,12 +167,8 @@ html.dark {
 }
 
 .action_button {
-  background: rgb(29, 115, 156);
-  background: linear-gradient(
-    90deg,
-    rgba(29, 115, 156, 1) 0%,
-    rgba(7, 80, 142, 1) 100%
-  );
+  /* background: rgb(29, 115, 156); */
+  background: var(--action-btn-bg);
   border-radius: 6px;
   color: #fff;
   display: inline-block;

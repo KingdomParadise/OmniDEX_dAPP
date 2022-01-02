@@ -58,10 +58,13 @@ const MainBody = () => {
                     textAlign: "left",
                   }}
                 >
-                  NEW RELEASE
+                  {/* NEW RELEASE */}
                 </h5>
                 <h2 className="screen__title__vymBx">
-                  <span className="" style={{ color: "#27ECFE" }}>
+                  <span
+                    className=""
+                    style={{ color: darkMode ? "" : "#959595" }}
+                  >
                     <span className="nowrap">
                       Vision-chain
                       <br />
@@ -220,7 +223,7 @@ const MainBody = () => {
           <Link
             to="/"
             className="button button_glassy action_button_def"
-            style={{ backgroundColor: darkMode ? "#07315d" : "#649dbe" }}
+            style={{ backgroundColor: darkMode ? "#353535" : "#999999" }}
           >
             Action Button
             <img
@@ -444,9 +447,9 @@ const MainBody = () => {
       <section className="calculations_container">
         <div
           className="calculations_inner"
-          style={{
-            backgroundColor: darkMode ? "#0c1d42b2" : "hsl(0deg 0% 79% / 61%)",
-          }}
+          // style={{
+          //   backgroundColor: darkMode ? "#0c1d42b2" : "hsl(0deg 0% 79% / 61%)",
+          // }}
         >
           <div className="calc_title">
             <span>Vision-DEX</span>
@@ -470,7 +473,7 @@ const MainBody = () => {
                 <div
                   className="token_indicator_container"
                   style={{
-                    backgroundColor: darkMode ? "#031730" : "#a8adb3",
+                    backgroundColor: darkMode ? "#1A1A1A" : "#A1A1A1",
                   }}
                 >
                   <img src={ethereum} height={24} width={24} alt="token" />
@@ -480,7 +483,7 @@ const MainBody = () => {
                 <div
                   className="token-amount-input-container"
                   style={{
-                    backgroundColor: darkMode ? "#081e3f" : "#becad5",
+                    backgroundColor: darkMode ? "#212121" : "#BDBDBD",
                   }}
                 >
                   <input
@@ -490,7 +493,7 @@ const MainBody = () => {
                   <button
                     type="button"
                     style={{
-                      backgroundColor: darkMode ? "#050d21" : "#919ba6",
+                      backgroundColor: darkMode ? "#0F0F0F" : "#929292",
                     }}
                   >
                     ETH
@@ -503,11 +506,11 @@ const MainBody = () => {
                     style={
                       darkMode
                         ? {
-                            backgroundColor: "#081e3f",
+                            backgroundColor: "#212121",
                             color: "#fff",
                           }
                         : {
-                            backgroundColor: "#becad5",
+                            backgroundColor: "#BDBDBD",
                             color: "#666a6c",
                           }
                     }
@@ -534,7 +537,7 @@ const MainBody = () => {
                   <div
                     className="token_indicator_container"
                     style={{
-                      backgroundColor: darkMode ? "#031730" : "#a8adb3",
+                      backgroundColor: darkMode ? "#1A1A1A" : "#A1A1A1",
                     }}
                   >
                     <img src={ethereum} height={24} width={24} alt="token" />
@@ -544,7 +547,7 @@ const MainBody = () => {
                   <div
                     className="token-amount-input-container"
                     style={{
-                      backgroundColor: darkMode ? "#081e3f" : "#becad5",
+                      backgroundColor: darkMode ? "#212121" : "#BDBDBD",
                     }}
                   >
                     <input
@@ -556,7 +559,7 @@ const MainBody = () => {
                     <button
                       type="button"
                       style={{
-                        backgroundColor: darkMode ? "#050d21" : "#919ba6",
+                        backgroundColor: darkMode ? "#0F0F0F" : "#929292",
                       }}
                     >
                       VISION
@@ -569,11 +572,11 @@ const MainBody = () => {
                       style={
                         darkMode
                           ? {
-                              backgroundColor: "#081e3f",
+                              backgroundColor: "#212121",
                               color: "#fff",
                             }
                           : {
-                              backgroundColor: "#becad5",
+                              backgroundColor: "#BDBDBD",
                               color: "#666a6c",
                             }
                       }
@@ -586,11 +589,11 @@ const MainBody = () => {
                       style={
                         darkMode
                           ? {
-                              backgroundColor: "#081e3f",
+                              backgroundColor: "#212121",
                               color: "#fff",
                             }
                           : {
-                              backgroundColor: "#becad5",
+                              backgroundColor: "#BDBDBD",
                               color: "#666a6c",
                             }
                       }
@@ -629,7 +632,9 @@ const MainBody = () => {
         <div
           className="doc__3KXY3"
           style={{
-            backgroundColor: darkMode ? "#0c1d42b2" : "hsl(0deg 0% 79% / 61%)",
+            backgroundColor: darkMode
+              ? "rgb(24, 24, 24,0.5)"
+              : "rgb(218, 218, 218,0.5)",
           }}
         >
           <div className="doc__info__1QgQf">
