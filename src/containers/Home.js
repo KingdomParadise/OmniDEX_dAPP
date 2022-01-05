@@ -1,14 +1,14 @@
-import React from 'react'
-import MainBody from './MainBody'
-import NavBar from './NavBar'
+import React from "react";
+import MainBody from "./MainBody";
+import NavBar from "./NavBar";
 
- const Home = () =>  {
-    return (
-        <>
-        <NavBar />
-        <MainBody />
-        </>
-    )
-}
+const Home = () => {
+  return (
+    <>
+      <NavBar />
+      <MainBody />
+    </>
+  );
+};
 
-export default Home
+export default Home;

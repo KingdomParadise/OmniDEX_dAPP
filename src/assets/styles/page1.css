@@ -1,6 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap");
+
+:root {
+  --bg-color: #282828;
+  --action-btn-bg: linear-gradient(
+    274deg,
+    rgba(149, 149, 149, 1) 0%,
+    rgba(149, 149, 149, 1) 52%
+  );
+  --bgDCB-bg: rgba(217, 217, 217, 0.9);
+}
+html.dark {
+  --action-btn-bg: linear-gradient(
+    81deg,
+    rgba(120, 120, 120, 1) 0%,
+    rgba(86, 86, 86, 1) 52%
+  );
+  --bgDCB-bg: rgba(42, 42, 42, 0.5);
+}
+
 .bg-app {
-  background-color: #182845;
+  background-color: var(--bg-color);
 }
 .btn-trans {
   background-color: transparent;
@@ -8,7 +27,7 @@
 }
 .toolBar {
   height: 10vh;
-  /* background: #182845; */
+  /* background: var(--bg-color); */
 }
 .toolbarRight {
   width: 70%;
@@ -18,12 +37,12 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #182845;
+  background-color: var(--bg-color);
   /* height: 90vh; */
   padding: 2rem 0.75rem 0 0.75rem;
 
   position: relative;
-  font-family: "Inter", sans-serif;
+  font-family: "Special Elite", cursive;
 }
 .page1BodyContainerLight {
   width: 100%;
@@ -34,7 +53,7 @@
   padding: 2rem 0.5rem 0 0.5rem;
 
   position: relative;
-  font-family: "Inter", sans-serif;
+  font-family: "Special Elite", cursive;
 }
 .rocketImg {
   margin-left: -80px;
@@ -44,15 +63,15 @@
   width: 70px;
 }
 .cFont {
-  font-family: "Inter", sans-serif !important;
+  font-family: "Special Elite", cursive !important;
   font-weight: 800 !important;
 }
 
 .color2 {
-  color: #27ecfe;
+  color: #fff;
 }
 .color2Light {
-  color: #7ea2c1;
+  color: #9a9a9a;
 }
 .rect1 {
   background-image: url(../images/page1/landing-bg.png);
@@ -75,14 +94,33 @@
   z-index: 10;
 }
 .launchBtn {
-  background-color: #0a3662;
   color: white;
+  background-color: #383838;
+  border: none !important;
 }
-.launchBtnLight {
-  background-color: #759ab9;
-  color: white;
+.launchBtn.locked,
+.launchBtnLight.locked {
+  padding: 14px 30px;
 }
 
+.launchBtn.action_button,
+.launchBtnLight.action_button {
+  padding: 4px 60px !important;
+  margin-left: 0 !important;
+  font-size: 22px !important;
+}
+.launchBtnLight {
+  background-color: #8e8e8e;
+  color: white;
+}
+.action_button2.unlock {
+  padding: 13px 30px;
+  border: none !important;
+  margin-left: 5px;
+}
+.btn:focus {
+  box-shadow: none !important;
+}
 .btn-gradient {
   background-color: skyblue;
   background: linear-gradient(to right, #2fabe5, #07518f);
@@ -102,8 +140,9 @@
   border-radius: 24px;
 }
 .bgDCB {
-  background-color: rgba(42, 66, 110, 0.4);
+  background-color: var(--bgDCB-bg);
   padding: 0.5rem;
+  border-radius: 10px;
 }
 .rect3 {
   background-color: #23355780;
@@ -128,7 +167,7 @@
   z-index: 10;
 }
 .rect4 {
-  background-color: rgba(19, 34, 62, 0.4);
+  background-color: rgb(35, 35, 35, 0.4);
   background-image: url(../images/page1/cool-pools-bg.png);
   background-position: center;
   background-size: cover;
@@ -150,7 +189,7 @@
   z-index: 10;
 }
 .rect5 {
-  background-color: #13223e;
+  background-color: #222222;
   background-image: url(../images/page1/dots-bg.png);
   background-position: center;
   background-size: cover;
@@ -173,34 +212,33 @@
 }
 .rect5-item1 {
   width: 100%;
-  background-color: #172847;
+  background-color: #282828;
   padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
 }
 .rect5-item1Light {
   width: 100%;
-  background-color: #d0e6f5;
+  background-color: #d2d2d2;
   padding: 1rem 1rem;
   display: flex;
   justify-content: space-between;
 }
 .rect5-item2 {
-  background-color: #0f1d38;
+  background-color: #1d1d1d;
   padding: 1rem 1rem;
   width: 100%;
   justify-content: space-between;
   display: flex;
 }
 .rect5-item2Light {
-  background-color: #afc9e0;
+  background-color: #b5b5b5;
   padding: 1rem 2rem;
   width: 100%;
   justify-content: space-between;
   display: flex;
 }
 .newsLetter {
-  background: linear-gradient(to right, #2fabe6, #07528f);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -210,6 +248,17 @@
   padding: 3rem 2rem;
   margin-top: 3rem;
 }
+.newsLetter.newsletter-dark {
+  background: linear-gradient(
+    87deg,
+    rgba(121, 121, 121, 1) 0%,
+    rgba(86, 86, 86, 1) 100%
+  );
+}
+.newsLetter.newsLetter-light {
+  background: linear-gradient(87deg, #9d9d9d 0%, rgba(78, 78, 78, 1) 100%);
+}
+
 .fs-lg {
   font-size: 24px !important;
 }
@@ -315,10 +364,7 @@
   position: relative;
   z-index: 1;
 }
-/* .footer_container{
-    margin-left: -3rem;
-    margin-right: -3rem;
-} */
+
 .cubeImage {
   position: absolute;
   bottom: 40px;
@@ -346,9 +392,9 @@
   left: -20px;
   z-index: 3;
 }
-.slide {
+/* .slide {
   width: 100%;
-  /* background-color: #13223e; */
+
   margin: 40px;
   padding: 20px;
   text-align: left !important;
@@ -359,23 +405,28 @@
   margin: 40px;
   padding: 20px;
   text-align: left !important;
-}
-.carousel .slider-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
+} */
+/* 
 .slider {
   background-color: transparent;
+} */
+.swipe1,
+.swipe1Light {
+  max-width: 800px;
+  width: 100%;
 }
-
-.carousel .slide {
+.swipe1 .item {
+  background-color: rgba(34, 34, 34, 0.5);
+}
+.item .item-body {
+  padding: 10px 10px 20px 10px;
+}
+.swipe1,
+.swipe1Light {
   background-color: transparent;
 }
-.swipe1 {
-  background-color: #23355780;
-}
-.swipe1Light {
-  background-color: #b8b8b880;
+.swipe1Light .item {
+  background-color: #dadada;
 }
 @media (min-width: 768px) {
   .page1BodyContainer {
@@ -393,17 +444,16 @@
   .dotLogo {
     width: 120px;
   }
-  .rect5-item1 {
+  /* .rect5-item1 {
     width: 520px;
   }
   .rect5-item2 {
     width: 520px;
-  }
+  } */
   .rect5 {
     padding: 2rem 2rem;
   }
   .newsLetter {
-    background: linear-gradient(to right, #2fabe6, #07528f);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -436,4 +486,21 @@
     width: 95%;
     text-align: right;
   }
+}
+
+.toolbarRight .action_button {
+  padding: 0px 20px;
+}
+.action_button2 {
+  background: rgb(178, 178, 178) !important;
+  background: linear-gradient(
+    95deg,
+    rgba(178, 178, 178, 1) 0%,
+    rgba(60, 60, 60, 1) 100%
+  ) !important;
+}
+.action_button2.beginner-btn {
+  padding: 4px 30px !important;
+  font-size: 30px !important;
+  border: none !important;
 }

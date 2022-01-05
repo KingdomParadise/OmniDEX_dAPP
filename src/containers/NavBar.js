@@ -27,13 +27,15 @@ const NavBar = () => {
       <header id="main-header" className="header_container">
         <div className="header_inner">
           <Link to="/" className="header_brand">
-            <img src={logo} width={60} alt="OmniDEX logo" />
-            <span className="text-uppercase">Vision Exchange</span>
+            <img src={logo} width={70} alt="OmniDEX logo" />
+            <span className="text-uppercase">
+              Vision <br /> Exchange
+            </span>
           </Link>
           <nav className="nav_items">
-            <Link to="/">Home</Link>
-            <Link to="/">Page 1</Link>
-            <Link to="/">Page 2</Link>
+            <Link to="/">Team</Link>
+            <Link to="/">Buy</Link>
+            <Link to="/">Faq</Link>
           </nav>
           <div className="nav_actions">
             <div

@@ -382,10 +382,10 @@ const MainBody = () => {
                 <img src={ethereum} alt="Ethereum" />
                 Ethereum
               </div>
-              <div className="partner__3YHW9">
+              {/* <div className="partner__3YHW9">
                 <img src={matic_grant} alt="Polygon" />
                 Polygon
-              </div>
+              </div> */}
               <div className="partner__3YHW9">
                 <img src={fantom} alt="Fantom" />
                 Fantom
@@ -398,10 +398,10 @@ const MainBody = () => {
                 <img src={avalanche} alt="Avalanche" />
                 Avalanche
               </div>
-              <div className="partner__3YHW9">
+              {/* <div className="partner__3YHW9">
                 <img src={matic_grant} alt="Polygon" />
                 Polygon
-              </div>
+              </div> */}
               <div className="partner__3YHW9">
                 <img src={harmony} alt="Harmony" />
                 Harmony
