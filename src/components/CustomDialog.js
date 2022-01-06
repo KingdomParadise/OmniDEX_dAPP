@@ -7,82 +7,83 @@ import DialogContent from "@mui/material/DialogContent";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { makeStyles } from "@mui/styles";
+import { red } from "@material-ui/core/colors";
 
 const useStyles = makeStyles((theme) => ({
-	paper: {
-		backgroundColor: "#0f1f3deb !important",
-		color: "#fff !important",
-    borderRadius: '12px !important'
-	},
+  paper: {
+    backgroundColor: "var(--omni-swap-middle-box) !important",
+    color: "#fff !important",
+    borderRadius: "12px !important",
+  },
   dailogheader: {
-    padding: '1.6rem !important'
-  }
+    padding: "1.6rem !impFortant",
+    background: "var(--omni-swap-middle-box)",
+  },
 }));
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-	"& .MuiDialogContent-root": {
-		padding: theme.spacing(3),
-
-	},
-	"& .MuiDialogActions-root": {
-		padding: theme.spacing(1),
-	},
+  "& .MuiDialogContent-root": {
+    padding: theme.spacing(3),
+  },
+  "& .MuiDialogActions-root": {
+    padding: theme.spacing(1),
+  },
 }));
 
 const BootstrapDialogTitle = (props) => {
   const classes = useStyles();
-	const { children, onClose, ...other } = props;
+  const { children, onClose, ...other } = props;
 
-	return (
-		<DialogTitle className={classes.dailogheader} {...other}>
-			{children}
-			{onClose ? (
-				<IconButton
-					aria-label='close'
-					onClick={onClose}
-					sx={{
-						position: "absolute",
-						right: 18,
-						top: 18,
-						color: (theme) => theme.palette.grey[500],
-					}}
-				>
-					<CloseIcon />
-				</IconButton>
-			) : null}
-		</DialogTitle>
-	);
+  return (
+    <DialogTitle className={classes.dailogheader} {...other}>
+      {children}
+      {onClose ? (
+        <IconButton
+          aria-label="close"
+          onClick={onClose}
+          sx={{
+            position: "absolute",
+            right: 18,
+            top: 18,
+            color: (theme) => theme.palette.grey[500],
+          }}
+        >
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </DialogTitle>
+  );
 };
 
 BootstrapDialogTitle.propTypes = {
-	children: PropTypes.node,
-	onClose: PropTypes.func.isRequired,
+  children: PropTypes.node,
+  onClose: PropTypes.func.isRequired,
 };
 
-const CustomDialog = ({ open, handleClose, children, title, size='sm' }) => {
+const CustomDialog = ({ open, handleClose, children, title, size = "sm" }) => {
   const classes = useStyles();
-	return (
-		<BootstrapDialog
-    maxWidth={'md'}
-			onClose={handleClose}
-			aria-labelledby='customized-dialog-title'
-			open={open}
+  return (
+    <BootstrapDialog
+      maxWidth={"md"}
+      onClose={handleClose}
+      aria-labelledby="customized-dialog-title"
+      open={open}
       classes={{
         paper: classes.paper,
       }}
       maxWidth={size}
-		>
-			{title && (
-				<BootstrapDialogTitle
-					id='customized-dialog-title'
-					onClose={handleClose}
-				>
-					{title}
-				</BootstrapDialogTitle>
-			)}
-			<DialogContent>{children}</DialogContent>
-		</BootstrapDialog>
-	);
+    >
+      {title && (
+        <BootstrapDialogTitle
+          id="customized-dialog-title"
+          onClose={handleClose}
+        >
+          {title}
+        </BootstrapDialogTitle>
+      )}
+      <DialogContent>{children}</DialogContent>
+    </BootstrapDialog>
+  );
 };
 
 export default CustomDialog;

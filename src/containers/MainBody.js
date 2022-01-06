@@ -331,41 +331,43 @@ const MainBody = () => {
                 Uniswap
               </div>
               <div className="partner__3YHW9">
+                <img width={45} src={pancakeswap} alt="Pancakeswap" />
+                Pancakeswap
+              </div>
+              {/* <div className="partner__3YHW9">
                 <img width={45} src={quickswap} alt="Quickswap" />
                 Quickswap
-              </div>
+              </div> */}
               <div className="partner__3YHW9">
                 <img width={45} src={pangolin} alt="Pangolin" />
                 Pangolin
               </div>
-              <div className="partner__3YHW9">
+              {/* <div className="partner__3YHW9">
                 <img width={45} src={_inch} alt="1inch" />
                 1inch
-              </div>
-              <div className="partner__3YHW9">
-                <img width={45} src={sushiswap} alt="Sushiswap" />
-                Sushiswap
-              </div>
-              <div className="partner__3YHW9">
+              </div> */}
+             
+              {/* <div className="partner__3YHW9">
                 <img width={45} src={ox} alt="0x protocol" />
                 0x protocol
-              </div>
-              <div className="partner__3YHW9">
-                <img width={45} src={pancakeswap} alt="Pancakeswap" />
-                Pancakeswap
-              </div>
-              <div className="partner__3YHW9">
+              </div> */}
+              
+              {/* <div className="partner__3YHW9">
                 <img width={45} src={matic_grant} alt="Polygon" />
                 Polygon
-              </div>
+              </div> */}
               <div className="partner__3YHW9">
                 <img width={45} src={solarbeam} alt="Solarbeam" />
                 Solarbeam
               </div>
               <div className="partner__3YHW9">
+                <img width={45} src={sushiswap} alt="Sushiswap" />
+                Sushiswap
+              </div>
+              {/* <div className="partner__3YHW9">
                 <img width={45} src={spiritswap} alt="Spiritswap" />
                 Spiritswap
-              </div>
+              </div> */}
             </div>
           </div>
           <div>
@@ -378,34 +380,34 @@ const MainBody = () => {
               />
             </div>
             <div className="partners__list__26Fh1">
-              <div className="partner__3YHW9">
+              {/* <div className="partner__3YHW9">
                 <img src={ethereum} alt="Ethereum" />
                 Ethereum
-              </div>
+              </div> */}
               {/* <div className="partner__3YHW9">
                 <img src={matic_grant} alt="Polygon" />
                 Polygon
               </div> */}
-              <div className="partner__3YHW9">
+              {/* <div className="partner__3YHW9">
                 <img src={fantom} alt="Fantom" />
                 Fantom
-              </div>
+              </div> */}
               <div className="partner__3YHW9">
                 <img src={xdai} alt="xDai" />
                 xDai
               </div>
-              <div className="partner__3YHW9">
+              {/* <div className="partner__3YHW9">
                 <img src={avalanche} alt="Avalanche" />
                 Avalanche
-              </div>
+              </div> */}
               {/* <div className="partner__3YHW9">
                 <img src={matic_grant} alt="Polygon" />
                 Polygon
               </div> */}
-              <div className="partner__3YHW9">
+              {/* <div className="partner__3YHW9">
                 <img src={harmony} alt="Harmony" />
                 Harmony
-              </div>
+              </div> */}
               <div className="partner__3YHW9">
                 <img src={bsc} alt="BSC" />
                 BSC

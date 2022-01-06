@@ -22,7 +22,7 @@ import { Menu, ChevronLeft, Inbox, Mail, Home } from "@material-ui/icons";
 
 import DexHomeBody from "./DexHomeBody";
 import "../assets/styles/page1.css";
-import logo from "../assets/images/page1/vision-logo.png";
+import logo from "../assets/images/page1/logo.png";
 import swap from "../assets/sidebar/swap.png";
 import bridge from "../assets/sidebar/bridge.png";
 import staking from "../assets/sidebar/staking.png";

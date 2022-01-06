@@ -504,3 +504,7 @@ html.dark {
   font-size: 30px !important;
   border: none !important;
 }
+
+slideimgcolor{
+  opacity: 0.2;
+}

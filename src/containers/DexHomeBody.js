@@ -22,7 +22,7 @@ import coingecko from "../assets/images/communityIcons/coingecko.svg";
 import cube from "../assets/images/omni-documnet-box.png";
 import fadedCube from "../assets/images/faddedBox.png";
 import rect1Bg from "../assets/images/page1/rect1-bg.png";
-import slide1Img from "../assets/images/page1/slide1-img.png";
+import slide1Img from "../assets/images/page1/slide.png";
 // import { Carousel } from "react-responsive-carousel";
 import { ThemeContext } from "../theme/ThemeContext";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -194,7 +194,7 @@ const DexHomeBody = () => {
                     <img src={dcbBsc} width={120} alt="dcb-bsc" />
                   </div>
                   <div>
-                    <p className="mb-1 bold">DCB-BSC</p>
+                    <p className="mb-1 bold">VZN-BSC</p>
                     <p className="mb-1">Apr: 82.10%</p>
                   </div>
                 </div>
@@ -203,7 +203,7 @@ const DexHomeBody = () => {
                     <img src={dcbBsc} width={120} alt="dcb-bsc" />
                   </div>
                   <div>
-                    <p className="mb-1 bold">DCB-BSC</p>
+                    <p className="mb-1 bold">VZN-BSC</p>
                     <p className="mb-1">Apr: 82.10%</p>
                   </div>
                 </div>
@@ -234,7 +234,7 @@ const DexHomeBody = () => {
                     <img src={dcbBsc} width={120} alt="dcb-bsc" />
                   </div>
                   <div>
-                    <p className="mb-1 bold">DCB-BSC</p>
+                    <p className="mb-1 bold">VZM-BSC</p>
                     <p className="mb-1">Apr: 82.10%</p>
                   </div>
                 </div>
@@ -243,7 +243,7 @@ const DexHomeBody = () => {
                     <img src={dcbBsc} width={120} alt="dcb-bsc" />
                   </div>
                   <div>
-                    <p className="mb-1 bold">DCB-BSC</p>
+                    <p className="mb-1 bold">VZM-BSC</p>
                     <p className="mb-1">Apr: 82.10%</p>
                   </div>
                 </div>
@@ -268,6 +268,7 @@ const DexHomeBody = () => {
                   <OwlCarousel className="owl-theme" {...options}>
                     <div className="item">
                       <img src={slide1Img} alt="" width={140} />
+
                       <div className="item-body">
                         <h3>OmniTv Ep28 - Beefy Finance</h3>
                         <p>
