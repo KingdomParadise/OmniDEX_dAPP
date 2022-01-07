@@ -33,9 +33,10 @@ const NavBar = () => {
             </span>
           </Link>
           <nav className="nav_items">
+            <Link to="/">Pre Sale</Link>
             <Link to="/">Team</Link>
             <Link to="/">Buy</Link>
-            <Link to="/">Faq</Link>
+            <Link to="/">FAQ</Link>
           </nav>
           <div className="nav_actions">
             <div

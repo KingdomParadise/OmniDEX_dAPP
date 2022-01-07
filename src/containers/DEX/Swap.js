@@ -23,9 +23,9 @@ import { makeStyles } from "@mui/styles";
 import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import CustomDialog from "../../components/CustomDialog";
 import { ThemeContext } from "../../theme/ThemeContext";
-import { Button } from "@mui/material";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
+import MetamaskImage from "../../assets/images/swap/metamask.png";
+import TrustWallet from "../../assets/images/swap/TWT.png";
+import walletconnect from "../../assets/images/swap/walletconnect.png";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -42,17 +42,17 @@ const ConnectWallet = ({ open, handleClose }) => {
     {
       id: 0,
       title: "MetaMask",
-      icon: uniswap,
+      icon: MetamaskImage,
     },
     {
       id: 1,
       title: "Trust Wallet",
-      icon: polygon,
+      icon: TrustWallet,
     },
     {
       id: 2,
       title: "WalletConnect",
-      icon: polygon,
+      icon: walletconnect,
     },
   ];
 
@@ -277,10 +277,6 @@ const Swap = () => {
     tokenList: false,
   });
 
-  const [selectionValue, setSelectionValue] = useState();
-
-  const [selectionValue1, setSelectionValue1] = useState();
-  const [counter, setCounter] = useState(0);
   const [leftToken, setLeftToken] = useState({
     id: 0,
     title: "MetaMask",
@@ -307,13 +303,7 @@ const Swap = () => {
     setAnchorEl(null);
   };
   const handleTokenSelection = (token) => {
-    // console.log("Token", token);
-    // console.log("counter", counter);
-    if (counter == 1) {
-      setSelectionValue(token);
-    } else {
-      setSelectionValue1(token);
-    }
+    console.log(token);
     setPopup({
       tokenList: false,
     });
@@ -382,40 +372,14 @@ const Swap = () => {
                   <button
                     className="selectCurrencyButton"
                     style={{ color: darkMode ? "#9ca6be" : "#fff" }}
-                    onClick={() => {
-                      setCounter(1);
+                    onClick={() =>
                       setPopup({
                         ...popup,
                         tokenList: !popup.tokenList,
-                      });
-                    }}
+                      })
+                    }
                   >
-                    {selectionValue ? (
-                      <div class="selectButtonWidth">
-                        <img
-                          src={selectionValue.icon}
-                          width="18px"
-                          height="18px"
-                        />
-                        {selectionValue.title}
-                        <span>
-                          <IconButton
-                            aria-label="close"
-                            sx={{
-                              color: (theme) => theme.palette.grey[500],
-                            }}
-                          >
-                            <CloseIcon
-                              onClick={() => {
-                                setSelectionValue("");
-                              }}
-                            />
-                          </IconButton>
-                        </span>
-                      </div>
-                    ) : (
-                      "Select Token"
-                    )}
+                    Select Token
                   </button>
                   <input
                     className="amountInput"
@@ -435,16 +399,7 @@ const Swap = () => {
                 </div>
                 <div className="swapButtonDevider">
                   <div className="swapButton">
-                    <img
-                      src={swithcer}
-                      alt="swithcer"
-                      height="24"
-                      width="24"
-                      onClick={() => {
-                        setSelectionValue(selectionValue1);
-                        setSelectionValue1(selectionValue);
-                      }}
-                    />
+                    <img src={swithcer} alt="swithcer" height="24" width="24" />
                   </div>
                 </div>
                 <div
@@ -454,38 +409,14 @@ const Swap = () => {
                   <button
                     className="selectCurrencyButton"
                     style={{ color: darkMode ? "#9ca6be" : "#fff" }}
-                    onClick={() => {
-                      setCounter(2);
+                    onClick={() =>
                       setPopup({
                         ...popup,
                         tokenList: !popup.tokenList,
-                      });
-                    }}
+                      })
+                    }
                   >
-                    {selectionValue1 ? (
-                      <div class="selectButtonWidth">
-                        <img
-                          src={selectionValue1.icon}
-                          width="20px"
-                          height="20px"
-                        />
-                        {selectionValue1.title}
-                        <IconButton
-                          aria-label="close"
-                          sx={{
-                            color: (theme) => theme.palette.grey[500],
-                          }}
-                        >
-                          <CloseIcon
-                            onClick={() => {
-                              setSelectionValue1("");
-                            }}
-                          />
-                        </IconButton>
-                      </div>
-                    ) : (
-                      "Select Token"
-                    )}
+                    Select Token{" "}
                   </button>
                   <input
                     className="amountInput"

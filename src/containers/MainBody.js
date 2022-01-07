@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React, { useContext, useState } from "react";
+import MediaQuery from "react-responsive";
+
 import "../assets/styles/mainBody.css";
 import { FiSettings, FiSearch } from "react-icons/fi";
 import { BsFillStarFill } from "react-icons/bs";
@@ -9,7 +11,8 @@ import bannerTopBox from "../assets/images/banner-top-box.png";
 import faddedBox from "../assets/images/faddedBox.png";
 import cryptoIcon from "../assets/images/icon.png";
 import daigram from "../assets/images/daigram.png";
-import daigram_light from "../assets/images/daigram-light.png";
+import daigram_light from "../assets/images/daigram.png";
+import daigram_dark from "../assets/images/DiagramDark.png";
 import matic_grant from "../assets/images/polygon.svg";
 import harmony_grant from "../assets/images/harmony.svg";
 import near_grant from "../assets/images/near.svg";
@@ -65,14 +68,28 @@ const MainBody = () => {
                     className=""
                     style={{ color: darkMode ? "" : "#959595" }}
                   >
-                    <span className="nowrap">
+                    <span
+                      className={
+                        darkMode ? "nowrap newRelase" : "nowrap newRelaseLight"
+                      }
+                    >
+                      NEW RELASE
+                    </span>
+                    <br />
+                    <span
+                      className={darkMode ? "nowrap darkc" : "nowrap lightc"}
+                    >
                       Vision-chain
                       <br />
                     </span>
-                    exchange
+                    <span className={darkMode ? " darkc" : " lightc"}>
+                      exchange
+                    </span>
                     <br className="screen__br__3HphO" />
+                    <span className={darkMode ? " darkc" : " lightc"}>
+                      protocol
+                    </span>
                   </span>{" "}
-                  protocol
                 </h2>
                 <div className="screen__info__2QpSI">
                   <p className="screen__text__1p3Jl">
@@ -96,10 +113,16 @@ const MainBody = () => {
               </span>
 
               <div className="screen__instruction__2oDJw">
-                <div className="screen_instruction_inner">
+                <div
+                  className={
+                    darkMode
+                      ? "screen_instruction_inner"
+                      : "screen_instruction_inner light"
+                  }
+                >
                   <div className="landing_instruction">
                     <span style={{ color: "#fff" }}>
-                      Complete multi chain <br /> swap in 1 click!
+                      Complete multi chain <br /> swap in one click!
                     </span>
                   </div>
                   <div className="landing_instruction_search">
@@ -120,26 +143,28 @@ const MainBody = () => {
                   </div>
                 </div>
                 <img
-                  className="screen__big-cube__mMoMv"
+                  className="screen__big-cube__mMoMv iconWidth1 "
                   src={bannerTopBox}
                   height={150}
                   alt="Decorative cube1"
                 />
                 <img
-                  className="screen__blured-cube__5rokD"
+                  className="screen__blured-cube__5rokD iconWidth"
                   src={faddedBox}
                   alt="Decorative cube"
                 />{" "}
               </div>
             </div>
-            <div className="screen__info__2QpSI_secondary">
-              <p className="screen__text__1p3Jl">
-                <span>
-                  The Vision-DEX is a cross-chain exchange allowing the swap of
-                  thousands of tokens across 8 different blockchains seamlessly
-                </span>
-              </p>
-              <Link to="/" className="screen__link__1gw9g" rel="noreferrer">
+            <MediaQuery maxWidth={600}>
+              <div className="screen__info__2QpSI_secondary">
+                <p className="screen__text__1p3Jl">
+                  <span style={{ fontSize: "25px" }}>
+                    The Vision-DEX is a cross-chain exchange allowing the swap
+                    of thousands of tokens across 8 different blockchains
+                    seam-lessly
+                  </span>
+                </p>
+                {/* <Link to="/" className="screen__link__1gw9g" rel="noreferrer">
                 Start Trading
                 <img
                   className="arrow__3f0-7"
@@ -148,8 +173,9 @@ const MainBody = () => {
                   width={35}
                   alt="arrow"
                 />
-              </Link>
-            </div>
+              </Link> */}
+              </div>
+            </MediaQuery>
             <div className="gradient" />
           </div>
         </div>
@@ -208,7 +234,7 @@ const MainBody = () => {
         </h2>
         <img
           className="about__image__Ry7YU"
-          src={darkMode ? daigram : daigram_light}
+          src={darkMode ? daigram_dark : daigram_light}
           alt="What is Vision"
         />
         <div className="about__info__3eAVO">
@@ -220,6 +246,7 @@ const MainBody = () => {
               utilizing over 50 decentralized exchanges.
             </span>
           </p>
+          <div>
           <Link
             to="/"
             className="button button_glassy action_button_def"
@@ -244,6 +271,7 @@ const MainBody = () => {
               alt="arrow"
             />
           </Link>
+          </div> 
         </div>
         <div className="gradient__31T_H" />
       </section>
@@ -289,7 +317,8 @@ const MainBody = () => {
             />
             <span>CertiK Audit</span>
           </div>
-          {/* <Link
+
+          <Link
             to="/"
             className="screen__link__1gw9g"
             rel="noreferrer"
@@ -303,7 +332,7 @@ const MainBody = () => {
               width={35}
               alt="arrow"
             />
-          </Link> */}
+          </Link>
         </div>
       </section>
       <section className="partners__3xIAI">
@@ -345,13 +374,14 @@ const MainBody = () => {
               {/* <div className="partner__3YHW9">
                 <img width={45} src={_inch} alt="1inch" />
                 1inch
-              </div> */}
-             
-              {/* <div className="partner__3YHW9">
+              </div>*/}
+
+              {/* 
+              <div className="partner__3YHW9">
                 <img width={45} src={ox} alt="0x protocol" />
                 0x protocol
               </div> */}
-              
+
               {/* <div className="partner__3YHW9">
                 <img width={45} src={matic_grant} alt="Polygon" />
                 Polygon
@@ -431,17 +461,33 @@ const MainBody = () => {
           website. This means that your users can buy token, without having to
           leave your website! It’s free and Already joined 40+ projects.
         </p>
+        <MediaQuery maxWidth={600}>
+          <center>
+            <Link to="/" className="screen__link__1gw9g " rel="noreferrer">
+              Connect Wallet
+              <img
+                className="arrow__3f0-7"
+                src={arrow}
+                height={15}
+                width={35}
+                alt="arrow"
+              />
+            </Link>
+          </center>
+        </MediaQuery>
 
-        <Link to="/" className="screen__link__1gw9g" rel="noreferrer">
-          Action Button
-          <img
-            className="arrow__3f0-7"
-            src={arrow}
-            height={15}
-            width={35}
-            alt="arrow"
-          />
-        </Link>
+        <MediaQuery minWidth={601}>
+          <Link to="/" className="screen__link__1gw9g " rel="noreferrer">
+            Connect Wallet
+            <img
+              className="arrow__3f0-7"
+              src={arrow}
+              height={15}
+              width={35}
+              alt="arrow"
+            />
+          </Link>
+        </MediaQuery>
       </section>
 
       {/* omnidex calculations */}
@@ -542,7 +588,12 @@ const MainBody = () => {
                       backgroundColor: darkMode ? "#1A1A1A" : "#A1A1A1",
                     }}
                   >
-                    <img src={ethereum} height={24} width={24} alt="token" />
+                    <img
+                      src={bannerTopBox}
+                      height={24}
+                      width={24}
+                      alt="token"
+                    />
                   </div>
                 </div>
                 <div className="token_input_buttons">
@@ -564,7 +615,7 @@ const MainBody = () => {
                         backgroundColor: darkMode ? "#0F0F0F" : "#929292",
                       }}
                     >
-                      VISION
+                      VZN
                     </button>
                   </div>
                   <div>
@@ -690,7 +741,7 @@ const MainBody = () => {
               className="screen__link__1gw9g signup-form__submit__RSCiX"
               rel="noreferrer"
             >
-              Action Button
+              Submit
             </Link>
           </form>
         </div>
@@ -738,7 +789,7 @@ const MainBody = () => {
                   />
                 </Link>
                 <Link to="/">
-                  One Pager
+                  One Pages
                   <img
                     className="arrow__3f0-7"
                     src={arrow}

@@ -2,17 +2,25 @@
   --omni-swap-background: #fff;
   --omni-swap-containers: #e6e7e9;
   --omni-swap-text-color: #fff;
-  --omni-swap-image-container: #23314d;
-  --omni-swap-container-inner: #c6d3dc;
+  --omni-swap-image-container: #c6c6c6;
+  --omni-swap-container-inner: #d0d0d0;
   --omni-swap-middle-box: #e6e7e9;
   --omni-swap-swap-button: rgb(174, 174, 175);
-  --omni-swap-select-token: #7ea2c3;
+  --omni-swap-select-token: #9a9a9a;
   --omni-swap-header-barleft: #dae5eb;
   --omni-swap-header-barright: #eef2f5;
   --tolerancein-input-bg: #fff;
   --tolerancein-button-bg: #404040;
   --transactionVolume-bg: url(../images/swap/volume-bg-light.png);
   --footer-bg2: #141414;
+  --tokenCollection: #d8d8d8;
+  --singleItem-bg: #ebebeb;
+  --scroll-shadow: inset 0 0 6px #cacaca;
+  --scroll-track-bar: #dcdcdc;
+  --scroll-thumb: #bdbdbd;
+  --tokenGrid: #272727;
+  --newtovision-link: #9a9a9a;
+  --boxheader-text: #272727;
 }
 
 html.dark {
@@ -30,6 +38,14 @@ html.dark {
   --tolerancein-button-bg: #404040;
   --transactionVolume-bg: url(../images/swap/volume-bg.png);
   --footer-bg2: #1e1e1e;
+  --tokenCollection: #282828;
+  --singleItem-bg: #1e1e1e;
+  --scroll-shadow: inset 0 0 6px #171717;
+  --scroll-track-bar: #434343;
+  --scroll-thumb: #171717;
+  --tokenGrid: #a1a1a1;
+  --newtovision-link: #595959;
+  --boxheader-text: #fff;
 }
 
 button:focus {
@@ -62,7 +78,7 @@ button:focus {
 
 .boxHeader {
   padding: 0.5rem 1.25rem 0.5rem;
-  color: #fff;
+  color: var(--boxheader-text);
   display: flex;
   -webkit-box-align: center;
   justify-content: space-between;
@@ -94,7 +110,7 @@ button:focus {
   align-items: center;
   height: 35px;
   padding: 7px 15px;
-  color: #fff;
+  color: var(--boxheader-text);
   font-weight: 500;
   font-size: 16px;
   border-radius: 35px;
@@ -410,7 +426,7 @@ button:focus {
 }
 
 .newToVision span {
-  color: darkgrey;
+  color: var(--newtovision-link);
   font-size: 18px;
 }
 
@@ -425,33 +441,28 @@ button:focus {
   padding: 0.8rem 1.4rem;
   min-width: 10rem;
   outline: none;
-  border: 2px solid black;
+  border: 2px solid var(--tokenGrid);
   border-radius: 12px;
   font-size: 20px;
   margin-bottom: 0.9rem;
-  color: white;
+  color: var(--tokenGrid);
   cursor: pointer;
 }
 
-.tokenGrid:hover {
+/* .tokenGrid:hover {
   border: 2px solid rgb(204, 204, 204);
-}
+} */
 
 .singleItem {
   /* padding: 1rem; */
   border-radius: 5px;
   border: 1px solid transparent;
-  background-color: var(--omni-swap-middle-box);
+  background-color: var(--singleItem-bg);
   padding: 6px;
 }
 
 .tokenCollection {
-  background: linear-gradient(
-    170deg,
-    rgba(19, 19, 19, 0.8) 0%,
-    rgba(19, 19, 19, 0.2) 50%,
-    transparent
-  );
+  background-color: var(--tokenCollection);
   border-radius: 6px;
   max-height: 60vh;
   overflow: auto;
@@ -461,7 +472,7 @@ button:focus {
   cursor: pointer;
 }
 .singleTokenListItem:hover {
-  background-color: darkgrey;
+  background-color: rgba(40, 56, 83, 0.664);
   border-radius: 8px;
   padding: 1px 6px;
 }
@@ -486,17 +497,20 @@ button:focus {
 }
 
 .cusScroll::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #0d192d;
+  -webkit-box-shadow: var(--scroll-shadow);
+  background-color: var(--scroll-track-bar);
+  border-radius: 10px;
 }
 
 .cusScroll::-webkit-scrollbar {
   width: 8px;
-  background-color: #0d192d;
+  background-color: var(--scroll-track-bar);
+  border-radius: 10px;
 }
 
 .cusScroll::-webkit-scrollbar-thumb {
-  background-color: #394454;
+  background-color: var(--scroll-thumb);
+  border-radius: 10px;
 }
 .starBtn {
   border: 1px solid white;
@@ -508,12 +522,8 @@ button:focus {
   border-radius: 6px;
 }
 .activeNet {
-  border: 1px solid darkgrey;
+  border: 1px solid #7e7ea8;
 }
 .inactiveNet {
   border: 1px solid transparent;
-}
-
-.selectButtonWidth {
-  width: 120px;
 }

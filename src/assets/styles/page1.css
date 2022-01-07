@@ -110,7 +110,7 @@ html.dark {
   font-size: 22px !important;
 }
 .launchBtnLight {
-  background-color: #8e8e8e;
+  background-color: #848484;
   color: white;
 }
 .action_button2.unlock {
@@ -503,8 +503,4 @@ html.dark {
   padding: 4px 30px !important;
   font-size: 30px !important;
   border: none !important;
-}
-
-slideimgcolor{
-  opacity: 0.2;
 }
