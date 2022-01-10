@@ -225,7 +225,7 @@ a:hover {
     text-align: center !important;
   }
   html body .audits__list__3OBjG ._1NVMLAeGTqGbKx__SalZv8 {
-    width: 100% !important;
+    /* width: 100% !important; */
     justify-content: center !important;
   }
   .partners__subtitle__31ICZ {
@@ -269,9 +269,10 @@ a:hover {
     font-size: 16px !important;
   }
   body .header_brand img {
-    width: 30px;
+    width: 50px;
     height: auto;
   }
+
   .token-amount-input-container {
     max-width: 200px !important;
   }

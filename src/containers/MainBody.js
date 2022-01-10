@@ -148,17 +148,19 @@ const MainBody = () => {
                   height={150}
                   alt="Decorative cube1"
                 />
-                <img
-                  className="screen__blured-cube__5rokD iconWidth"
-                  src={faddedBox}
-                  alt="Decorative cube"
-                />{" "}
+                <section>
+                  <img
+                    className="screen__blured-cube__5rokD iconWidth"
+                    src={faddedBox}
+                    alt="Decorative cube"
+                  />{" "}
+                </section>
               </div>
             </div>
             <MediaQuery maxWidth={600}>
               <div className="screen__info__2QpSI_secondary">
                 <p className="screen__text__1p3Jl">
-                  <span style={{ fontSize: "25px" }}>
+                  <span style={{ fontSize: "14px" }}>
                     The Vision-DEX is a cross-chain exchange allowing the swap
                     of thousands of tokens across 8 different blockchains
                     seam-lessly
@@ -247,31 +249,32 @@ const MainBody = () => {
             </span>
           </p>
           <div>
-          <Link
-            to="/"
-            className="button button_glassy action_button_def"
-            style={{ backgroundColor: darkMode ? "#353535" : "#999999" }}
-          >
-            Action Button
-            <img
-              className="button__arrow"
-              src={arrow}
-              height={15}
-              width={35}
-              alt="arrow"
-            />
-          </Link>
-          <Link to="/" className="screen__link__1gw9g" rel="noreferrer">
-            Action Button
-            <img
-              className="arrow__3f0-7"
-              src={arrow}
-              height={15}
-              width={35}
-              alt="arrow"
-            />
-          </Link>
-          </div> 
+            <Link
+              to="/"
+              className="screen__link__1gw9g mobi"
+              rel="noreferrer"
+              style={{ backgroundColor: darkMode ? "#353535" : "#999999" }}
+            >
+              Action Button
+              <img
+                className="arrow__3f0-7"
+                src={arrow}
+                height={15}
+                width={35}
+                alt="arrow"
+              />
+            </Link>
+            <Link to="/" className="screen__link__1gw9g mobi" rel="noreferrer">
+              Action Button
+              <img
+                className="arrow__3f0-7"
+                src={arrow}
+                height={15}
+                width={35}
+                alt="arrow"
+              />
+            </Link>
+          </div>
         </div>
         <div className="gradient__31T_H" />
       </section>
@@ -320,7 +323,7 @@ const MainBody = () => {
 
           <Link
             to="/"
-            className="screen__link__1gw9g"
+            className="screen__link__1gw9g act"
             rel="noreferrer"
             style={{ height: "56px", marginLeft: "52px" }}
           >
@@ -339,8 +342,8 @@ const MainBody = () => {
         <div className="partners__title__1CYAp">
           <h2>
             <span className="highlight">Vision </span>
-            <br className="partners__br__32LPN" />
-            supports
+            {/* <br className="partners__br__32LPN" /> */}
+            Audits
           </h2>
           <img
             className="partners__main-cube__3H4O7"
@@ -660,7 +663,7 @@ const MainBody = () => {
                 to="/"
                 style={{
                   minWidth: "180px",
-                  height: "56px",
+                  height: "46px",
                   marginLeft: "22px",
                 }}
                 className="screen__link__1gw9g action_calc_button"
@@ -723,7 +726,7 @@ const MainBody = () => {
               Subscribe to our newsletter
             </h2>
             <p className="subscription__text__qXvTm">
-              Fill in your email to receive Omni’s latest info and updates
+              Fill in your email to receive VZM latest info and updates
             </p>
           </div>
           <form className="signup-form__2Wjqj" id="subscribeToLetters">
