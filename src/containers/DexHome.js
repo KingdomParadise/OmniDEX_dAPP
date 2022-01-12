@@ -18,11 +18,13 @@ import {
   Drawer,
   useMediaQuery,
 } from "@material-ui/core";
+import MediaQuery from "react-responsive";
 import { Menu, ChevronLeft, Inbox, Mail, Home } from "@material-ui/icons";
 
 import DexHomeBody from "./DexHomeBody";
 import "../assets/styles/page1.css";
 import logo from "../assets/images/page1/vision-logo.png";
+import logo1 from "../assets/images/page1/dot-logo.png";
 import swap from "../assets/sidebar/swap.png";
 import bridge from "../assets/sidebar/bridge.png";
 import staking from "../assets/sidebar/staking.png";
@@ -254,15 +256,30 @@ export default function ResponsiveDrawer() {
             </IconButton>
             <div className="toolbarRight">
               <div>
-                <img src={bsc} width={20} alt="BSC" />
-                <button
-                  className="btn btn-link"
-                  style={{ color: darkMode ? "#fff" : "#1e1e1e" }}
-                >
-                  BSC
-                </button>
-                <button className=" action_button  action_button2 ">
-                  Action Button
+                <span className="bsc_icon">
+                  <img src={bsc} width={20} alt="BSC" />
+                  <button
+                    className="btn btn-link"
+                    style={{ color: darkMode ? "#fff" : "#1e1e1e" }}
+                  >
+                    BSC
+                  </button>
+                </span>
+                <MediaQuery maxWidth={480}>
+                  <header id="main-header" className="header_container">
+                    <div className="header_inner dapp_head_logo">
+                      <Link to="/dex" className="header_brand">
+                        <img src={logo1} width={45} alt="OmniDEX logo" />
+                        <div className="text_vision_title">
+                          <span className="text-uppercase  text_vision_title_1">Vision</span>
+                          <span className="text-uppercase">Exchange</span>
+                        </div>
+                      </Link>
+                    </div>
+                  </header>
+                </MediaQuery>
+                <button className=" action_button  action_button2 connect_device ">
+                  Connect Wallet
                 </button>
               </div>
             </div>

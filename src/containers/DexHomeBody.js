@@ -10,6 +10,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dcbBsc from "../assets/images/page1/bscicon.png";
+import dcbBsc1 from "../assets/images/page1/iconic.png";
 import arrow from "../assets/images/arrow.png";
 import { Link } from "react-router-dom";
 import facebook from "../assets/images/communityIcons/fb.svg";
@@ -26,6 +27,8 @@ import slide1Img from "../assets/images/page1/slide1-img.png";
 import slide1Imglight from "../assets/images/page1/slide1-img-light.png";
 // import { Carousel } from "react-responsive-carousel";
 import { ThemeContext } from "../theme/ThemeContext";
+import MediaQuery from "react-responsive";
+import { fontSize } from "@mui/system";
 // import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 const options = {
   loop: true,
@@ -52,82 +55,161 @@ const DexHomeBody = () => {
       <div
         className={darkMode ? " page1BodyContainer" : "page1BodyContainerLight"}
       >
-        <div>
-          <img src={rect1Bg} alt="" className="rect1bgImage" />
-        </div>
-        <div className="row">
-          <div className="col-md-12">
-            <div
-              className={
-                darkMode
-                  ? "rect1 d-flex justify-content-left align-items-center py-4"
-                  : "rect1Light d-flex justify-content-left align-items-center py-4"
-              }
-            >
-              <div>
-                <img
-                  src={rocket}
-                  className="rocketImg d-none d-md-block"
-                  alt="rocket"
-                />
-              </div>
-              <div>
-                <h2
-                  className={
-                    darkMode
-                      ? "color2 text-uppercase cFont"
-                      : "color2Light text-uppercase cFont"
-                  }
-                >
-                  Vision Exchange
-                </h2>
-                <h2 className="text-uppercase cFont">Lending Service</h2>
-                <button
-                  className={
-                    darkMode
-                      ? "btn launchBtn btn-md-lg px-4 action_button"
-                      : "btn launchBtnLight btn-md-lg px-4 action_button"
-                  }
-                >
-                  Beta Mode Launching Soon
-                </button>
+        <div>{/* <img src={rect1Bg} alt="" className="rect1bgImage" /> */}</div>
+
+        <MediaQuery maxWidth={480}>
+          {" "}
+          <div className={darkMode ? "rect1 " : "rect1Light "}>
+            <div>
+              <img
+                src={dotLogo}
+                className="rocketImg d-md-block"
+                alt="rocket"
+              />
+            </div>
+            <div className="heading_dapp_landing">
+              <h2
+                className={
+                  darkMode
+                    ? "color2 text-uppercase cFont"
+                    : "color2Light text-uppercase cFont"
+                }
+              >
+                Vision Exchange
+              </h2>
+              <h2 className="text-uppercase cFont1">Lending Service</h2>
+              <button
+                className={
+                  darkMode
+                    ? "btn launchBtn btn-md-lg px-4 action_button"
+                    : "btn launchBtnLight btn-md-lg px-4 action_button"
+                }
+              >
+                Beta Mode Launching Soon
+              </button>
+            </div>
+          </div>
+        </MediaQuery>
+        <MediaQuery minWidth={481}>
+          <div className="row ">
+            <div className="col-md-12 ">
+              {" "}
+              <div
+                className={
+                  darkMode
+                    ? "rect1 rect1_d d-flex justify-content-left align-items-center py-4"
+                    : "rect1Light d-flex justify-content-left align-items-center py-4"
+                }
+              >
+                <div>
+                  <img
+                    src={dotLogo}
+                    className="rocketImg d-md-block"
+                    alt="rocket"
+                  />
+                </div>
+                <div className="heading_dapp_landing">
+                  <h2
+                    className={
+                      darkMode
+                        ? "color2 text-uppercase cFont"
+                        : "color2Light text-uppercase cFont"
+                    }
+                  >
+                    Vision Exchange
+                  </h2>
+                  <h2 className="text-uppercase cFont">Lending Service</h2>
+                  <button
+                    className={
+                      darkMode
+                        ? "btn launchBtn btn-md-lg px-4 action_button"
+                        : "btn launchBtnLight btn-md-lg px-4 action_button"
+                    }
+                  >
+                    Beta Mode Launching Soon
+                  </button>
+                </div>
               </div>
             </div>
-            <img src={cube} alt="" className="cubeImage" />
           </div>
-          <div className="col-md-12 mt-5">
-            <div className="d-flex align-items-center justify-content-center justify-content-md-start">
-              <div className="mr-3 my-auto d-md-block">
+        </MediaQuery>
+
+        {/* <img src={cube} alt="" className="cubeImage" /> */}
+
+        <div className="col-md-12 mt-5">
+          <div className="d-flex align-items-center justify-content-center justify-content-md-start">
+            {/* <div className="mr-3 my-auto d-md-block">
                 <img
                   src={darkMode ? dotLogo : dotLogoLight}
                   className="dotLogo d-none d-md-block"
                   alt="dotlogo"
                 />
-              </div>
-              <div className="my-auto">
-                <h1 className="text-uppercase cFont text-center text-md-left">
-                  Welcome all
+              </div> */}
+            <div className="my-auto">
+              <MediaQuery minWidth={481}>
+                <h1 className="text-uppercase cFont head_wel text-center text-md-left">
+                  Welcome all Vision Users
                 </h1>
-                <h1 className="text-uppercase cFont text-center text-md-left">
+                <div className="col-md-12">
+                  {/* <div className="d-flex flex-column flex-md-row align-items-center mt-3"> */}
+                  <div className="mr-md-5 my-auto">
+                    <h3 className="text-center cfont_6 text-md-left">
+                      Complete multi chain swaps in one click!
+                    </h3>
+                  </div>
+
+                  {/* </div> */}
+                </div>
+              </MediaQuery>
+              <MediaQuery maxWidth={480}>
+                <h1 className="text-uppercase cFont3 head_wel text-center text-md-left">
+                  Welcome all <br />
+                  Vision Users
+                </h1>
+                <div className="col-md-12">
+                  {/* <div className="d-flex flex-column flex-md-row align-items-center mt-3"> */}
+                  <div className="mr-md-5 my-auto">
+                    <h3 className="text-center cfont_6 text-md-left">
+                      Complete multi chain
+                      <br /> swaps in one click!
+                    </h3>
+                  </div>
+
+                  {/* </div> */}
+                </div>
+              </MediaQuery>
+
+              {/* <h1 className="text-uppercase cFont text-center text-md-left">
                   <span className={darkMode ? "color2" : "color2Light"}>
                     Vision
                   </span>{" "}
                   Users
-                </h1>
-              </div>
+                </h1> */}
             </div>
           </div>
+
           <div className="col-md-12">
             <div className="d-flex flex-column flex-md-row align-items-center mt-3">
               <div className="mr-md-5 my-auto">
-                <h3 className="text-center text-md-left">
-                  Complete multi chain <br /> swaps in 1 click!
-                </h3>
+                <MediaQuery minWidth={481}>
+                  <button
+                    className="btn btn-md-lg   px-md-5 action_button action_button2 beginner-btn"
+                    style={{ marginLeft: 0 }}
+                  >
+                    Beginner? Start Here
+                  </button>
+                </MediaQuery>
+                <MediaQuery maxWidth={480}>
+                  <button
+                    id="beginner-btn_1"
+                    className="btn px-md-5  action_button action_button2 beginner-btn "
+                  >
+                    Beginner? Start Here
+                  </button>
+                </MediaQuery>
               </div>
-              <div className="my-auto">
-                <button className="btn btn-md-lg  px-md-5 action_button action_button2 beginner-btn">
-                  Beginner? Start Here
-                </button>
+              <div className="my-auto" style={{ marginLeft: "50%" }}>
+                <img src={cube} alt="" className="logo_button" />
               </div>
             </div>
           </div>
@@ -139,36 +221,73 @@ const DexHomeBody = () => {
                   : "rect2Light d-flex justify-content-center align-items-center py-5"
               }
             >
-              <div>
-                <h2 className="text-uppercase cFont">
-                  {" "}
-                  <span className={darkMode ? "color2" : "color2Light"}>
-                    VISION{" "}
-                  </span>{" "}
-                  Farmings
-                </h2>
-                <p className="">Vision is the ultimate exchange protocol</p>
-                <div className="d-flex">
-                  <div>
-                    <button
-                      className={
-                        darkMode
-                          ? "btn launchBtn btn-md-lg d-flex mr-3 locked"
-                          : "btn launchBtnLight btn-md-lg d-flex mr-3 locked"
-                      }
-                    >
-                      Locked
-                      <LockIcon fontSize="medium" />
-                    </button>
-                  </div>
-                  <div>
-                    <button className="btn btn-gradient btn-md-lg d-flex action_button action_button2 unlock">
-                      Unlock Wallet
-                      <ArrowRightAltIcon fontSize="medium" />
-                    </button>
+              <MediaQuery minWidth={481}>
+                <div>
+                  <h2 className="text-uppercase cFont">
+                    {" "}
+                    <span className={darkMode ? "color2" : "color2Light"}>
+                      VISION{" "}
+                    </span>{" "}
+                    Farmings
+                  </h2>
+                  <p className="">Vision is the ultimate exchange protocol</p>
+                  <div className="d-flex">
+                    <div>
+                      <button
+                        className={
+                          darkMode
+                            ? "btn launchBtn btn-md-lg d-flex mr-3 locked"
+                            : "btn launchBtnLight btn-md-lg d-flex mr-3 locked"
+                        }
+                      >
+                        Locked
+                        <LockIcon fontSize="medium" />
+                      </button>
+                    </div>
+                    <div>
+                      <button className="btn btn-gradient btn-md-lg d-flex action_button action_button2 unlock">
+                        Unlock Wallet
+                        <ArrowRightAltIcon fontSize="medium" />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </MediaQuery>
+
+              <MediaQuery maxWidth={480}>
+                <div>
+                  <h2 className="text-uppercase cFont7">
+                    {" "}
+                    <span className={darkMode ? "color2" : "color2Light"}>
+                      VISION{" "}
+                    </span>{" "}
+                    Farmings
+                  </h2>
+                  <p className="cFont8">
+                    Vision is the ultimate exchange protocol
+                  </p>
+                  <div className="d-flex">
+                    <div>
+                      <button
+                        className={
+                          darkMode
+                            ? "btn launchBtn btn-md-lg d-flex mr-3 locked "
+                            : "btn launchBtnLight btn-md-lg d-flex mr-3 locked"
+                        }
+                      >
+                        Locked
+                        <LockIcon fontSize="medium" />
+                      </button>
+                    </div>
+                    <div>
+                      <button className="btn btn-gradient btn-md-lg d-flex action_button action_button2 unlock">
+                        Unlock Wallet
+                        <ArrowRightAltIcon fontSize="medium" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </MediaQuery>
             </div>
           </div>
           <div className="col-md-12 mt-5">
@@ -190,21 +309,41 @@ const DexHomeBody = () => {
                 <h6 className="">Vision is the ultimate exchange protocol</h6>
               </div>
               <div className="d-flex flex-column flex-md-row justify-content-start">
-                <div className="d-flex justify-content-center justify-content-md-start bgDCB mr-md-2 pr-5">
+                <div
+                  className={
+                    darkMode
+                      ? "d-flex justify-content-center justify-content-md-start bgDCB mr-md-2 pr-5"
+                      : "d-flex justify-content-center justify-content-md-start bgDCB mr-md-2 pr-5 light_icon"
+                  }
+                >
                   <div className="mr-3">
-                    <img src={dcbBsc} width={120} alt="dcb-bsc" />
+                    <img
+                      src={darkMode ? dcbBsc : dcbBsc1}
+                      width={120}
+                      alt="dcb-bsc"
+                    />
                   </div>
-                  <div>
-                    <p className="mb-1 bold">DCB-BSC</p>
+                  <div className="vix">
+                    <p className="mb-1 bold">VZN-BSC</p>
                     <p className="mb-1">Apr: 82.10%</p>
                   </div>
                 </div>
-                <div className="d-flex justify-content-center justify-content-md-start bgDCB  mt-2 mt-md-0 pr-5">
+                <div
+                  className={
+                    darkMode
+                      ? "d-flex justify-content-center justify-content-md-start bgDCB  mt-2 mt-md-0 pr-5"
+                      : "d-flex justify-content-center justify-content-md-start bgDCB  mt-2 mt-md-0 pr-5 light_icon"
+                  }
+                >
                   <div className="mr-3">
-                    <img src={dcbBsc} width={120} alt="dcb-bsc" />
+                    <img
+                      src={darkMode ? dcbBsc : dcbBsc1}
+                      width={120}
+                      alt="dcb-bsc"
+                    />
                   </div>
-                  <div>
-                    <p className="mb-1 bold">DCB-BSC</p>
+                  <div className="vix">
+                    <p className="mb-1 bold">VZN-BSC</p>
                     <p className="mb-1">Apr: 82.10%</p>
                   </div>
                 </div>
@@ -230,86 +369,183 @@ const DexHomeBody = () => {
                 <h6 className="">Vision is the ultimate exchange protocol</h6>
               </div>
               <div className="d-flex flex-column flex-md-row justify-content-start">
-                <div className="d-flex justify-content-center justify-content-md-start bgDCB mr-md-2 pr-5">
+                <div
+                  className={
+                    darkMode
+                      ? "d-flex justify-content-center justify-content-md-start bgDCB mr-md-2 pr-5"
+                      : "d-flex justify-content-center justify-content-md-start bgDCB mr-md-2 pr-5 light_icon"
+                  }
+                >
                   <div className="mr-3">
-                    <img src={dcbBsc} width={120} alt="dcb-bsc" />
+                    <img
+                      src={darkMode ? dcbBsc : dcbBsc1}
+                      width={120}
+                      alt="dcb-bsc"
+                    />
                   </div>
-                  <div>
-                    <p className="mb-1 bold">DCB-BSC</p>
+                  <div className="vix">
+                    <p className="mb-1 bold">VZN-BSC</p>
                     <p className="mb-1">Apr: 82.10%</p>
                   </div>
                 </div>
-                <div className="d-flex justify-content-center justify-content-md-start bgDCB mt-2 mt-md-0 pr-5">
-                  <div className="mr-3">
-                    <img src={dcbBsc} width={120} alt="dcb-bsc" />
+                <div
+                  className={
+                    darkMode
+                      ? "d-flex justify-content-center justify-content-md-start bgDCB mr-mt-2 pr-5"
+                      : "d-flex justify-content-center justify-content-md-start bgDCB mr-mt-2 pr-5 light_icon"
+                  }
+                >
+                  <div className="mr-3 ">
+                    <img
+                      src={darkMode ? dcbBsc : dcbBsc1}
+                      width={120}
+                      alt="dcb-bsc"
+                    />
                   </div>
-                  <div>
-                    <p className="mb-1 bold">DCB-BSC</p>
+                  <div className="vix">
+                    <p className="mb-1 bold">VZN-BSC</p>
                     <p className="mb-1">Apr: 82.10%</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-md-12 d-none d-md-block mt-5">
-            <div className="d-flex flex-column flex-md-row align-items-start mt-3">
-              <div className="mr-md-5">
-                <h1 className="text-uppercase cFont mt-4">
-                  {" "}
-                  Whats the
-                  <span className={darkMode ? "color2" : "color2Light"}>
+
+          <MediaQuery minWidth={481}>
+            <div className="col-md-12 d-md-block mt-5">
+              <div className="d-flex flex-column flex-md-row align-items-start mt-3">
+                <div className="mr-md-5">
+                  <h1 className="text-uppercase cFont mt-4">
                     {" "}
-                    news?{" "}
-                  </span>
-                </h1>
-                {/* <h3 className="text-center text-md-left"></h3> */}
-              </div>
-              <div className="my-auto">
-                <div className={darkMode ? "swipe1" : "swipe1Light"}>
-                  <OwlCarousel className="owl-theme" {...options}>
-                    <div className="item">
-                      <img src={darkMode ? slide1Img : slide1Imglight} alt="" width={140} />
-                      <div className="item-body">
-                        <h3>OmniTv Ep28 - Beefy Finance</h3>
-                        <p>
-                          Lorem ipsum dolor sit amet, ectetur adipiscing elit,
-                          sed{" "}
-                        </p>
+                    Whats the
+                    <span className={darkMode ? "color2" : "color2Light"}>
+                      {" "}
+                      news?{" "}
+                    </span>
+                  </h1>
+                  {/* <h3 className="text-center text-md-left"></h3> */}
+                </div>
+                <div className="my-auto">
+                  <div className={darkMode ? "swipe1" : "swipe1Light"}>
+                    <OwlCarousel className="owl-theme" {...options}>
+                      <div className="item">
+                        <img
+                          src={darkMode ? slide1Img : slide1Imglight}
+                          alt=""
+                          width={140}
+                        />
+                        <div className="item-body">
+                          <h3>OmniTv Ep28 - Beefy Finance</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet, ectetur adipiscing elit,
+                            sed{" "}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="item">
-                      <img
-                        src={darkMode ? slide1Img : slide1Imglight}
-                        alt=""
-                        width={140}
-                      />
-                      <div className="item-body">
-                        <h3>second news</h3>
-                        <p>
-                          Lorem ipsum dolor sit amet, ectetur adipiscing elit,
-                          sed{" "}
-                        </p>
+                      <div className="item">
+                        <img
+                          src={darkMode ? slide1Img : slide1Imglight}
+                          alt=""
+                          width={140}
+                        />
+                        <div className="item-body">
+                          <h3>second news</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet, ectetur adipiscing elit,
+                            sed{" "}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="item">
-                      <img
-                        src={darkMode ? slide1Img : slide1Imglight}
-                        alt=""
-                        width={140}
-                      />
-                      <div className="item-body">
-                        <h3>Third news</h3>
-                        <p>
-                          Lorem ipsum dolor sit amet, ectetur adipiscing elit,
-                          sed{" "}
-                        </p>
+                      <div className="item">
+                        <img
+                          src={darkMode ? slide1Img : slide1Imglight}
+                          alt=""
+                          width={140}
+                        />
+                        <div className="item-body">
+                          <h3>Third news</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet, ectetur adipiscing elit,
+                            sed{" "}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  </OwlCarousel>
+                    </OwlCarousel>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </MediaQuery>
+          <MediaQuery maxWidth={480}>
+            <div className="col-md-12 d-md-block mt-5">
+              <div className="d-flex flex-column flex-md-row align-items-start mt-3">
+                <div className="mr-md-5">
+                  <h1 className="text-uppercase cFont mt-4">
+                    {" "}
+                    Whats the
+                    <span className={darkMode ? "color2" : "color2Light"}>
+                      {" "}
+                      news?{" "}
+                    </span>
+                  </h1>
+                  {/* <h3 className="text-center text-md-left"></h3> */}
+                </div>
+                <div className="my-auto">
+                  <div className={darkMode ? "swipe1" : "swipe1Light"}>
+                    <OwlCarousel
+                      className="owl-theme"
+                      {...options}
+                      style={{ width: "320px" }}
+                    >
+                      <div className="item">
+                        <img
+                          src={darkMode ? slide1Img : slide1Imglight}
+                          alt=""
+                          width={140}
+                        />
+                        <div className="item-body">
+                          <h3>OmniTv Ep28 - Beefy Finance</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet, ectetur adipiscing elit,
+                            sed{" "}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="item">
+                        <img
+                          src={darkMode ? slide1Img : slide1Imglight}
+                          alt=""
+                          width={140}
+                        />
+                        <div className="item-body">
+                          <h3>second news</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet, ectetur adipiscing elit,
+                            sed{" "}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="item">
+                        <img
+                          src={darkMode ? slide1Img : slide1Imglight}
+                          alt=""
+                          width={140}
+                        />
+                        <div className="item-body">
+                          <h3>Third news</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet, ectetur adipiscing elit,
+                            sed{" "}
+                          </p>
+                        </div>
+                      </div>
+                    </OwlCarousel>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </MediaQuery>
+
           <div className="col-md-12 mt-4">
             <div
               className={`d-flex flex-column justify-content-center align-items-center mt-4 py-md-4 ${
@@ -371,7 +607,8 @@ const DexHomeBody = () => {
                   <div className="input-group ">
                     <input
                       type="text"
-                      className="form-control fs-lg border-0"
+                      className="form-control fs-lg border-0 email_add_font"
+                   
                       placeholder="Email Address"
                       id="mail"
                       name="email"

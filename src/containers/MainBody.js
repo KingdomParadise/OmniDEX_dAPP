@@ -42,6 +42,7 @@ import twitter from "../assets/images/communityIcons/twitter.svg";
 import telegram from "../assets/images/communityIcons/telegram.svg";
 import coingecko from "../assets/images/communityIcons/coingecko.svg";
 import { ThemeContext } from "../theme/ThemeContext";
+import logo from "../assets/images-new/common/logo.png";
 
 const MainBody = () => {
   const theme = useContext(ThemeContext);

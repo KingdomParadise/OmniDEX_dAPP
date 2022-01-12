@@ -66,6 +66,13 @@ html.dark {
   font-family: "Special Elite", cursive !important;
   font-weight: 800 !important;
 }
+.cFont1 {
+  font-family: "Special Elite", cursive !important;
+  font-weight: 800 !important;
+}
+.after_banner {
+  margin-top: 10%;
+}
 
 .color2 {
   color: #fff;
@@ -73,22 +80,29 @@ html.dark {
 .color2Light {
   color: #9a9a9a;
 }
+
 .rect1 {
-  background-image: url(../images/page1/landing-bg.png);
+  background-image: url(../images/page1/dappbanner.png);
   background-position: center;
   background-size: cover;
   border-radius: 24px;
+
+  width: 100%;
+  height: 100%;
   background-color: rgba(13, 27, 55, 0.4);
   padding: 1rem 2rem;
   position: relative;
   z-index: 10;
 }
 .rect1Light {
-  background-image: url(../images/page1/landing-bg-light.png);
+  background-image: url(../images/page1/dapp_banner_light.png);
   background-position: center;
   background-size: cover;
   border-radius: 24px;
-  background-color: rgba(238, 238, 238, 0.4);
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 27, 55, 0.4);
   padding: 1rem 2rem;
   position: relative;
   z-index: 10;
@@ -178,7 +192,7 @@ html.dark {
   z-index: 10;
 }
 .rect4Light {
-  background-color: rgba(19, 34, 62, 0.4);
+  background-color: #dadada;
   background-image: url(../images/page1/cool-pools-bg-light.png);
   background-position: center;
   background-size: cover;
@@ -187,6 +201,13 @@ html.dark {
   padding: 2rem 2rem;
   position: relative;
   z-index: 10;
+}
+.light_icon {
+  background: #c2c2c2 !important;
+}
+
+.light_icon_bk {
+  background: #d9d9d9 !important;
 }
 .rect5 {
   background-color: #222222;
@@ -233,7 +254,7 @@ html.dark {
 }
 .rect5-item2Light {
   background-color: #b5b5b5;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   width: 100%;
   justify-content: space-between;
   display: flex;
@@ -243,8 +264,8 @@ html.dark {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* margin-left: -2rem;
-    margin-right: -2rem; */
+  width: 100%;
+  z-index: 1000;
   padding: 3rem 2rem;
   margin-top: 3rem;
 }
@@ -364,6 +385,12 @@ html.dark {
   position: relative;
   z-index: 1;
 }
+.logo_button {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-left: 50% !important;
+}
 
 .cubeImage {
   position: absolute;
@@ -375,7 +402,8 @@ html.dark {
 .cubeImage1 {
   position: absolute;
   bottom: 0px;
-  right: 1px;
+  top: 90%;
+  right: 0;
   z-index: 3;
   width: 60px;
 }
@@ -436,10 +464,11 @@ html.dark {
     padding: 2rem 4rem 0 4rem;
   }
   .rocketImg {
-    width: 240px;
+    left: 15%;
+    width: 60%;
     position: relative;
-    top: 1.5rem;
-    margin-left: 0;
+
+    margin: 10%;
   }
   .dotLogo {
     width: 120px;
@@ -457,10 +486,12 @@ html.dark {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: -3rem;
-    margin-right: -3rem;
+    margin-left: -5rem !important;
+    width: 115%;
+    /* margin-right: -3rem; */
     padding: 3rem;
     margin-top: 3rem;
+
     flex-direction: row;
   }
   .footer_container {
@@ -503,4 +534,278 @@ html.dark {
   padding: 4px 30px !important;
   font-size: 30px !important;
   border: none !important;
+}
+
+@media (max-width: 480px) {
+  .bsc_icon {
+    display: none;
+  }
+  .connect_device {
+    font-size: 10px !important;
+  }
+  .launchBtn.action_button,
+  .launchBtnLight.action_button {
+    padding: 4px 25px !important;
+    margin-left: 15% !important;
+    font-size: 10px !important;
+  }
+  .logo_button {
+    display: none;
+  }
+  .py-4 {
+    display: list-item !important;
+  }
+  .vix {
+    font-size: 11px !important;
+    margin-top: 10px !important;
+    font-weight: 800 !important;
+  }
+  .rect1 {
+    background-image: url(../images/page1/dappbanner.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(13, 27, 55, 0.4);
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  .rect1Light {
+    background-image: url(../images/page1/dapp_banner_light.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+
+    width: 76%;
+    height: 100%;
+    background-color: rgba(13, 27, 55, 0.4);
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  .rocketImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px !important;
+  }
+
+  .cFont {
+    font-family: "Special Elite", cursive !important;
+    font-weight: 800 !important;
+    font-size: 30px !important;
+    margin-top: 30px !important;
+    margin-left: 10px !important;
+  }
+  .cFont1 {
+    font-family: "Special Elite", cursive !important;
+    font-weight: 800 !important;
+    font-size: 30px !important;
+    margin-left: 10px !important;
+  }
+
+  .cFon3 {
+    font-family: "Special Elite", cursive !important;
+    font-weight: 800 !important;
+    font-size: 35px !important;
+  }
+  #beginner-btn_1 {
+    font-size: 18px !important;
+    margin-left: -10% !important;
+  }
+
+  .head_wel {
+    margin-left: -30% !important;
+  }
+  .cfont_6 {
+    margin-left: -30% !important;
+    font-size: 20px !important;
+  }
+
+  .cFont7 {
+    font-size: 30px !important;
+    margin-left: 10% !important;
+  }
+  .cFont8 {
+    font-size: 12px !important;
+    margin-left: 10% !important;
+  }
+  .launchBtn.locked,
+  .launchBtnLight.locked {
+    padding: 4px 20px !important;
+  }
+
+  .action_button2.unlock {
+    padding: 4px 10px !important;
+  }
+  .rect2 {
+    background-image: url(../images/page1/farming-bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    width: 86%;
+    margin-left: -5% !important;
+    padding: 4rem 2rem;
+    height: 100%;
+  }
+  .rect2Light {
+    background-image: url(../images/page1/farming-bg-light.png);
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(222, 223, 225, 0.9);
+    border-radius: 24px;
+    width: 86%;
+    margin-left: -5% !important;
+    padding: 4rem 2rem;
+    height: 100%;
+  }
+  .rect3 {
+    background-color: #23355780;
+    background-image: url(../images/page1/hot-farm-bg.png);
+    background-position: center;
+    background-size: auto;
+    border-radius: 24px;
+    width: 86%;
+    margin-left: -5% !important;
+    padding: 4rem 2rem;
+    height: 100%;
+    padding: 2rem 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  .rect3Light {
+    background-color: #23355780;
+    background-image: url(../images/page1/hot-farm-bg-light.png);
+    background-position: center;
+    background-size: auto;
+    border-radius: 24px;
+    width: 86%;
+    margin-left: -5% !important;
+    padding: 4rem 2rem;
+    height: 100%;
+    background-color: rgb(222, 223, 225, 0.9);
+    padding: 2rem 2rem;
+    position: relative;
+    z-index: 10;
+  }
+  .rect4 {
+    background-color: rgb(35, 35, 35, 0.4);
+    background-image: url(../images/page1/cool-pools-bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    width: 86%;
+    margin-left: -5% !important;
+    padding: 4rem 2rem;
+    height: 100%;
+
+    position: relative;
+    z-index: 10;
+  }
+  .rect4Light {
+    background-color: #dadada;
+    background-image: url(../images/page1/cool-pools-bg-light.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    width: 86%;
+    margin-left: -5% !important;
+    padding: 4rem 2rem;
+    height: 100%;
+
+    position: relative;
+    z-index: 10;
+  }
+
+  .rect5 {
+    background-color: #222222;
+    background-image: url(../images/page1/dots-bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    width: 86%;
+    margin-left: -5% !important;
+    padding: 4rem 2rem;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  .rect5Light {
+    background-color: #e9eaea;
+    background-image: url(../images/page1/dots-bg.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 24px;
+    width: 86%;
+    margin-left: -5% !important;
+    padding: 4rem 2rem;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  .owl-theme {
+    margin-left: -5% !important;
+  }
+
+  .rect5-item1 {
+    width: 100%;
+    font-size: 9px;
+    background-color: #282828;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .rect5-item1Light {
+    width: 100%;
+    font-size: 9px;
+    background-color: #d2d2d2;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rect5-item2 {
+    background-color: #1d1d1d;
+    padding: 1rem 1rem;
+    font-size: 9px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+  }
+  .rect5-item2Light {
+    background-color: #b5b5b5;
+    padding: 1rem 1rem;
+    font-size: 9px;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .newsLetter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 390px;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+    margin-left: -10% !important;
+  }
+  .email_add_font {
+    font-size: 10px !important;
+  }
+}
+
+.dapp_head_logo {
+  margin-left: 7% !important;
+}
+.text_vision_title {
+  display: grid;
+  margin-left: -10px;
+  margin-top: 10px;
+}
+.text_vision_title_1 {
+  margin: auto !important;
 }
