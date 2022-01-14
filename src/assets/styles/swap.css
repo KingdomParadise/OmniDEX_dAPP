@@ -115,6 +115,82 @@ button:focus {
   font-size: 16px;
   border-radius: 35px;
 }
+@media (max-width: 480px) {
+  .tokenCollection {
+    overflow: hidden !important;
+    max-height: 60vh;
+    padding-left: 0 !important;
+  }
+  .singleItem {
+    background: none !important;
+  }
+  .activeNet {
+    border: none !important;
+  }
+
+  .swap_header_bar_token {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 7px 15px;
+    color: var(--boxheader-text);
+    font-weight: 500;
+    font-size: 13px;
+    border-radius: 35px;
+  }
+  .swapButton {
+    padding: 2px 2px !important;
+    border-radius: 22px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -18px !important;
+    margin-bottom: -14px;
+    left: calc(50% - 5px);
+    background-color: var(--omni-swap-swap-button);
+    border: 4px solid rgb(211, 212, 214);
+    z-index: 2;
+    text-align: center;
+  }
+  .tokenGrid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0.8rem 1.4rem !important;
+    min-width: 10rem;
+    outline: none;
+    border: 2px solid var(--tokenGrid);
+    width: 80% !important;
+    margin-left: -7% !important;
+    border-radius: 12px;
+    font-size: 15px !important;
+    margin-bottom: 0.9rem;
+    overflow-x: hidden !important;
+    color: var(--tokenGrid);
+    cursor: pointer;
+  }
+
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    overflow-x: hidden !important;
+  }
+  .input-field-light {
+    width: 200px !important;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: transparent;
+    border: 1px solid rgb(124, 119, 119);
+    outline: none;
+    color: rgb(5, 5, 5);
+    font-size: 18px;
+    height: 52px;
+    border-radius: 6px;
+  }
+  .input-field {
+    width: 200px !important;
+  }
+}
 
 .swapImageContainer {
   position: absolute;
@@ -521,9 +597,38 @@ button:focus {
   margin-left: 12px;
   border-radius: 6px;
 }
+.starBtn_light {
+  border: 1px solid rgb(83, 81, 81);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 2px 12px;
+  margin-left: 12px;
+  border-radius: 6px;
+}
 .activeNet {
   border: 1px solid #7e7ea8;
 }
 .inactiveNet {
   border: 1px solid transparent;
+}
+
+.css-ypiqx9-MuiDialogContent-root {
+  overflow-y: hidden !important;
+}
+
+.input-field-light {
+  width: 400px;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: transparent;
+  border: 1px solid rgb(124, 119, 119);
+  outline: none;
+  color: rgb(5, 5, 5);
+  font-size: 18px;
+  height: 52px;
+  border-radius: 6px;
+}
+
+.input-field-light::placeholder {
+  color: black !important;
 }

@@ -164,7 +164,8 @@ input:checked + .slider:before {
   border-radius: 20px;
   overflow: hidden;
   padding: 20px;
-  width: 545px;
+  margin-left: -20% !important;
+  width: 745px;
 }
 
 .b1wrYDKlpvqv6pS_mCwck_1A7hsyIuo366Cm918KSon5 {

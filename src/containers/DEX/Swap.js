@@ -26,6 +26,10 @@ import { ThemeContext } from "../../theme/ThemeContext";
 import MetamaskImage from "../../assets/images/swap/metamask.png";
 import TrustWallet from "../../assets/images/swap/TWT.png";
 import walletconnect from "../../assets/images/swap/walletconnect.png";
+import { Button } from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -34,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: ".6rem",
     padding: "1.4rem",
     fontSize: "15px",
+  },
+  del_overflow: {
+    overflowY: "hidden !important",
   },
 }));
 
@@ -186,21 +193,32 @@ const SelectToken = ({ open, handleClose, handleTokenSelection }) => {
   // 	alert("selec")
   // 	console.log(token);
   // }
+  const theme1 = useContext(ThemeContext);
+  const darkMode = theme1.state.darkMode;
   return (
-    <CustomDialog open={open} handleClose={handleClose} title={"Tokens List"}>
+    <CustomDialog
+      open={open}
+      handleClose={handleClose}
+      title={"Tokens List"}
+      style={{ overflowY: "hidden " }}
+    >
       <div className="px-3">
         <div className="selectToken">
           <div className="landing_instruction_search_input d-flex">
             <div className="input-icons">
-              <FiSearch className="icon" size={26} color={"#fff"} />
+              <FiSearch
+                className="icon"
+                size={26}
+                color={darkMode ? "#fff" : "9a9a9a"}
+              />
               <input
-                className="input-field"
+                className={darkMode ? "input-field" : "input-field-light"}
                 type="text"
                 placeholder="Search name or paste address"
                 onChange={() => handleSearch()}
               />
             </div>
-            <div className="starBtn">
+            <div className={darkMode ? "starBtn" : "starBtn_light"}>
               <StarBorderOutlinedIcon />
             </div>
           </div>
@@ -208,7 +226,10 @@ const SelectToken = ({ open, handleClose, handleTokenSelection }) => {
 											<BsFillStarFill color='#fff' size={24} />
 										</button> */}
           <div className="row m-0">
-            <div className="col-2 tokenCollection pt-3">
+            <div
+              className="col-2 tokenCollection pt-3"
+              style={{ marginTop: "-5px", height: "fit-content" }}
+            >
               <div className="d-flex flex-column">
                 {network.map((item, index) => (
                   <div
@@ -226,7 +247,10 @@ const SelectToken = ({ open, handleClose, handleTokenSelection }) => {
                 ))}
               </div>
             </div>
-            <div className="col-10 tokenList cusScroll">
+            <div
+              className="col-10 tokenList cusScroll"
+              style={{ height: "63%" }}
+            >
               <div className="d-flex flex-column">
                 {tokenList.map((item) => (
                   <div
@@ -236,6 +260,7 @@ const SelectToken = ({ open, handleClose, handleTokenSelection }) => {
                     <div
                       className="d-flex"
                       onClick={() => handleTokenSelection(item)}
+                      style={{ marginTop: darkMode ? "1px" : "8px" }}
                     >
                       <div className="mr-2 my-auto">
                         <img
@@ -277,6 +302,11 @@ const Swap = () => {
     tokenList: false,
   });
 
+  const [selectionValue, setSelectionValue] = useState();
+
+  const [selectionValue1, setSelectionValue1] = useState();
+  const [counter, setCounter] = useState(0);
+  const [toggleNavPopup, settoggleNavPopup] = useState(false);
   const [leftToken, setLeftToken] = useState({
     id: 0,
     title: "MetaMask",
@@ -303,7 +333,13 @@ const Swap = () => {
     setAnchorEl(null);
   };
   const handleTokenSelection = (token) => {
-    console.log(token);
+    console.log("Token", token);
+    console.log("counter", counter);
+    if (counter == 1) {
+      setSelectionValue(token);
+    } else {
+      setSelectionValue1(token);
+    }
     setPopup({
       tokenList: false,
     });
@@ -372,14 +408,39 @@ const Swap = () => {
                   <button
                     className="selectCurrencyButton"
                     style={{ color: darkMode ? "#9ca6be" : "#fff" }}
-                    onClick={() =>
+                    onClick={() => {
+                      setCounter(1);
                       setPopup({
                         ...popup,
                         tokenList: !popup.tokenList,
-                      })
-                    }
+                      });
+                    }}
                   >
-                    Select Token
+                    {selectionValue ? (
+                      <>
+                        <img
+                          src={selectionValue.icon}
+                          width="18px"
+                          height="18px"
+                        />
+                        {selectionValue.title}
+
+                        <IconButton
+                          aria-label="close"
+                          sx={{
+                            color: (theme) => theme.palette.grey[500],
+                          }}
+                        >
+                          <CloseIcon
+                            onClick={() => {
+                              setSelectionValue("");
+                            }}
+                          />
+                        </IconButton>
+                      </>
+                    ) : (
+                      "Select Token"
+                    )}
                   </button>
                   <input
                     className="amountInput"
@@ -399,7 +460,16 @@ const Swap = () => {
                 </div>
                 <div className="swapButtonDevider">
                   <div className="swapButton">
-                    <img src={swithcer} alt="swithcer" height="24" width="24" />
+                    <img
+                      src={swithcer}
+                      alt="swithcer"
+                      height="24"
+                      width="24"
+                      onClick={() => {
+                        setSelectionValue(selectionValue1);
+                        setSelectionValue1(selectionValue);
+                      }}
+                    />
                   </div>
                 </div>
                 <div
@@ -409,14 +479,38 @@ const Swap = () => {
                   <button
                     className="selectCurrencyButton"
                     style={{ color: darkMode ? "#9ca6be" : "#fff" }}
-                    onClick={() =>
+                    onClick={() => {
+                      setCounter(2);
                       setPopup({
                         ...popup,
                         tokenList: !popup.tokenList,
-                      })
-                    }
+                      });
+                    }}
                   >
-                    Select Token{" "}
+                    {selectionValue1 ? (
+                      <>
+                        <img
+                          src={selectionValue1.icon}
+                          width="18px"
+                          height="18px"
+                        />
+                        {selectionValue1.title}
+                        <IconButton
+                          aria-label="close"
+                          sx={{
+                            color: (theme) => theme.palette.grey[500],
+                          }}
+                        >
+                          <CloseIcon
+                            onClick={() => {
+                              setSelectionValue1("");
+                            }}
+                          />
+                        </IconButton>
+                      </>
+                    ) : (
+                      "Select Token"
+                    )}
                   </button>
                   <input
                     className="amountInput"

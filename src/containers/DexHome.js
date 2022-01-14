@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -24,6 +24,8 @@ import { Menu, ChevronLeft, Inbox, Mail, Home } from "@material-ui/icons";
 import DexHomeBody from "./DexHomeBody";
 import "../assets/styles/page1.css";
 import logo from "../assets/images/page1/vision-logo.png";
+import setting from "../assets/images/page1/gear.png";
+import settinglight from "../assets/images/page1/gearlight.png";
 import logo1 from "../assets/images/page1/dot-logo.png";
 import swap from "../assets/sidebar/swap.png";
 import bridge from "../assets/sidebar/bridge.png";
@@ -37,6 +39,9 @@ import bsc from "../assets/images/bsc.png";
 import { Routes, Route, Link } from "react-router-dom";
 import Swap from "../containers/DEX/Swap";
 import { ThemeContext } from "../theme/ThemeContext";
+import { Button } from "@mui/material";
+import NavPopup from "../components/NavPopup";
+
 const drawerWidth = 280;
 
 const useStyles = makeStyles((theme) => ({
@@ -116,13 +121,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ResponsiveDrawer() {
+  // const theme1 = useContext(ThemeContext);
+  // const darkMode = theme1.state.darkMode;
+  const [toggleNavPopup, settoggleNavPopup] = useState(false);
+  const [toggleSwitch, settoggleSwitch] = useState(true);
   const theme1 = useContext(ThemeContext);
   const darkMode = theme1.state.darkMode;
+
+  const handleThemeSwitch = () => {
+    if (darkMode) {
+      settoggleSwitch(false);
+      theme1.dispatch({ type: "LIGHTMODE" });
+    } else {
+      settoggleSwitch(true);
+      theme1.dispatch({ type: "DARKMODE" });
+    }
+  };
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [isMobileOpen, setIsMobileOpen] = React.useState(false);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
+  // const theme = useContext(ThemeContext);
+  // const darkMode = theme.state.darkMode;
 
   const handleSmallScreenDrawerToggle = () => {
     setIsMobileOpen(!isMobileOpen);
@@ -240,7 +262,7 @@ export default function ResponsiveDrawer() {
               justifyContent: "space-between",
               background: darkMode
                 ? "linear-gradient(170deg, rgba(19, 19, 19, 0.8) 0%,rgba(19, 19, 19, 0.2) 50%, transparent)"
-                : "white",
+                : "var(--omni-swap-middle-box)",
             }}
           >
             <IconButton
@@ -257,13 +279,18 @@ export default function ResponsiveDrawer() {
             <div className="toolbarRight">
               <div>
                 <span className="bsc_icon">
-                  <img src={bsc} width={20} alt="BSC" />
-                  <button
-                    className="btn btn-link"
-                    style={{ color: darkMode ? "#fff" : "#1e1e1e" }}
+                  {/* <img src={bsc} width={20} alt="BSC" /> */}
+                  <Button
+                    className="bsc_icon_btn text-capitalize"
+                    style={{
+                      color: darkMode ? "#fff" : "#1e1e1e",
+                      border: "solid 1px",
+                      padding: "8px 20px",
+                      borderRadius: "10px",
+                    }}
                   >
-                    BSC
-                  </button>
+                    Buy VZN
+                  </Button>
                 </span>
                 <MediaQuery maxWidth={480}>
                   <header id="main-header" className="header_container">
@@ -271,7 +298,9 @@ export default function ResponsiveDrawer() {
                       <Link to="/dex" className="header_brand">
                         <img src={logo1} width={45} alt="OmniDEX logo" />
                         <div className="text_vision_title">
-                          <span className="text-uppercase  text_vision_title_1">Vision</span>
+                          <span className="text-uppercase  text_vision_title_1">
+                            Vision
+                          </span>
                           <span className="text-uppercase">Exchange</span>
                         </div>
                       </Link>
@@ -281,6 +310,14 @@ export default function ResponsiveDrawer() {
                 <button className=" action_button  action_button2 connect_device ">
                   Connect Wallet
                 </button>
+
+                <img
+                  style={{ marginLeft: "10px" }}
+                  src={darkMode ? setting : settinglight}
+                  width={25}
+                  onClick={() => settoggleNavPopup(!toggleNavPopup)}
+                  alt="setting"
+                />
               </div>
             </div>
           </Toolbar>
@@ -335,6 +372,12 @@ export default function ResponsiveDrawer() {
           </Routes>
         </main>
       </div>
+      {toggleNavPopup ? (
+        <NavPopup
+          toggleSwitch={toggleSwitch}
+          settoggleSwitch={handleThemeSwitch}
+        />
+      ) : null}
     </ThemeProvider>
   );
 }

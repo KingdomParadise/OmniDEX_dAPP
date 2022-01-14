@@ -1,0 +1,159 @@
+.check {
+  background-image: url(../images/page1/dark_bg.png);
+
+  background-position: center bottom;
+
+  background-size: cover;
+  width: 200% !important;
+  background-size: contain;
+  /* height: 200% !important; */
+  max-width: inherit !important;
+}
+
+.check1 {
+  background-image: url(../images/page1/light_bg_1.png);
+  background-position: center bottom;
+
+  background-size: cover;
+  width: 200% !important;
+  background-size: contain;
+  /* height: 200% !important; */
+  max-width: inherit !important;
+}
+
+.box_c {
+  border-radius: 10px;
+  background-color: #171717;
+  opacity: 0.702;
+  width: 54px;
+  font-size: 40px;
+  margin: 10px 40px;
+
+  text-align: center;
+  height: 52px;
+}
+.box_c_l {
+  border-radius: 10px;
+  background-color: #737373;
+  opacity: 0.702;
+  width: 54px;
+  font-size: 40px;
+  margin: 10px 40px;
+
+  text-align: center;
+  height: 52px;
+}
+
+.box_c1 {
+  font-size: 20px;
+  margin: 10px 47px;
+
+  text-align: center;
+}
+.bg_card {
+  background-image: url(../images/page1/vector_preSale.png);
+  background-repeat: no-repeat;
+  background-color: var(--container-bg);
+  position: relative;
+  background-size: cover;
+  background-position-y: bottom;
+  width: 70% !important;
+}
+
+.bg_card2 {
+  background-image: url(../images/page1/vector_preSale.png);
+  background-repeat: round;
+  background-position-y: center;
+}
+
+.css-1v5z18m {
+  width: 520px !important;
+}
+.MuiSlider-track,
+.css-1gv0vcd-MuiSlider-track {
+  padding: 10px 10px;
+  background: linear-gradient(58deg, white, black) !important;
+}
+
+.css-eg0mwd-MuiSlider-thumb::after {
+  background: white;
+}
+.logo_button {
+  width: 110px;
+  height: 110px;
+  opacity: 0.6;
+  top: 210px;
+}
+
+@media (max-width: 480px) {
+  .css-6s0hr3 {
+    width: 350px !important;
+  }
+  .logo_button1,
+  .logo_button {
+    display: none;
+  }
+  .css-1v5z18m {
+    width: 220px !important;
+  }
+  .icon_new {
+    margin-left: 180px !important;
+    margin-top: -170px;
+  }
+  .box_c {
+    border-radius: 10px;
+    background-color: #171717;
+    opacity: 0.702;
+    width: 54px;
+    font-size: 32px;
+    margin: 5px 15px;
+
+    text-align: center;
+    height: 52px;
+  }
+  .box_c_l {
+    border-radius: 10px;
+    background-color: #737373;
+    opacity: 0.702;
+    width: 54px;
+    font-size: 32px;
+    margin: 5px 15px;
+
+    text-align: center;
+    height: 52px;
+  }
+
+  .box_c1 {
+    font-size: 14px;
+    margin: 5px 17px;
+
+    text-align: center;
+  }
+}
+
+.logo_button1 {
+  width: 70px;
+  height: 70px;
+  opacity: 0.6;
+  margin-top: -510%;
+}
+
+.icon_new {
+  margin-left: 450px;
+  margin-top: -170px;
+}
+
+.bg_light_i {
+  background: #b8b8b8 !important;
+}
+
+.bg_light_i_b {
+  background: #9c9c9c !important;
+}
+
+.css-1kz0hui-MuiSlider-valueLabel {
+  margin-top: 300% !important;
+}
+.page1BodyContainerLight {
+  background: #e5e5e5;
+}

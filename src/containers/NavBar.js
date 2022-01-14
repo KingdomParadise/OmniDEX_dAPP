@@ -50,7 +50,7 @@ const NavBar = () => {
               </button>
             </div>
             <Link to="/dex" className="action_button">
-              Launch App
+              Connect Wallet
             </Link>
           </div>
         </div>

@@ -132,6 +132,7 @@ html.dark {
   border: none !important;
   margin-left: 5px;
 }
+
 .btn:focus {
   box-shadow: none !important;
 }
@@ -717,6 +718,16 @@ html.dark {
 
     position: relative;
     z-index: 10;
+  }
+  .newsLetter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 115% !important;
+    z-index: 1000;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
   }
 
   .rect5 {

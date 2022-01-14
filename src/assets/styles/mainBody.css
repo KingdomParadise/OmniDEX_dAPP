@@ -322,8 +322,9 @@ html.dark {
   border-radius: 6px;
 }
 .input-field::placeholder {
-  color: white;
+  color: rgb(247, 243, 243);
 }
+
 .screen__info__2QpSI {
   z-index: 1;
 }
@@ -1147,6 +1148,9 @@ html.dark {
 }
 
 @media (max-width: 480px) {
+
+
+  
   .screen__info__2QpSI {
     display: none;
   }
@@ -1316,6 +1320,9 @@ html.dark {
     height: 360px;
   }
   .screen_instruction_inner .input-field {
+    width: 96%;
+  }
+  .screen_instruction_inner .input-field_light {
     width: 96%;
   }
   .audits__list__3OBjG {

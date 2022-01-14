@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
   dailogheader: {
     padding: "1.6rem !important",
   },
+  del_overflow: {
+    overflowY: "hidden !important",
+    overflowX: "hidden !important",
+  },
 }));
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
@@ -48,7 +52,7 @@ const BootstrapDialogTitle = (props) => {
           onClick={onClose}
           sx={{
             position: "absolute",
-            right: 18,
+            right: 24,
             top: 18,
             color: (theme) => theme.palette.grey[500],
           }}
@@ -73,8 +77,10 @@ const CustomDialog = ({ open, handleClose, children, title, size = "sm" }) => {
     <BootstrapDialog
       maxWidth={"md"}
       onClose={handleClose}
+      className={classes.del_overflow}
       aria-labelledby="customized-dialog-title"
       open={open}
+      style={{ height: "70%", marginTop: "10%" }}
       classes={{
         paper: darkMode ? classes.paper : classes.paperLight,
       }}
