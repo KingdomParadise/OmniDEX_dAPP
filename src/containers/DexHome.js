@@ -33,6 +33,9 @@ import staking from "../assets/sidebar/staking.png";
 import multiChain from "../assets/sidebar/multichain.png";
 import farming from "../assets/sidebar/farming.png";
 import nft from "../assets/sidebar/nft.png";
+import buy from "../assets/sidebar/cart.png";
+import faq from "../assets/sidebar/help.png";
+import team from "../assets/sidebar/team.png";
 import more from "../assets/sidebar/more.png";
 import burgerMenu from "../assets/images/slider-icon.png";
 import bsc from "../assets/images/bsc.png";
@@ -41,6 +44,11 @@ import Swap from "../containers/DEX/Swap";
 import { ThemeContext } from "../theme/ThemeContext";
 import { Button } from "@mui/material";
 import NavPopup from "../components/NavPopup";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import Collapse from "@mui/material/Collapse";
+import BuyCrepto from "./BuyCrepto/BuyCrepto";
+import Faq from "./Faq/Faq";
 
 const drawerWidth = 280;
 
@@ -140,6 +148,7 @@ export default function ResponsiveDrawer() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [open1, setOpen1] = React.useState(true);
   const [isMobileOpen, setIsMobileOpen] = React.useState(false);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -162,6 +171,9 @@ export default function ResponsiveDrawer() {
       fontFamily: `"Special Elite", cursive`,
     },
   });
+  const handleClick = () => {
+    setOpen1(!open1);
+  };
   const drawerItem = (
     <div>
       <List>
@@ -228,14 +240,42 @@ export default function ResponsiveDrawer() {
           </ListItem>
         </Link>
 
-        <Link to="/dex/swap" className="text-white">
-          <ListItem button>
-            <ListItemIcon>
-              <img className="mr-2" src={more} width={25} alt="more" />
-            </ListItemIcon>
-            <ListItemText primary="More" />
-          </ListItem>
-        </Link>
+        <ListItem button onClick={handleClick} className="text-white">
+          <ListItemIcon>
+            <img className="mr-2" src={more} width={25} alt="more" />
+          </ListItemIcon>
+
+          <ListItemText primary="More" />
+          {open1 ? <ExpandLess /> : <ExpandMore />}
+        </ListItem>
+        <Collapse in={open1} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding className="sub-task">
+            <Link to="/dex/buycrypto" className="text-white">
+              <ListItem sx={{ pl: 3 }}>
+                <ListItemIcon>
+                  <img className="mr-2" src={buy} width={20} alt="Buy Crypto" />
+                </ListItemIcon>
+                <ListItemText primary="Buy Crypto" />
+              </ListItem>
+            </Link>
+            <Link to="/dex/faq" className="text-white">
+              <ListItem sx={{ pl: 3 }}>
+                <ListItemIcon>
+                  <img className="mr-2" src={faq} width={20} alt="FAQ" />
+                </ListItemIcon>
+                <ListItemText primary="FAQ" />
+              </ListItem>
+            </Link>
+            <Link to="" className="text-white">
+              <ListItem sx={{ pl: 3 }}>
+                <ListItemIcon>
+                  <img className="mr-2" src={team} width={20} alt="Team" />
+                </ListItemIcon>
+                <ListItemText primary="Team" />
+              </ListItem>
+            </Link>
+          </List>
+        </Collapse>
       </List>
     </div>
   );
@@ -369,6 +409,8 @@ export default function ResponsiveDrawer() {
           <Routes>
             <Route path="/" element={<DexHomeBody />}></Route>
             <Route path="/swap" element={<Swap />}></Route>
+            <Route path="/buycrypto" element={<BuyCrepto />}></Route>
+            <Route path="/faq" element={<Faq />}></Route>
           </Routes>
         </main>
       </div>

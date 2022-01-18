@@ -1,0 +1,15 @@
+.containerBackgroundImage {
+  background: url("../images/page1/rect1-bg.png") left bottom no-repeat,
+    url("../images/right-gradient-banner.png") right top no-repeat;
+  background-size: cover, 180px;
+}
+
+.css-1pnmrwp-MuiTypography-root {
+  color: white !important;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  background: rgba(36, 36, 36, 0.8);
+}
+
+

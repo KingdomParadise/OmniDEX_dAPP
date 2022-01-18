@@ -101,7 +101,7 @@ function PreSale() {
     <>
       <NavBar />
       <Container>
-        {/* className={darkMode ? "check" : "check1"} */}
+      
         <FlexCenter>
           <Section
             className={darkMode ? "bg_card" : "bg_card2"}
