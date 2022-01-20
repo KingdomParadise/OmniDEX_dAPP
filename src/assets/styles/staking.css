@@ -1,0 +1,128 @@
+.main_body {
+  font-size: 25px;
+}
+
+.icon_size {
+  font-size: 50px !important;
+}
+
+.input-field-light {
+  width: 300px;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: transparent;
+  border: 1px solid rgb(124, 119, 119);
+  outline: none;
+  color: rgb(5, 5, 5);
+  font-size: 12px;
+  height: 42px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+.input-field {
+  width: 300px;
+  height: 42px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.input-icons {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.icon {
+  margin-top: 20px;
+}
+
+.check_box {
+  background-color: #282828 !important;
+  border-radius: 0 !important;
+  height: 27px;
+  width: 20px;
+  /* margin-top: 15px; */
+}
+.check_box_li {
+  background-color: #afafaf !important;
+  border-radius: 0 !important;
+  height: 27px;
+  width: 20px;
+  /* margin-top: 15px; */
+}
+.check_map {
+  margin-top: 15px !important;
+}
+.stak_map {
+  margin-top: 18px !important;
+  margin-left: -5% !important;
+}
+
+.main {
+  background: url("../images/staking/bg_stake.png") left center;
+  background-size: cover;
+}
+.main_light {
+  background: url("../images/staking/background_light.png") top center;
+  background-size: cover;
+  z-index: 100;
+}
+
+.f_size {
+  font-size: 25px;
+}
+.f_size_b {
+  font-size: 20px;
+  margin-left: 10px !important;
+}
+.f_size_c {
+  font-size: 25px;
+  margin-left: 10px !important;
+}
+
+.button_map {
+  margin-top: 10px;
+}
+.title_c {
+  margin-top: 20px !important;
+}
+
+.title_c_1 {
+  margin-top: 20px !important;
+}
+
+.title_c_2 {
+  margin-top: 10px !important;
+}
+
+@media (max-width: 480px) {
+  .btn_g {
+    display: none;
+  }
+  .sec_p {
+    margin-left: 20px !important;
+  }
+  .check_map {
+    margin-left: 10px !important;
+  }
+  .view_c {
+    margin-left: 20px !important;
+  }
+  .button_map {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  .button_map_1 {
+    padding-right: 70px !important;
+  }
+  .f_size {
+    font-size: 12px !important;
+  }
+  .sec_x {
+    width: 90% !important;
+  }
+  .kin_k {
+    margin-top: 1% !important;
+  }
+  .kin_p {
+    margin: 0px !important;
+    margin-left: 30% !important;
+    margin-top: -20% !important;
+  }
+}

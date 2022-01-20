@@ -30,7 +30,7 @@ const Faq = () => {
   const darkMode = theme1.state.darkMode;
   return (
     <>
-      <FlexCenter className="containerBackgroundImage">
+      <FlexCenter className="containerBackgroundImage112">
         <Section
           style={{
             marginTop: 150,
@@ -46,13 +46,12 @@ const Faq = () => {
             large
             className={darkMode ? "faq_st" : "faq_st_light"}
           >
-            <div style={{ display: "flex" }} className="font_mobi">
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
               <Typography>What is Vision</Typography>
               <ArrowForwardIosIcon
-                className="font_mobi_mar"
                 style={{
                   color: darkMode ? "white" : "#c2c2c2",
-                  marginLeft: "76%",
+                  // marginLeft: "80%",
                 }}
               />
             </div>
@@ -68,15 +67,11 @@ const Faq = () => {
             className={darkMode ? "faq_st" : "faq_st_light"}
           >
             {" "}
-            <div style={{ display: "flex" }}>
-              <Typography className="font_mobi">
-                Who can use our service?
-              </Typography>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Typography>Who can use our service?</Typography>
               <ArrowForwardIosIcon
-                className="font_mobi_mar2"
                 style={{
                   color: darkMode ? "white" : "#c2c2c2",
-                  marginLeft: "61%",
                 }}
               />
             </div>
@@ -91,15 +86,13 @@ const Faq = () => {
             large
             className={darkMode ? "faq_st" : "faq_st_light"}
           >
-            <div style={{ display: "flex" }}>
-              <Typography className="font_mobi">
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Typography>
                 What are the minimum and maximum trade sizes?
               </Typography>
               <ArrowForwardIosIcon
-                className="font_mobi_mar3"
                 style={{
                   color: darkMode ? "white" : "#c2c2c2",
-                  marginLeft: "30%",
                 }}
               />
             </div>
@@ -115,13 +108,11 @@ const Faq = () => {
             className={darkMode ? "faq_st" : "faq_st_light"}
           >
             {" "}
-            <div style={{ display: "flex" }}>
-              <Typography className="font_mobi">How does it work?</Typography>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Typography>How does it work?</Typography>
               <ArrowForwardIosIcon
-                className="font_mobi_mar4"
                 style={{
                   color: darkMode ? "white" : "#c2c2c2",
-                  marginLeft: "70%",
                 }}
               />
             </div>
@@ -155,15 +146,13 @@ const Faq = () => {
             className={darkMode ? "faq_st" : "faq_st_light"}
           >
             {" "}
-            <div style={{ display: "flex" }}>
-              <Typography className="font_mobi">
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Typography>
                 What are the minimum and maximum trade sizes?
               </Typography>
               <ArrowForwardIosIcon
-                className="font_mobi_mar5"
                 style={{
                   color: darkMode ? "white" : "#c2c2c2",
-                  marginLeft: "28%",
                 }}
               />
             </div>

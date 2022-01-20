@@ -67,7 +67,7 @@
 }
 
 .css-1v5z18m {
-  width: 520px !important;
+  width: 100% !important;
 }
 .MuiSlider-track,
 .css-1gv0vcd-MuiSlider-track {
@@ -97,8 +97,8 @@
     width: 220px !important;
   }
   .icon_new {
-    margin-left: 180px !important;
-    margin-top: -170px;
+    margin-left: 189px !important;
+    margin-top: -142px !important;
   }
   .box_c {
     border-radius: 10px;
@@ -139,8 +139,8 @@
 }
 
 .icon_new {
-  margin-left: 450px;
-  margin-top: -170px;
+  margin-left: 490px;
+  margin-top: -142px;
 }
 
 .bg_light_i {
@@ -156,4 +156,8 @@
 }
 .page1BodyContainerLight {
   background: #e5e5e5;
+}
+
+.newsLetter {
+  width: 110% !important;
 }

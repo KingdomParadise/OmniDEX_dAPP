@@ -49,6 +49,7 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import Collapse from "@mui/material/Collapse";
 import BuyCrepto from "./BuyCrepto/BuyCrepto";
 import Faq from "./Faq/Faq";
+import Staking from "./Staking/Staking";
 
 const drawerWidth = 280;
 
@@ -215,7 +216,7 @@ export default function ResponsiveDrawer() {
             <ListItemText primary="Multi-Chain" />
           </ListItem>
         </Link>
-        <Link to="/dex/swap" className="text-white">
+        <Link to="/dex/staking" className="text-white">
           <ListItem button>
             <ListItemIcon>
               <img className="mr-2" src={staking} width={25} alt="staking" />
@@ -409,7 +410,8 @@ export default function ResponsiveDrawer() {
           <Routes>
             <Route path="/" element={<DexHomeBody />}></Route>
             <Route path="/swap" element={<Swap />}></Route>
-            <Route path="/buycrypto" element={<BuyCrepto />}></Route>
+            <Route path="/buycrypto" element={<BuyCrepto />} defer></Route>
+            <Route path="/staking" element={<Staking />} defer></Route>
             <Route path="/faq" element={<Faq />}></Route>
           </Routes>
         </main>

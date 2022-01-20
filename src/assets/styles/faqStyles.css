@@ -1,7 +1,7 @@
-.containerBackgroundImage {
-  background: url("../images/page1/rect1-bg.png") left bottom no-repeat,
-    url("../images/right-gradient-banner.png") right top no-repeat;
-  background-size: cover, 180px;
+.containerBackgroundImage112 {
+  background: url("../images/page1/rect1-bg.png") left center no-repeat;
+
+  background-size: 100%;
 }
 
 .faq_st {
@@ -10,24 +10,4 @@
 
 .faq_st_light {
   box-shadow: 0px 10px #c2c2c2 !important;
-}
-@media (max-width: 480px) {
-  .font_mobi {
-    font-size: 12px !important;
-  }
-  .font_mobi_mar {
-    margin-left: 62% !important;
-  }
-  .font_mobi_mar2 {
-    margin-left: 42% !important;
-  }
-  .font_mobi_mar3 {
-    margin-left: 0 !important;
-  }
-  .font_mobi_mar4 {
-    margin-left: 56% !important;
-  }
-  .font_mobi_mar5 {
-    margin-left: 0% !important;
-  }
 }

@@ -101,7 +101,6 @@ function PreSale() {
     <>
       <NavBar />
       <Container>
-      
         <FlexCenter>
           <Section
             className={darkMode ? "bg_card" : "bg_card2"}
@@ -256,6 +255,7 @@ function PreSale() {
           </Section>
           <div className="icon_new" style={{ display: "flex" }}>
             <p style={{ fontSize: "20px" }}>BUSD</p>
+            &nbsp;
             <img src={icon} alt="logo" width={30} height={30} />
           </div>
 
@@ -294,7 +294,7 @@ function PreSale() {
                       <Typography blockLabel>Total Received</Typography>
                     </div>
                     <div>
-                      <Typography cardTitle> 299.99 BUSD</Typography>
+                      <Typography cardTitle> 299.99 VZN</Typography>
                     </div>
                   </CardBlock>
                   <CardBlock className={darkMode ? "" : "bg_light_i_b"}>
@@ -326,7 +326,8 @@ function PreSale() {
         <br />
         <br />
       </Container>
-      <Footer />
+      
+      <Footer className="footer_k"/>
     </>
   );
 }

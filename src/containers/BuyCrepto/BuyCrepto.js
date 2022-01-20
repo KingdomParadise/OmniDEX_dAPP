@@ -184,13 +184,12 @@ const BuyCrepto = () => {
 
   return (
     <>
-      <FlexCenter className="containerBackgroundImage">
+      <FlexCenter className="containerBackgroundImage123">
         <Section
           style={{
             marginTop: 150,
             marginBottom: 200,
           }}
-          className={darkMode ? "check" : "check1"}
         >
           <Card
             className={darkMode ? "" : "bg_light"}
@@ -271,7 +270,7 @@ const BuyCrepto = () => {
                   <Box
                     component="form"
                     sx={{
-                      "& .MuiTextField-root": { m: 1, width: "54ch" },
+                      "& .MuiTextField-root": { m: 1, width: "60ch" },
                     }}
                     noValidate
                     autoComplete="off"
@@ -317,7 +316,7 @@ const BuyCrepto = () => {
               </CardBlock>
               <div>
                 <Typography fieldLabel>Amount</Typography>
-                <Typography fieldLabel style={{ marginLeft: "275px" }}>
+                <Typography fieldLabel style={{ marginLeft: "345px" }}>
                   USD/ETH
                 </Typography>
                 <Typography fieldLabel style={{ marginLeft: "25px" }}>
@@ -427,7 +426,7 @@ const BuyCrepto = () => {
                     <Box
                       component="form"
                       sx={{
-                        "& .MuiTextField-root": { m: 1, width: "40ch" },
+                        "& .MuiTextField-root": { m: 1, width: "47ch" },
                       }}
                       noValidate
                       autoComplete="off"
@@ -523,7 +522,7 @@ const BuyCrepto = () => {
                     <Box
                       component="form"
                       sx={{
-                        "& .MuiTextField-root": { m: 1, width: "54ch" },
+                        "& .MuiTextField-root": { m: 1, width: "60ch" },
                       }}
                       noValidate
                       autoComplete="off"
